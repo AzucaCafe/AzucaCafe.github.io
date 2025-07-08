@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AzuCafe Web Site</title>
-    <link rel="icon" href="..\img\icon.pngs" type="image/x-icon">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/home-styles.css">
     <link rel="stylesheet" href="css/navbar-styles.css">
     <link rel="stylesheet" href="css/footer-styles.css">
@@ -13,6 +13,7 @@
     <div id="navbar"></div>
     <main id="content" class="content-section slide-in"></main>
     <div id="footer"></div>
+
     <script src="javascript/utils.js"></script>
     <script src="javascript/components.js"></script>
     <script src="javascript/navbar.js"></script>
@@ -21,12 +22,21 @@
     <script src="javascript/history.js"></script>
     <script src="javascript/blog.js"></script>
     <script src="javascript/shop.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            loadComponent('navbar', 'html/navbar.html');
-            loadComponent('content', 'html/home.html');
-            loadComponent('footer', 'html/footer.html');
+            // ✅ Usamos la función CORRECTA con animación y reactivación de listeners
+            loadComponentWithAnimation('navbar', 'html/navbar.html');
 
+            const hash = window.location.hash;
+            if (hash) {
+                const target = hash.replace('#', '');
+                loadComponentWithAnimation('content', `html/${target}.html`);
+            } else {
+                loadComponentWithAnimation('content', 'html/home.html');
+            }
+
+            loadComponentWithAnimation('footer', 'html/footer.html');
             setMarqueeSpeed(20);
         });
 

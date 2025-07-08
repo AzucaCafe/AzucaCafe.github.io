@@ -5,7 +5,7 @@ body {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     line-height: 1.6;
 }
 
@@ -23,7 +23,7 @@ body {
 .blog-post {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #f9f9f9; /* Fondo ligeramente más oscuro */
+    background-color: #925632; /* Fondo ligeramente más oscuro */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: all 0.3s ease; /* Transición para hover */
@@ -33,7 +33,7 @@ body {
 .blog-post h2 {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
-    color: #925632; /* Color marrón acorde a la paleta */
+    color: #ffffff; /* Color marrón acorde a la paleta */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -41,7 +41,7 @@ body {
 /* Estilo para los párrafos de cada publicación */
 .blog-post p {
     font-size: 18px;
-    color: #555;
+    color: #ffffff;
     text-align: justify; /* Texto justificado para mayor legibilidad */
     line-height: 1.8;
     margin-bottom: 20px;
@@ -51,6 +51,7 @@ body {
 .blog-post:hover {
     background-color: #fff; /* Fondo blanco al pasar el ratón */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    color: #000000;
 }
 
 /* Separación entre publicaciones */
@@ -58,10 +59,176 @@ body {
     margin-top: 40px;
 }
 
-/* Estilos para el título principal de la página */
-h1, h2 {
-    font-family: 'Playfair Display', serif;
+.blog-post h2,
+.blog-post p {
+    transition: color 0.3s ease;
+}
+
+.blog-post:hover h2 {
     color: #925632;
+}
+
+.blog-post:hover p {
+    color: black;
+}
+
+.blog-post:hover {
+    border: 3px solid #925632;
+}
+
+/* Estilo para el contenedor principal que divide en dos columnas */
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 20px;
+    margin: 0 auto;
+    color: #925632;
+}
+/* Estilo para el contenedor principal que divide en dos columnas */
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Contenedor izquierdo dividido */
+.left-container {
+    width: 50%; /* Ocupa el 50% del ancho */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Mantén los elementos alineados al inicio */
+    padding: 20px;
+    background-color: #fff; /* Fondo claro */
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+    color: #000000;
+    min-width: 200px;
+    max-width: 600px;
+    overflow-x: hidden; /* Asegura que no haya scroll horizontal */
+    overflow-y: auto; /* Permite el scroll vertical */
+    position: relative;
+}
+
+/* Oculta la barra de desplazamiento vertical en navegadores basados en WebKit (Chrome, Safari, Opera) */
+.left-container::-webkit-scrollbar {
+    width: 0px; /* El ancho del scrollbar es 0, ocultándolo */
+}
+
+/* Para Firefox */
+.left-container {
+    scrollbar-width: none; /* Oculta la barra de desplazamiento */
+}
+
+/* Para Internet Explorer y Edge */
+.left-container {
+    -ms-overflow-style: none; /* Oculta la barra de desplazamiento */
+}
+
+/* Encabezado fijo para "Current Projects" */
+.left-header {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.left-header p {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Contenedor para las tarjetas de los proyectos */
+.project-list {
+    max-height: 600px; /* Establece un tamaño máximo para que sea desplazable */
+    overflow-y: auto; /* Habilita el desplazamiento vertical solo para las tarjetas */
+    padding-right: 10px; /* Asegura que el scroll no cubra el contenido */
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+    background-color: #925632;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between; /* Alinea el contenido de la tarjeta */
+    align-items: center; /* Alinea verticalmente la imagen */
+    transition: transform 0.3s ease;
+    
+}
+
+/* Contenedor para el texto del proyecto */
+.project-text {
+    display: flex;
+    flex-direction: column; /* Coloca el título arriba y el texto abajo */
+    justify-content: center;
+    margin-right: 20px; /* Espacio entre el texto y la imagen */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-card h3 {
+    margin: 0 0 5px;
+    font-size: 1.5em;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+}
+
+.project-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Estilo para la imagen del proyecto */
+.project-card img {
+    width: 50px; /* Tamaño del icono */
+    height: auto;
+    border-radius: 5px; /* Opción para redondear un poco el icono si es necesario */
+}
+
+.project-link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto de la tarjeta */
+}
+
+.project-card:hover {
+    transform: scale(1.2); /* Escala la tarjeta al pasar el cursor */
+    cursor: pointer; /* Cambia el cursor a pointer al pasar sobre la tarjeta */
+}
+
+/* Contenedor derecho con el GIF */
+.right-container {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    min-width: auto;
+    min-height: auto;
+    max-width: 400px;
+    border: 2px solid B0C0BC;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.left-container,
+.right-container {
+    width: 50%; /* 50% en pantallas grandes */
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra los contenidos internos */
 }
 
 /* Ajustes de diseño responsivo para pantallas pequeñas */
@@ -76,5 +243,57 @@ h1, h2 {
 
     .blog-post p {
         font-size: 16px; /* Reduce ligeramente el tamaño del texto */
+    }
+
+    .home-content {
+        flex-direction: column;
+        align-items: center; /* Centra los contenedores en pantallas pequeñas */
+        justify-content: center;
+        padding: 0; /* Asegura que no haya padding adicional */
+    }
+
+    .left-container,
+    .right-container {
+        width: 80%; /* Asegura que ocupen el ancho completo */
+        max-width: 100%;
+        margin-bottom: 10px; /* Reduce el margen inferior entre contenedores */
+        padding: 10px; /* Ajusta el padding para que no se desborde en pantallas pequeñas */
+        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+    }
+
+    .left-container{
+        overflow-x: hidden; /* Asegura que no haya scroll horizontal */
+        overflow-y: auto; /* Permite el scroll vertical */
+        position: relative;
+    }
+
+    /* Oculta la barra de desplazamiento vertical en navegadores basados en WebKit (Chrome, Safari, Opera) */
+    .left-container::-webkit-scrollbar {
+        width: 0px; /* El ancho del scrollbar es 0, ocultándolo */
+    }
+
+    /* Para Firefox */
+    .left-container {
+        scrollbar-width: none; /* Oculta la barra de desplazamiento */
+    }
+
+    /* Para Internet Explorer y Edge */
+    .left-container {
+        -ms-overflow-style: none; /* Oculta la barra de desplazamiento */
+    }
+
+    .right-container{
+        width: 80%;
+    }
+
+    .project-list {
+        padding: 0;
+        margin: 0;
+        width: 80%; /* Asegura que la lista de proyectos no se salga del contenedor */
+    }
+
+    .project-card {
+        margin-bottom: 10px; /* Reduce el espacio entre tarjetas en pantallas pequeñas */
+        padding: 10px; /* Ajusta el padding para evitar desbordamientos */
     }
 }

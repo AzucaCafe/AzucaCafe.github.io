@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navbar</title>
+    <title>Barra de navegación</title>
     <link rel="icon" href="..\img\icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/navbar-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
@@ -13,26 +13,26 @@
     <script src="../javascript/components.js" defer></script>
 </head>
 
+<body>
     <div class="navbar-container">
-        <div class="left-content" >
+        <div class="left-content">
             <img src="..\img\icon.png" alt="Logo" class="navbar-logo">
-            <h1>AzuCafe</h1>
+            <h1>Azuca Café</h1>
         </div>
         <nav>
             <ul>
-                <li><a id="home-link" href="#" data-target="home">Home</a></li>
-                <li><a id="shop" href="#" data-target="shop">Shop</a></li>
+                <li><a id="home-link" href="#" data-target="home">Inicio</a></li>
+                <li><a data-target="shop" id="shop-link">Tienda</a></li>
                 <li class="dropdown">
-                    <a>Others</a>
+                    <a>Otros</a>
                     <ul class="dropdown-content">
-                        <li><a id="history-link" href="#" data-target="history">Our History</a></li>
+                        <li><a id="history-link" href="#" data-target="history">Nuestra Historia</a></li>
                         <li><a id="blog-link" href="#" data-target="blog">Blog</a></li>
                         <!-- Puedes agregar más opciones aquí -->
                     </ul>
                 </li>
-
             </ul>
         </nav>
     </div>
-
+</body>
 </html>

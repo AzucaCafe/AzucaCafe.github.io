@@ -1,61 +1,113 @@
+<!-- En tu archivo HTML principal (ej. index.html) -->
+<script src="../javascript/shop.js" defer></script>
+<script src="../javascript/components.js" defer></script>
+<!-- ... otros scripts ... -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
-    <link rel="icon" href="..\img\icon.png" type="image/x-icon">
+    <title>Tienda Interactiva</title>
     <link rel="stylesheet" href="../css/shop-styles.css">
-    <script src="../javascript/navbar.js" defer></script> <!-- Incluye el archivo de navegación -->
-    <script src="../javascript/utils.js" defer></script>
-    <script src="../javascript/components.js" defer></script>
+    <link rel="stylesheet" href="../css/compra-styles.css">
 </head>
 <body>
-    <h1 class="shop-title">Our Products</h1>
-    
+    <h1 class="shop-title">Nuestros Productos</h1>
     <div class="shop-container">
-
-        <!-- First product card -->
-        <div class="product-card">
-            <img src="../img/shop/grano.png" alt="Coffee beans" class="product-image">
-            <h3>Coffee Beans</h3>
-            <p>Coffee beans in different presentations (125gr, 250gr, 340gr, 500gr)</p>
-            <div class="price">18.000$ - 30.000$</div>
+        <!-- Granos de Café -->
+        <div class="product-card" data-product="Bolsa de Granos de Café">
+            <img src="../img/shop/grano/100.png" alt="Granos de café" class="product-image">
+            <h3>Bolsa de Granos de Café</h3>
+            <p>Selecciona la presentación y cantidad deseada</p>
+            <select class="product-select size-select">
+                <option value="100g">100g</option>
+                <option value="125g">125g</option>
+                <option value="250g">250g</option>
+                <option value="340g">340g</option>
+                <option value="500g">500g</option>
+                <option value="2500g">2500g</option>
+            </select>
+            <select class="product-select quantity-select">
+                <option value="1">1 unidad</option>
+                <option value="2">2 unidades</option>
+                <option value="3">3 unidades</option>
+                <option value="4">4 unidades</option>
+                <option value="5">5 unidades</option>
+                 <option value="6">6 unidad</option>
+                <option value="7">7 unidades</option>
+                <option value="8">8 unidades</option>
+                <option value="9">9 unidades</option>
+                <option value="10">10 unidades</option>
+            </select>
+            <div class="price">$0</div> <!-- Valor inicial visible, el JS lo actualizará -->
             <div class="button-container">
-                <button class="view-button">View Product</button>
-                <a href="https://api.whatsapp.com/send?phone=573232056895&text=I%20am%20interested%20in%20buying%20Coffee%20Beans" target="_blank">
-                    <button class="buy-button">Buy Now</button>
+                <button class="view-button">Ver Producto</button>
+                <a class="buy-button" target="_blank" href="">
+                    <button class="buy-button">Comprar Ahora</button>
                 </a>
             </div>
         </div>
 
-        <!-- Second product card -->
-        <div class="product-card">
-            <img src="../img/shop/molido.png" alt="Ground coffee" class="product-image">
-            <h3>Ground Coffee</h3>
-            <p>Ground coffee in different presentations (125gr, 250gr, 340gr, 500gr)</p>
-            <div class="price">18.000$ - 30.000$</div>
+        <!-- Café Molido -->
+        <div class="product-card" data-product="Bolsa de Café Molido">
+            <img src="../img/shop/molido/100.png" alt="Café molido" class="product-image">
+            <h3>Bolsa de Café Molido</h3>
+            <p>Selecciona la presentación y cantidad deseada</p>
+            <select class="product-select size-select">
+                <option value="100g">100g</option>
+                <option value="125g">125g</option>
+                <option value="250g">250g</option>
+                <option value="340g">340g</option>
+                <option value="500g">500g</option>
+                <option value="2500g">2500g</option>
+            </select>
+            <select class="product-select quantity-select">
+                <option value="1">1 unidad</option>
+                <option value="2">2 unidades</option>
+                <option value="3">3 unidades</option>
+                <option value="4">4 unidades</option>
+                <option value="5">5 unidades</option>
+                <option value="6">6 unidad</option>
+                <option value="7">7 unidades</option>
+                <option value="8">8 unidades</option>
+                <option value="9">9 unidades</option>
+                <option value="10">10 unidades</option>
+            </select>
+            <div class="price">$0</div> <!-- Valor inicial visible, el JS lo actualizará -->
             <div class="button-container">
-                <button class="view-button">View Product</button>
-                <a href="https://api.whatsapp.com/send?phone=573232056895&text=I%20am%20interested%20in%20buying%20Ground%20Coffee" target="_blank">
-                    <button class="buy-button">Buy Now</button>
+                <button class="view-button">Ver Producto</button>
+                <a class="buy-button" target="_blank" href="">
+                    <button class="buy-button">Comprar Ahora</button>
                 </a>
             </div>
         </div>
 
-        <!-- Third product card -->
-        <div class="product-card">
-            <img src="../img/shop/te.png" alt="Fermented coffee shell tea" class="product-image">
-            <h3>Fermented Coffee Shell Tea</h3>
-            <p>Fermented coffee shell tea presentations of (100 gr)</p>
-            <div class="price">15.000$</div>
+        <!-- Té de cáscara de café -->
+        <div class="product-card" data-product="Bolsa de Té de Cáscara de Café Fermentado">
+            <img src="../img/shop/te.png" alt="Té" class="product-image">
+            <h3>Bolsa de Té de Cáscara de Café Fermentado</h3>
+            <p>Solo disponible en 100g</p>
+            <select class="product-select size-select">
+                <option value="100g">100g</option>
+            </select>
+            <select class="product-select quantity-select">
+                <option value="1">1 unidad</option>
+                <option value="2">2 unidades</option>
+                <option value="3">3 unidades</option>
+                <option value="4">4 unidades</option>
+                <option value="5">5 unidades</option>
+            </select>
+            <div class="price">$0</div> <!-- Valor inicial visible, el JS lo actualizará -->
             <div class="button-container">
-                <button class="view-button">View Product</button>
-                <a href="https://api.whatsapp.com/send?phone=573232056895&text=I%20am%20interested%20in%20buying%20Fermented%20Coffee%20Shell%20Tea" target="_blank">
-                    <button class="buy-button">Buy Now</button>
+                <button class="view-button">Ver Producto</button>
+                <a class="buy-button" target="_blank" href="">
+                    <button class="buy-button">Comprar Ahora</button>
                 </a>
             </div>
         </div>
     </div>
+    <script>
+        if (window.initializeShop) window.initializeShop();
+    </script>
 </body>
 </html>

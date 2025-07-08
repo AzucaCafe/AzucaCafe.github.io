@@ -1,6 +1,7 @@
 function loadComponentWithAnimation(id, file) {
     const content = document.getElementById(id);
     content.classList.add('slide-out');
+
     setTimeout(() => {
         fetch(file)
             .then(response => response.text())
@@ -8,11 +9,19 @@ function loadComponentWithAnimation(id, file) {
                 content.innerHTML = data;
                 content.classList.remove('slide-out');
                 content.classList.add('hidden');
+
                 setTimeout(() => {
                     content.classList.remove('hidden');
                     content.classList.add('slide-in');
+
+                    // ✅ Reactiva los listeners en el nuevo contenido
+                    addNavLinkListeners();
+
+                    // Opcional: podrías hacer algo específico para home si quieres
                     if (file.includes('home.html')) {
+                        // lógica específica para home si es necesaria
                     }
+
                 }, 100);
             })
             .catch(error => console.error('Error loading component:', error));
