@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const nombreProducto = data.productType.replace(/^Bolsa de /, '').replace(/^Té de /, '').toLowerCase();
         const unidad = cantidad === 1 ? 'bolsa' : 'bolsas';
         const mensaje = `Hola, estoy interesado en comprar ${cantidad} ${unidad} de ${nombreProducto} de (${currentSize})`;
-        const url = `https://api.whatsapp.com/send?phone=573232056895&text=${encodeURIComponent(mensaje)}`;
+        const url = `https://api.whatsapp.com/send?phone=+573232056895&text=${encodeURIComponent(mensaje)}`;
 
         // Render principal
         container.innerHTML = `

@@ -1,12 +1,10 @@
 /* Estilos generales del body */
 body {
-    font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    background-color: #B0C0BC;
-    background-color: #dbdad6;
     background-color: #ffffff;
     color: #000000;
+    font-family: 'Montserrat', sans-serif; /* Fuente general para todo el body */
 }
 
 .navbar-container {
@@ -17,11 +15,12 @@ body {
     max-width: 1000px;
     margin: 20px auto;
     color: #0F0F0F;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif; /* Fuente 'Playfair Display' para la navbar */
+    font-weight: bold; /* Aplica negrita a toda la navbar */
 }
 
 .left-content {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif; /* Fuente para el texto de la izquierda */
     font-size: 15px;
     display: flex;
     align-items: center;
@@ -38,7 +37,8 @@ body {
 }
 
 nav {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif; /* Fuente 'Playfair Display' para la barra de navegación */
+    font-weight: bold; /* Aplica negrita a toda la barra de navegación */
     font-size: 35px;
     display: flex;
     align-items: center;
@@ -79,17 +79,17 @@ nav ul li a {
     font-size: 15px;
     position: relative;
     overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    flex-wrap: wrap;
+    font-family: 'Playfair Display', serif; /* Fuente 'Playfair Display' para los enlaces */
+    font-weight: bold; /* Aplica negrita a los enlaces */
 }
 
 nav ul li a:hover {
-    background-color: #A77352;
-    border: 3px solid #A77352;
+    background-color: #704e39;
+    border: 3px solid #704e39;
     color: #fff;
     border-radius: 25px;
 }
+
 
 /* Estilos del dropdown */
 .dropdown {
@@ -97,9 +97,9 @@ nav ul li a:hover {
 }
 
 .dropdown-content {
-    visibility: hidden; /* Oculta el menú inicialmente */
-    opacity: 0; /* Empieza con opacidad 0 */
-    transform: translateY(-20px); /* Comienza más arriba del botón */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
     transform: translateX(-50%) translateY(-20px);
     display: block;
     position: absolute;
@@ -108,13 +108,13 @@ nav ul li a:hover {
     max-width: 160px;
     min-width: 100px;
     z-index: 1;
-    border-radius: 15px; /* Borde redondeado de 15px */
-    left: 50%; /* Centra el dropdown horizontalmente */
-    transform: translateX(-50%); /* Ajuste para centrar el dropdown */
-    margin-top: 10px; /* Separación debajo del botón */
+    border-radius: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
     padding: 10px;
     border: 2px solid #000000;
-    transition: visibility 0s, opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición suave para la opacidad y el desplazamiento */
+    transition: visibility 0s, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .dropdown-content li {
@@ -123,7 +123,7 @@ nav ul li a:hover {
 }
 
 .dropdown-content li:last-child {
-    margin-bottom: 0; /* Elimina el margen del último elemento */
+    margin-bottom: 0;
 }
 
 .dropdown-content li a {
@@ -136,7 +136,7 @@ nav ul li a:hover {
 }
 
 .dropdown-content li a:hover {
-    background-color: #A77352;
+    background-color: #704e39;
     color: white;
     border-radius: 15px;
 }
@@ -170,6 +170,6 @@ nav ul li a:hover {
     }
 
     .dropdown-content {
-        left: 15%; /* Centra el dropdown horizontalmente */
+        left: 15%;
     }
 }

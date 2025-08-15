@@ -93,7 +93,7 @@ function actualizarWhatsappLink(card) {
     const nombreProducto = productType.replace(/^Bolsa de /, '').replace(/^Té de /, '').toLowerCase();
     const unidad = cantidad === 1 ? (nombreProducto === 'cáscara de café fermentado' ? 'bolsa' : 'bolsa') : (nombreProducto === 'cáscara de café fermentado' ? 'bolsas' : 'bolsas');
             const mensaje = `Hola, estoy interesado en comprar ${cantidad} ${unidad} de ${nombreProducto} (${size})`;
-    const url = `https://api.whatsapp.com/send?phone=573232056895&text=${encodeURIComponent(mensaje)}`;
+    const url = `https://api.whatsapp.com/send?phone=+573232056895&text=${encodeURIComponent(mensaje)}`;
 
     buyLink.href = url;
 }

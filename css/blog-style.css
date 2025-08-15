@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
     color: #333;
     background-color: #ffffff;
     line-height: 1.6;
@@ -52,6 +52,7 @@ body {
     background-color: #fff; /* Fondo blanco al pasar el ratón */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
     color: #000000;
+    font-weight: bold;
 }
 
 /* Separación entre publicaciones */
@@ -172,7 +173,7 @@ body {
     flex-direction: column; /* Coloca el título arriba y el texto abajo */
     justify-content: center;
     margin-right: 20px; /* Espacio entre el texto y la imagen */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 .project-card h3 {
@@ -183,7 +184,7 @@ body {
 }
 
 .project-card p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1em;
     color: #ffffff;
     margin: 0;

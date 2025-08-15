@@ -1,29 +1,38 @@
 /* Estilos para tarjetas interactivas de productos */
 
+/* Título de la tienda */
 .shop-title {
     text-align: center;
     font-size: 2em;
     margin-top: 1em;
     color: #3e3e3e;
+    font-family: 'Playfair Display', serif; /* Título en fuente serif */
+    font-weight: bold; /* Negrita */
 }
 
+/* Contenedor principal de los productos */
 .shop-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     padding: 2rem;
+    font-family: 'Playfair Display', serif; /* Título en fuente serif */
+    font-weight: bold; /* Fuente general para los productos */
 }
 
+/* Tarjetas de productos */
 .product-card {
     width: 280px;
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     padding: 1rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    font-family: 'Playfair Display', serif; /* Título en fuente serif */
+ /* Fuente para las tarjetas */
 }
 
 .product-card:hover {
@@ -36,6 +45,7 @@
     box-shadow: 0 0 15px rgba(241, 106, 40, 0.4);
 }
 
+/* Imagen de los productos */
 .product-image {
     width: 100%;
     height: auto;
@@ -44,18 +54,23 @@
     object-fit: cover;
 }
 
+/* Título del producto */
 .product-card h3 {
     font-size: 1.2em;
-    color: #222;
+    color: #000000;
     margin: 0.5em 0;
+    font-family: 'Playfair Display', serif; /* Título en fuente serif */
+    font-weight: bold; /* Negrita */
 }
 
+/* Descripción del producto */
 .product-card p {
     font-size: 0.95em;
     color: #666;
     margin-bottom: 1rem;
 }
 
+/* Selector de productos */
 .product-select {
     width: 100%;
     padding: 8px;
@@ -99,6 +114,7 @@
     background: #fff;
 }
 
+/* Precio del producto */
 .price {
     font-weight: bold;
     margin: 0.5rem 0 1rem;
@@ -107,12 +123,14 @@
     min-height: 1.5em; /* Asegura espacio aunque esté vacío */
 }
 
+/* Contenedor de botones */
 .button-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
+/* Botones de ver y comprar */
 .view-button,
 .buy-button button {
     background-color: #f16a28;
@@ -121,13 +139,33 @@
     padding: 10px;
     font-size: 0.95em;
     border-radius: 6px;
-    cursor: po  inter;
+    cursor: pointer;
     transition: background-color 0.2s ease;
+    font-family: 'Playfair Display', serif; /* Título en fuente serif */
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%; /* Hace que los botones sean del mismo ancho */
 }
 
-.view-button:hover,
+/* Estilo específico para el botón "Ver Producto" */
+.view-button {
+    background-color: #000000;
+    font-size: 14px;
+    padding: 8px 20px;
+}
+
+/* Estilo específico para el botón "Comprar Ahora" */
+.buy-button button {
+    font-size: 18px;
+    padding: 14px 30px;
+}
+
 .buy-button button:hover {
-    background-color: #cf571d;
+    background-color: #4caf50;
+}
+
+.view-button:hover{
+    background-color: #704e39;
 }
 
 /* Responsive */

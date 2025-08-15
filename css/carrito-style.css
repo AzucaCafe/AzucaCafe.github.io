@@ -8,6 +8,7 @@
     display: flex;
     gap: 32px;
     align-items: flex-start;
+    font-family: 'Montserrat', 'Arial', sans-serif; /* Se aplica fuente aquí */
 }
 
 .carrito-carrusel {
@@ -51,11 +52,13 @@
 .carrito-info {
     flex: 1;
     padding-left: 16px;
+    font-family: 'Roboto', sans-serif; /* Diferente fuente para la información */
 }
 
 .carrito-title {
     font-size: 2rem;
     margin-bottom: 8px;
+    font-family: 'Playfair Display', serif; /* Fuente serif para los títulos */
 }
 
 .carrito-detail {
@@ -85,7 +88,7 @@
     cursor: pointer;
     margin-top: 16px;
     transition: background 0.2s;
-    font-family: inherit;
+    font-family: 'Montserrat', sans-serif; /* Mantén la fuente Montserrat en el botón */
 }
 .buy-button:hover {
     background: #1b5e20;
@@ -106,6 +109,7 @@
     padding: 6px 14px;
     transition: background 0.2s, color 0.2s;
     border: 1px solid #e3eaf2;
+    font-family: 'Arial', sans-serif; /* Fuente Arial para los enlaces */
 }
 .back-link:hover {
     background: #e3eaf2;
