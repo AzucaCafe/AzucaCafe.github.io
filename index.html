@@ -6,6 +6,7 @@
     <title>AzuCafe Web Site</title>
     <link rel="icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/home-styles.css">
+    <link rel="stylesheet" href="css/planes-styles.css">
     <link rel="stylesheet" href="css/navbar-styles.css">
     <link rel="stylesheet" href="css/footer-styles.css">
 </head>
@@ -18,6 +19,7 @@
     <script src="javascript/components.js"></script>
     <script src="javascript/navbar.js"></script>
     <script src="javascript/home.js"></script>
+    <script src="javascript/planes.js"></script>
     <script src="javascript/footer.js"></script>
     <script src="javascript/history.js"></script>
     <script src="javascript/blog.js"></script>
@@ -38,6 +40,17 @@
 
             loadComponentWithAnimation('footer', 'html/footer.html');
             setMarqueeSpeed(20);
+
+            // Escuchar cambios en el hash para navegación dinámica
+            window.addEventListener('hashchange', function() {
+                const newHash = window.location.hash;
+                if (newHash) {
+                    const target = newHash.replace('#', '');
+                    loadComponentWithAnimation('content', `html/${target}.html`);
+                } else {
+                    loadComponentWithAnimation('content', 'html/home.html');
+                }
+            });
         });
 
         function setMarqueeSpeed(speed) {

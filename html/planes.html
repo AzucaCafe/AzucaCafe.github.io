@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes - AzucaCafe</title>
+    <link rel="icon" href="../img/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/planes-styles.css">
+    <script src="../javascript/planes.js" defer></script>
+</head>
+<body>
+    <!-- SECCIÓN DE BIENVENIDA A PLANES -->
+    <section class="planes-hero">
+        <div class="planes-hero-content">
+            <h1 class="planes-hero-title">Nuestros Planes</h1>
+            <p class="planes-hero-subtitle">Elige el plan perfecto para tu pasión por el café</p>
+            <div class="hero-decoration">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PLANES -->
+    <section class="planes-section">
+        <div class="planes-container">
+            <!-- PLAN BÁSICO -->
+            <div class="plan-card" data-plan="basico">
+                <div class="plan-header">
+                    <div class="plan-badge">Principiante</div>
+                    <h3 class="plan-name">Plan Básico</h3>
+                    <p class="plan-description">Perfecto para descubrir nuevos sabores</p>
+                </div>
+                
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">29.990</span>
+                    <span class="period">/mes</span>
+                </div>
+
+                <div class="plan-features">
+                    <ul>
+                        <li><span class="feature-icon">✓</span> 250g de café mensual</li>
+                        <li><span class="feature-icon">✓</span> Selección de 1 variedad</li>
+                        <li><span class="feature-icon">✓</span> Grano o molido a tu gusto</li>
+                        <li><span class="feature-icon">✓</span> Envío gratis en Colombia</li>
+                        <li><span class="feature-icon">✗</span> Acceso a degustaciones</li>
+                        <li><span class="feature-icon">✗</span> Descuento especial</li>
+                    </ul>
+                </div>
+
+                <button class="plan-btn" data-plan="basico">
+                    <span>Seleccionar Plan</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- PLAN PROFESIONAL -->
+            <div class="plan-card featured" data-plan="profesional">
+                <div class="plan-badge-featured">Popular</div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Plan Profesional</h3>
+                    <p class="plan-description">La opción más completa y versátil</p>
+                </div>
+                
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">59.990</span>
+                    <span class="period">/mes</span>
+                </div>
+
+                <div class="plan-features">
+                    <ul>
+                        <li><span class="feature-icon">✓</span> 500g de café mensual</li>
+                        <li><span class="feature-icon">✓</span> Selección de 2 variedades</li>
+                        <li><span class="feature-icon">✓</span> Grano o molido a tu gusto</li>
+                        <li><span class="feature-icon">✓</span> Envío gratis en Colombia</li>
+                        <li><span class="feature-icon">✓</span> Acceso a degustaciones</li>
+                        <li><span class="feature-icon">✓</span> 10% descuento en compras</li>
+                    </ul>
+                </div>
+
+                <button class="plan-btn featured" data-plan="profesional">
+                    <span>Seleccionar Plan</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- PLAN PREMIUM -->
+            <div class="plan-card" data-plan="premium">
+                <div class="plan-badge">Premium</div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Plan Premium</h3>
+                    <p class="plan-description">Para los verdaderos apasionados</p>
+                </div>
+                
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">99.990</span>
+                    <span class="period">/mes</span>
+                </div>
+
+                <div class="plan-features">
+                    <ul>
+                        <li><span class="feature-icon">✓</span> 1kg de café mensual</li>
+                        <li><span class="feature-icon">✓</span> Selección de 4 variedades</li>
+                        <li><span class="feature-icon">✓</span> Grano o molido a tu gusto</li>
+                        <li><span class="feature-icon">✓</span> Envío gratis en Colombia</li>
+                        <li><span class="feature-icon">✓</span> Acceso VIP a degustaciones</li>
+                        <li><span class="feature-icon">✓</span> 20% descuento en compras</li>
+                    </ul>
+                </div>
+
+                <button class="plan-btn" data-plan="premium">
+                    <span>Seleccionar Plan</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE COMPARATIVA -->
+    <section class="planes-comparison">
+        <h2>Comparativa de Planes</h2>
+        <div class="comparison-table">
+            <div class="table-row header-row">
+                <div class="table-cell feature">Características</div>
+                <div class="table-cell">Básico</div>
+                <div class="table-cell">Profesional</div>
+                <div class="table-cell">Premium</div>
+            </div>
+            
+            <div class="table-row">
+                <div class="table-cell feature">Cantidad Mensual</div>
+                <div class="table-cell">250g</div>
+                <div class="table-cell">500g</div>
+                <div class="table-cell">1kg</div>
+            </div>
+            
+            <div class="table-row">
+                <div class="table-cell feature">Variedades</div>
+                <div class="table-cell">1</div>
+                <div class="table-cell">2</div>
+                <div class="table-cell">4</div>
+            </div>
+            
+            <div class="table-row">
+                <div class="table-cell feature">Envío Gratis</div>
+                <div class="table-cell">✓</div>
+                <div class="table-cell">✓</div>
+                <div class="table-cell">✓</div>
+            </div>
+            
+            <div class="table-row">
+                <div class="table-cell feature">Degustaciones</div>
+                <div class="table-cell">✗</div>
+                <div class="table-cell">✓</div>
+                <div class="table-cell">VIP ✓</div>
+            </div>
+            
+            <div class="table-row">
+                <div class="table-cell feature">Descuento</div>
+                <div class="table-cell">-</div>
+                <div class="table-cell">10%</div>
+                <div class="table-cell">20%</div>
+            </div>
+            
+            <div class="table-row">
+                <div class="table-cell feature">Soporte Prioritario</div>
+                <div class="table-cell">✗</div>
+                <div class="table-cell">✗</div>
+                <div class="table-cell">✓</div>
+            </div>
+            
+            <div class="table-row">
+                <div class="table-cell feature">Cancelación</div>
+                <div class="table-cell">Flexible</div>
+                <div class="table-cell">Flexible</div>
+                <div class="table-cell">Flexible</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
+    <section class="planes-faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Puedo cambiar de plan en cualquier momento?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, puedes cambiar, pausar o cancelar tu suscripción en cualquier momento sin penalidades. Tu cambio será efectivo al mes siguiente.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cómo funciona el envío?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Recibiras tu café a través de correo nacional certificado. El envío es gratis para todos nuestros planes y toma entre 3-5 días hábiles.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Puedo elegir las variedades de café?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutamente. En tu panel de control podrás seleccionar cuáles variedades deseas recibir cada mes o dejarnos que sorprendamos con nuestras recomendaciones.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Qué pasa si me voy de vacaciones?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Puedes pausar tu suscripción por el tiempo que necesites. Tu período de suscripción se ampliará automáticamente para mantener tus beneficios.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Hay descuento para compras en cantidad?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, los planes Profesional y Premium incluyen descuentos en compras adicionales. Además, los clientes VIP reciben ofertas exclusivas regulares.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Necesito comprometer un período mínimo?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No hay período mínimo obligatorio. Puedes cancelar cuando quieras, aunque nos encantaría que disfrutes del mejor café del país con nosotros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE LLAMADA A ACCIÓN -->
+    <section class="planes-cta">
+        <div class="cta-content">
+            <h2>¿Listo para elevar tu experiencia con el café?</h2>
+            <p>Únete a cientos de clientes felices que ya disfrutan de café premium cada mes</p>
+            <div class="cta-buttons">
+                <button class="cta-btn primary" onclick="document.querySelector('.plan-card.featured').scrollIntoView({behavior: 'smooth'})">
+                    Ver Planes
+                </button>
+                <button class="cta-btn secondary" onclick="window.location.hash = 'home'">
+                    Volver al Inicio
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

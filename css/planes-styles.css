@@ -1,0 +1,760 @@
+/* ========================
+   PLANES STYLES - DISEÑO PROFESIONAL
+======================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    color: #2c3e2e;
+    background-color: #fafaf8;
+}
+
+/* ========================
+   HERO SECTION
+======================== */
+.planes-hero {
+    background: linear-gradient(135deg, #3a4a2c 0%, #556345 50%, #6a7c58 100%);
+    padding: 120px 5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+.planes-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.planes-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.planes-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4vw;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.planes-hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3vw;
+    margin: 0;
+    color: rgba(255,255,255,0.9);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.hero-decoration {
+    position: relative;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    background: white;
+    top: -80px;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    background: white;
+    top: -50px;
+    right: 10%;
+    animation: float 8s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(20px); }
+}
+
+/* ========================
+   PLANES SECTION
+======================== */
+.planes-section {
+    padding: 100px 5vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.planes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.plan-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    border-color: #556345;
+}
+
+.plan-card.featured {
+    transform: scale(1.05);
+    border-color: #3a4a2c;
+    box-shadow: 0 20px 60px rgba(58, 74, 44, 0.2);
+}
+
+.plan-card.featured:hover {
+    transform: scale(1.05) translateY(-15px);
+    box-shadow: 0 25px 70px rgba(58, 74, 44, 0.3);
+}
+
+.plan-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #556345 0%, #6a7c58 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.plan-badge-featured {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ffd166 0%, #ffb700 100%);
+    color: #2c3e2e;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 5px 15px rgba(255, 209, 102, 0.3);
+}
+
+.plan-header {
+    margin-bottom: 30px;
+}
+
+.plan-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    color: #2c3e2e;
+    font-weight: 700;
+}
+
+.plan-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95em;
+    color: #666;
+    margin: 0;
+    font-weight: 300;
+}
+
+.plan-price {
+    margin: 30px 0;
+    padding: 25px 0;
+    border-top: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.currency {
+    font-size: 1.2em;
+    color: #556345;
+    font-weight: 600;
+}
+
+.amount {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    color: #2c3e2e;
+}
+
+.period {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #999;
+    margin-left: auto;
+}
+
+.plan-features {
+    flex: 1;
+    margin-bottom: 30px;
+}
+
+.plan-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.plan-features li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95em;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-icon {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #556345;
+    min-width: 20px;
+}
+
+.plan-features li:has(.feature-icon:contains("✗")) {
+    opacity: 0.5;
+}
+
+.plan-btn {
+    background: linear-gradient(135deg, #3a4a2c 0%, #556345 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    letter-spacing: 0.5px;
+}
+
+.plan-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(58, 74, 44, 0.3);
+    background: linear-gradient(135deg, #2c3a24 0%, #445132 100%);
+}
+
+.plan-btn.featured {
+    background: linear-gradient(135deg, #ffd166 0%, #ffb700 100%);
+    color: #2c3e2e;
+    box-shadow: 0 5px 15px rgba(255, 209, 102, 0.3);
+}
+
+.plan-btn.featured:hover {
+    background: linear-gradient(135deg, #ffb700 0%, #ff9800 100%);
+    box-shadow: 0 10px 30px rgba(255, 209, 102, 0.4);
+    color: white;
+}
+
+.btn-arrow {
+    transition: transform 0.3s ease;
+}
+
+.plan-btn:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* ========================
+   COMPARATIVA TABLE
+======================== */
+.planes-comparison {
+    padding: 100px 5vw;
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.planes-comparison h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    text-align: center;
+    color: #2c3e2e;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.comparison-table {
+    display: grid;
+    gap: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.header-row {
+    background: linear-gradient(135deg, #3a4a2c 0%, #556345 100%);
+    color: white;
+}
+
+.table-cell {
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+}
+
+.table-row:last-child .table-cell {
+    border-right: 1px solid #e0e0e0;
+}
+
+.table-cell:last-child {
+    border-right: none;
+}
+
+.header-row .table-cell {
+    border-right-color: rgba(255,255,255,0.2);
+    border-bottom: none;
+}
+
+.table-cell.feature {
+    text-align: left;
+    font-weight: 600;
+    color: #2c3e2e;
+}
+
+.header-row .table-cell.feature {
+    color: white;
+}
+
+.table-row:nth-child(even):not(.header-row) {
+    background-color: #f9f9f9;
+}
+
+.table-row:hover:not(.header-row) {
+    background-color: #f0f5f0;
+}
+
+/* ========================
+   FAQ SECTION
+======================== */
+.planes-faq {
+    padding: 100px 5vw;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.planes-faq h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    text-align: center;
+    color: #2c3e2e;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.faq-container {
+    display: grid;
+    gap: 20px;
+}
+
+.faq-item {
+    background: white;
+    border: 2px solid #e8e8e8;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #556345;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2c3e2e;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.faq-item.active .faq-question {
+    background: linear-gradient(135deg, #3a4a2c 0%, #556345 100%);
+    color: white;
+}
+
+.faq-icon {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+    font-weight: 300;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: white;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+.faq-answer p {
+    padding: 25px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ========================
+   CTA SECTION
+======================== */
+.planes-cta {
+    background: linear-gradient(135deg, #3a4a2c 0%, #556345 50%, #6a7c58 100%);
+    padding: 100px 5vw;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.planes-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+}
+
+.cta-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    margin: 0 0 40px 0;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    padding: 15px 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.cta-btn.primary {
+    background: white;
+    color: #3a4a2c;
+}
+
+.cta-btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: white;
+}
+
+.cta-btn.secondary:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-3px);
+}
+
+/* ========================
+   ANIMACIONES
+======================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.plan-card {
+    animation: slideUp 0.6s ease-out;
+}
+
+.plan-card:nth-child(1) { animation-delay: 0.1s; }
+.plan-card:nth-child(2) { animation-delay: 0.2s; }
+.plan-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* ========================
+   MEDIA QUERIES
+======================== */
+@media (max-width: 1024px) {
+    .planes-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plan-card.featured {
+        transform: scale(1.02);
+    }
+
+    .plan-card.featured:hover {
+        transform: scale(1.02) translateY(-15px);
+    }
+
+    .table-row {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .planes-hero {
+        padding: 60px 20px;
+    }
+
+    .planes-hero-title {
+        font-size: 2.5em;
+    }
+
+    .planes-hero-subtitle {
+        font-size: 1em;
+    }
+
+    .planes-section {
+        padding: 60px 20px;
+    }
+
+    .planes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card.featured {
+        transform: scale(1);
+    }
+
+    .plan-card.featured:hover {
+        transform: translateY(-15px);
+    }
+
+    .plan-name {
+        font-size: 1.5em;
+    }
+
+    .amount {
+        font-size: 2.5em;
+    }
+
+    .planes-comparison {
+        padding: 60px 20px;
+    }
+
+    .planes-comparison h2 {
+        font-size: 2em;
+    }
+
+    .table-row {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        font-size: 0.85em;
+    }
+
+    .table-cell {
+        padding: 15px 10px;
+    }
+
+    .planes-faq {
+        padding: 60px 20px;
+    }
+
+    .planes-faq h2 {
+        font-size: 2em;
+    }
+
+    .planes-cta {
+        padding: 60px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 2em;
+    }
+
+    .cta-content p {
+        font-size: 1em;
+    }
+
+    .cta-buttons {
+        gap: 15px;
+    }
+
+    .cta-btn {
+        padding: 12px 30px;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .planes-hero {
+        padding: 40px 15px;
+    }
+
+    .planes-hero-title {
+        font-size: 2em;
+    }
+
+    .planes-hero-subtitle {
+        font-size: 0.9em;
+    }
+
+    .planes-section {
+        padding: 40px 15px;
+    }
+
+    .plan-card {
+        padding: 25px 20px;
+    }
+
+    .plan-name {
+        font-size: 1.3em;
+    }
+
+    .amount {
+        font-size: 2em;
+    }
+
+    .plan-features li {
+        font-size: 0.85em;
+        gap: 10px;
+    }
+
+    .plan-btn {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+
+    .table-row {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    .table-cell {
+        padding: 10px;
+        border: none !important;
+    }
+
+    .table-cell.feature {
+        font-weight: 700;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .faq-question {
+        padding: 15px;
+    }
+
+    .faq-answer p {
+        padding: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+}

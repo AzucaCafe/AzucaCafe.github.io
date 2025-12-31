@@ -3,82 +3,850 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="icon" href="..\img\icon.png" type="image/x-icon">
+    <title>Inicio - AzucaCafe</title>
+    <link rel="icon" href="../img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/home-styles.css">
-    <script src="../javascript/navbar.js" defer></script> <!-- Incluye el archivo de navegación -->
+    <script src="../javascript/navbar.js" defer></script>
     <script src="../javascript/utils.js" defer></script>
     <script src="../javascript/home.js" defer></script>
     <script src="../javascript/components.js" defer></script>
 </head>
 <body>
-    <div class="portfolio-header">
-        <div class="title-wall">
-            <h1>Bienvenido</h1>
+    <!-- SECCIÓN DE BIENVENIDA MEJORADA -->
+    <div class="portfolio-header" style="display: flex; align-items: center; justify-content: center; gap: 48px; max-width: 1200px; margin: 0 auto; padding: 80px 0;">
+        <div class="header-image" style="flex: 1; display: flex; justify-content: center; align-items: center;">
+            <img src="../img/wall.jpg" alt="Imagen de presentación" style="width: 100%; max-width: 480px; border-radius: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
         </div>
-
-        <div class="pic-wall">
-            <img src="../img/wall.jpg" alt="Imagen de presentación">
+        <div class="header-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+            <h1 style="font-size: 3.2rem; color: #222; font-weight: 700; margin-bottom: 24px;">Bienvenido a Azuca Café</h1>
+            <p style="font-size: 1.25rem; color: #444; margin-bottom: 32px; max-width: 420px;">Café con alma de aves, tradición y esencia colombiana que despierta tus sentidos.</p>
+            <button style="background: #556345; color: #fff; border: none; border-radius: 32px; padding: 16px 40px; font-size: 1rem; font-weight: 600; cursor: pointer;">Vuela hacia tu plan</button>
         </div>
     </div>
 
-    <div class="marquee">
-        <span>Bienvenido a nuestra página empresarial, disfrútala y contáctanos si te interesa algo o deseas adquirir un producto. Que tengas un excelente día.</span>
-    </div>
-
-    <div class="cards-container">
-        <!-- Primera carta - Tienda -->
-        <a id="shop" href="#" data-target="shop" class="card-link">
-            <div class="card">
-                <img src="../img/cards/1.jpg" alt="Cápsulas de café">
-                <h3>Tienda</h3>
+    <!-- SECCIÓN DE TARJETAS MEJORADAS CON FONDO -->
+    <div class="cards-section" style="background-color: #f7f7f7; position: relative;">
+        <!-- Overlay eliminado para mostrar el fondo gris claro -->
+        
+        <div class="cards-content" style="position: relative; z-index: 2;">
+            <div class="cards-intro">
+                <h2 style="color: #111;">Explora Nuestro Mundo</h2>
+                <p style="color: #222;">Descubre todo lo que Azuca Café tiene para ti</p>
             </div>
-        </a>
+            
+            <div class="cards-container">
+                <button class="card-button" data-target="shop" aria-label="Ir a tienda">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="../img/cards/1.jpg" alt="Tienda de café">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Tienda</h3>
+                            <p class="card-description">Explora nuestro catálogo de café en grano y molido</p>
+                        </div>
+                    </div>
+                </button>
 
-        <!-- Segunda carta - Nuestra historia -->
-        <a id="history-link" href="#" data-target="history" class="card-link">
-            <div class="card">
-                <img src="../img/cards/5.jpg" alt="Coffee Shop">
-                <h3>Nuestra Historia</h3>
+                <button class="card-button" data-target="planes" aria-label="Ir a planes">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="../img/cards/Home1.jpg" alt="Planes de suscripción">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Planes</h3>
+                            <p class="card-description">Suscríbete y recibe café premium cada mes</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button class="card-button" data-target="history" aria-label="Ir a nuestra historia">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="../img/cards/Home1.jpg" alt="Nuestra historia">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Nuestra Historia</h3>
+                            <p class="card-description">Conoce nuestra pasión por el café desde hace mas de 24 años</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button class="card-button" data-target="blog" aria-label="Ir a blog">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="../img/cards/3.jpg" alt="Blog de café">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Blog</h3>
+                            <p class="card-description">Todo sobre la historia, cultura del café y recetas para su preparacion</p>
+                        </div>
+                    </div>
+                </button>
             </div>
-        </a>
+        </div>
+    </div>
 
-        <!-- Tercera carta - Blog -->
-        <a id="blog-link" href="#" data-target="blog" class="card-link">
-            <div class="card">
-                <img src="../img/cards/3.jpg" alt="Cápsulas de café">
-                <h3>Blog (Historia del Café)</h3>
+    <section class="subscription-section">
+        <div class="subscription-wrapper">
+            <div class="subscription-info">
+                <div class="title-container">
+                    <h2 class="subscription-title">
+                        <span class="title-line">Más que café,</span>
+                        <span class="title-line highlight">una experiencia mensual</span>
+                    </h2>
+                    <div class="title-decoration">
+                        <div class="decoration-line"></div>
+                        <div class="decoration-icon">☕</div>
+                        <div class="decoration-line"></div>
+                    </div>
+                </div>
+                
+                <p class="subscription-subtitle">
+                    <span class="subtitle-word">Recibe</span>
+                    <span class="subtitle-word">café</span>
+                    <span class="subtitle-word">en</span>
+                    <span class="subtitle-word">grano</span>
+                    <span class="subtitle-word">o</span>
+                    <span class="subtitle-word">molido,</span>
+                    <span class="subtitle-word">seleccionado</span>
+                    <span class="subtitle-word">y</span>
+                    <span class="subtitle-word">entregado</span>
+                    <span class="subtitle-word">cada</span>
+                    <span class="subtitle-word">mes.</span>
+                    <br>
+                    <span class="subtitle-word highlight">Siempre</span>
+                    <span class="subtitle-word highlight">fresco.</span>
+                    <span class="subtitle-word highlight">Siempre</span>
+                    <span class="subtitle-word highlight">a</span>
+                    <span class="subtitle-word highlight">tu</span>
+                    <span class="subtitle-word highlight">medida.</span>
+                </p>
+                
+                <div class="subscription-steps">
+                    <div class="step-card" data-step="1">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Elige tu café</h3>
+                            <p class="step-description">Origen, perfil y presentación: grano o molido.</p>
+                        </div>
+                        <div class="step-icon">🌱</div>
+                    </div>
+                    
+                    <div class="step-card" data-step="2">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Define la frecuencia</h3>
+                            <p class="step-description">Cantidad y envío mensual según tu consumo.</p>
+                        </div>
+                        <div class="step-icon">📅</div>
+                    </div>
+                    
+                    <div class="step-card" data-step="3">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Disfruta sin preocuparte</h3>
+                            <p class="step-description">Nosotros nos encargamos del resto.</p>
+                        </div>
+                        <div class="step-icon">✨</div>
+                    </div>
+                </div>
+                
+                <button class="subscription-btn" id="openSubscriptionModal">
+                    <span class="btn-text">Suscríbete y ahorra cada mes</span>
+                    <span class="btn-icon">→</span>
+                    <span class="btn-pulse"></span>
+                </button>
+                
+                <div class="subscription-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Clientes satisfechos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Meses de experiencia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">% de recompra</div>
+                    </div>
+                </div>
             </div>
-        </a>
-    </div>
+            
+            <div class="subscription-image">
+                <div class="image-container">
+                    <img src="../img/cards/Home.png" alt="Suscripción de café mensual" class="main-image">
+                    <div class="image-decoration">
+                        <div class="decoration-circle circle-1"></div>
+                        <div class="decoration-circle circle-2"></div>
+                        <div class="decoration-circle circle-3"></div>
+                        <div class="floating-element bean-1">☕</div>
+                        <div class="floating-element bean-2">🌿</div>
+                        <div class="floating-element bean-3">⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal de suscripción -->
+        <div class="subscription-modal" id="subscriptionModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-container">
+                <button class="modal-close">×</button>
+                
+                <div class="modal-header">
+                    <h2 class="modal-title">Tu Experiencia de Café Personalizada</h2>
+                    <p class="modal-subtitle">Descubre todo lo que incluye nuestra suscripción premium</p>
+                </div>
+                
+                <div class="modal-content">
+                    <!-- Sección de ventajas -->
+                    <div class="modal-section">
+                        <h3 class="section-title">🎁 Ventajas Exclusivas</h3>
+                        <div class="advantages-grid">
+                            <div class="advantage-card">
+                                <div class="advantage-icon">🚚</div>
+                                <h4>Envío Gratis</h4>
+                                <p>Entrega a domicilio sin costo adicional en toda la ciudad</p>
+                            </div>
+                            <div class="advantage-card">
+                                <div class="advantage-icon">💰</div>
+                                <h4>20% de Descuento</h4>
+                                <p>Precio especial para suscriptores vs compra individual</p>
+                            </div>
+                            <div class="advantage-card">
+                                <div class="advantage-icon">🎁</div>
+                                <h4>Regalo Mensual</h4>
+                                <p>Cada envío incluye una sorpresa (dulces, infusión, etc.)</p>
+                            </div>
+                            <div class="advantage-card">
+                                <div class="advantage-icon">🔄</div>
+                                <h4>Flexibilidad Total</h4>
+                                <p>Modifica o cancela cuando quieras sin penalización</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sección de variedades -->
+                    <div class="modal-section">
+                        <h3 class="section-title">🌍 Nuestras Variedades</h3>
+                        <div class="varieties-container">
+                            <div class="variety-tabs">
+                                <button class="variety-tab active" data-variety="colombian">Colombiano Premium</button>
+                                <button class="variety-tab" data-variety="ethiopian">Etiopía Yirgacheffe</button>
+                                <button class="variety-tab" data-variety="brazilian">Brasil Santos</button>
+                                <button class="variety-tab" data-variety="blend">Blend Especial</button>
+                            </div>
+                            
+                            <div class="variety-content active" id="colombian">
+                                <div class="variety-info">
+                                    <h4>Colombiano Premium</h4>
+                                    <p>Café suave con notas de caramelo, chocolate y un toque cítrico. Perfecto para empezar el día.</p>
+                                    <ul class="variety-details">
+                                        <li><strong>Origen:</strong> Andes Colombianos</li>
+                                        <li><strong>Tueste:</strong> Medio</li>
+                                        <li><strong>Intensidad:</strong> 7/10</li>
+                                        <li><strong>Recomendado para:</strong> Café de la mañana</li>
+                                    </ul>
+                                </div>
+                                <div class="variety-image">
+                                    <div class="coffee-bean"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="variety-content" id="ethiopian">
+                                <div class="variety-info">
+                                    <h4>Etiopía Yirgacheffe</h4>
+                                    <p>Notas florales y cítricas con un cuerpo ligero. Considerado el champagne de los cafés.</p>
+                                    <ul class="variety-details">
+                                        <li><strong>Origen:</strong> Región de Sidamo, Etiopía</li>
+                                        <li><strong>Tueste:</strong> Ligero</li>
+                                        <li><strong>Intensidad:</strong> 6/10</li>
+                                        <li><strong>Recomendado para:</strong> Tardes especiales</li>
+                                    </ul>
+                                </div>
+                                <div class="variety-image">
+                                    <div class="coffee-bean"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="variety-content" id="brazilian">
+                                <div class="variety-info">
+                                    <h4>Brasil Santos</h4>
+                                    <p>Cuerpo completo con notas de nueces y chocolate. Suave y equilibrado.</p>
+                                    <ul class="variety-details">
+                                        <li><strong>Origen:</strong> Minas Gerais, Brasil</li>
+                                        <li><strong>Tueste:</strong> Medio-oscuro</li>
+                                        <li><strong>Intensidad:</strong> 8/10</li>
+                                        <li><strong>Recomendado para:</strong> Todo el día</li>
+                                    </ul>
+                                </div>
+                                <div class="variety-image">
+                                    <div class="coffee-bean"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="variety-content" id="blend">
+                                <div class="variety-info">
+                                    <h4>Blend Especial Azuca</h4>
+                                    <p>Mezcla exclusiva de nuestros mejores granos. Balance perfecto entre fuerza y sabor.</p>
+                                    <ul class="variety-details">
+                                        <li><strong>Origen:</strong> Mezcla exclusiva</li>
+                                        <li><strong>Tueste:</strong> Variable</li>
+                                        <li><strong>Intensidad:</strong> 9/10</li>
+                                        <li><strong>Recomendado para:</strong> Conocedores</li>
+                                    </ul>
+                                </div>
+                                <div class="variety-image">
+                                    <div class="coffee-bean"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sección de planes -->
+                    <!-- Busca esta sección en tu HTML y actualízala: -->
 
-    <div class="center-container"></div>
-    
-    <div class="text-certifications">
-        <h1>Nuestras Certificaciones</h1>
+                    <!-- Sección de planes -->
+                    <div class="modal-section">
+                        <h3 class="section-title">📦 Planes</h3>
+                        <div class="plans-container">
+                            
+                            <!-- Plan Básico -->
+                            <div class="plan-card">
+                                <div class="plan-image-large">
+                                    <img src="../img/Planes/Plan_Tangara_Real.png" alt="Plan Tangara Real">
+                                </div>
+                                <div class="plan-badge">Ideal para empezar</div>
+                                <div class="plan-header">
+                                    <h4>Tangara Real</h4>
+                                    <div class="plan-price">$29.900<span>/mes</span></div>
+                                </div>
+                                <ul class="plan-features">
+                                    <li>250g de café al mes</li>
+                                    <li>1 variedad a elegir</li>
+                                    <li>Envío estándar</li>
+                                    <li class="disabled">Regalo sorpresa</li>
+                                    <li class="disabled">Descuento adicional</li>
+                                </ul>
+                                <button class="plan-btn" data-plan="basic">Elegir Plan</button>
+                            </div>
+                            
+                            <!-- Plan Premium -->
+                            <div class="plan-card featured">
+                                <div class="plan-image-large">
+                                    <img src="../img/Planes/Plan_Colibri_Frente_Azul.png" alt="Plan Colibri Frente Azul">
+                                </div>
+                                <div class="plan-badge">Más Popular</div>
+                                <div class="plan-header">
+                                    <h4>Colibri Frente Azul</h4>
+                                    <div class="plan-price">$59.900<span>/mes</span></div>
+                                </div>
+                                <ul class="plan-features">
+                                    <li>500g de café al mes</li>
+                                    <li>2 variedades a elegir</li>
+                                    <li>Envío prioritario</li>
+                                    <li>Regalo sorpresa incluido</li>
+                                    <li>15% descuento en tienda</li>
+                                </ul>
+                                <button class="plan-btn" data-plan="premium">Elegir Plan</button>
+                            </div>
+                            
+                            <!-- Plan Experto -->
+                            <div class="plan-card">
+                                <div class="plan-image-large">
+                                    <img src="../img/Planes/Plan_Carpintero.png" alt="Plan Carpintero">
+                                </div>
+                                <div class="plan-badge">Para conocedores</div>
+                                <div class="plan-header">
+                                    <h4>Carpintero Gigante</h4>
+                                    <div class="plan-price">$79.900<span>/mes</span></div>
+                                </div>
+                                <ul class="plan-features">
+                                    <li>1Kg de café al mes</li>
+                                    <li>4 variedades a elegir</li>
+                                    <li>Envío express 24h</li>
+                                    <li>Doble regalo sorpresa</li>
+                                    <li>20% descuento en tienda</li>
+                                </ul>
+                                <button class="plan-btn" data-plan="expert">Elegir Plan</button>
+                            </div>
+
+                            <!-- Plan Elite -->
+                            <div class="plan-card">
+                                <div class="plan-image-large">
+                                    <img src="../img/Planes/Plan_Halcon_Murcielago.png" alt="Plan Élite">
+                                </div>
+                                <div class="plan-badge">Experiencia completa</div>
+                                <div class="plan-header">
+                                    <h4>Halcon Murcielaguero</h4>
+                                    <div class="plan-price">$199.900<span>/mes</span></div>
+                                </div>
+                                <ul class="plan-features">
+                                    <li>2.5Kg de café al mes</li>
+                                    <li>Todas las variedades</li>
+                                    <li>Envío express 24h</li>
+                                    <li>Kit de degustación mensual</li>
+                                    <li>30% descuento en tienda</li>
+                                    <li>Acceso a ediciones limitadas</li>
+                                </ul>
+                                <button class="plan-btn" data-plan="elite">Elegir Plan</button>
+                            </div>
+
+                            <!-- Plan Megascops -->
+                            <div class="plan-card">
+                                <div class="plan-image-large">
+                                    <img src="../img/Planes/Plan_Buho_Megascops.png" alt="Plan Cold Brew Experience">
+                                </div>
+                                <div class="plan-badge">Refrescante</div>
+                                <div class="plan-header">
+                                    <h4>Buho Megascops</h4>
+                                    <div class="plan-price">$69.900<span>/mes</span></div>
+                                </div>
+                                <ul class="plan-features">
+                                    <li>500g de café al mes</li>
+                                    <li>6 botella de Cold Brew 350ml</li>
+                                   <li>10% de descuento en tu siguiente renovación por devolución de los envases</li>
+                                    <li>Envío prioritario</li>
+                                   <li>Regalo sorpresa incluido</li>
+                                    <li>20% descuento en tienda</li>
+                                </ul>
+                                <button class="plan-btn" data-plan="coldbrew">Elegir Plan</button>
+                            </div>
+
+                            <!-- Plan Pico  de Plata -->
+                            <div class="plan-card">
+                                <div class="plan-image-large">
+                                    <img src="../img/Planes/Plan_Tangara_Pico_Plata.png" alt="Plan Café + Cascara">
+                                </div>
+                                <div class="plan-badge">Innovador</div>
+                                <div class="plan-header">
+                                    <h4>Cardenal Pico de Plata</h4>
+                                    <div class="plan-price">$39.900<span>/mes</span></div>
+                                </div>
+                                <ul class="plan-features">
+                                    <li>250g de café en grano</li>
+                                    <li>200g de té de cascara de café</li>
+                                    <li>Guía de preparación</li>
+                                    <li>Envío estándar</li>
+                                    <li>Infusor de tés incluido</li>
+                                    <li>Muestra de miel local</li>
+                                </ul>
+                                <button class="plan-btn" data-plan="cascara">Elegir Plan</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="modal-cta" id="startSubscription">
+                        <span>¡Quiero Mi Suscripción!</span>
+                        <span class="cta-icon">🎉</span>
+                    </button>
+                    <p class="modal-note">*Puedes modificar o cancelar en cualquier momento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion de certificaciones -->
+    <section class="certifications-section">
+        <h1 class="certifications-title">Nuestras Certificaciones</h1>
+        
+        <!-- Texto animado que sube y baja -->
+        <div class="discover-text">
+            <p>Descubre más acerca de los sellos que poseemos</p>
+            <div class="arrow-down">↓</div>
+        </div>
+
+        <div class="certifications-container">
+            <!-- Item 1 -->
+            <div class="cert-item" data-index="0">
+                <div class="cert-img-wrapper">
+                    <img src="../img/sellos/cafe-sello.png" alt="Federación Cafetera">
+                </div>
+                <p class="cert-name">Federación Cafetera de Colombia</p>
+                <div class="cert-details">
+                    <h3>Federación Nacional de Cafeteros</h3>
+                    <div class="detail-section">
+                        <h4>¿Qué significa?</h4>
+                        <p>Certifica que el café cumple con los más altos estándares de calidad, trazabilidad y buenas prácticas cafeteras establecidas en Colombia.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>¿Cómo se consigue?</h4>
+                        <p>Registro del productor, control de calidad exhaustivo y verificación de origen.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Desde cuándo lo tenemos</h4>
+                        <p>Desde 2018, renovado anualmente con excelentes resultados.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="cert-item" data-index="1">
+                <div class="cert-img-wrapper">
+                    <img src="../img/sellos/geoprotegida-sellos.png" alt="Área Geográfica Protegida">
+                </div>
+                <p class="cert-name">Área Geográfica Protegida</p>
+                <div class="cert-details">
+                    <h3>Área Geográfica Protegida</h3>
+                    <div class="detail-section">
+                        <h4>¿Qué significa?</h4>
+                        <p>Garantiza que el café proviene de una región específica con condiciones geográficas únicas.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>¿Cómo se consigue?</h4>
+                        <p>Verificación de origen mediante geolocalización y análisis de suelo.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Desde cuándo lo tenemos</h4>
+                        <p>Certificados desde 2020 para nuestras fincas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="cert-item" data-index="2">
+                <div class="cert-img-wrapper">
+                    <img src="../img/sellos/origen-sello.png" alt="Denominación de Origen">
+                </div>
+                <p class="cert-name">Denominación de Origen Protegida</p>
+                <div class="cert-details">
+                    <h3>Denominación de Origen Cafetero</h3>
+                    <div class="detail-section">
+                        <h4>¿Qué significa?</h4>
+                        <p>Reconocimiento oficial de características únicas derivadas del territorio de origen.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>¿Cómo se consigue?</h4>
+                        <p>Registro ante autoridades y demostración de características únicas.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Desde cuándo lo tenemos</h4>
+                        <p>Desde 2019, siendo pioneros en esta distinción.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="cert-item" data-index="3">
+                <div class="cert-img-wrapper">
+                    <img src="../img/sellos/cundinamarca-sello.png" alt="Cundinamarca">
+                </div>
+                <p class="cert-name">San Francisco (Cundinamarca)</p>
+                <div class="cert-details">
+                    <h3>Café de Cundinamarca</h3>
+                    <div class="detail-section">
+                        <h4>¿Qué significa?</h4>
+                        <p>Destaca la calidad y tradición cafetera específica del departamento.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>¿Cómo se consigue?</h4>
+                        <p>Certificación departamental y evaluación de prácticas agrícolas.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Desde cuándo lo tenemos</h4>
+                        <p>Desde nuestros inicios en 2017.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="cert-item" data-index="4">
+                <div class="cert-img-wrapper">
+                    <img src="../img/sellos/sanfrancisco-sello.png" alt="San Francisco">
+                </div>
+                <p class="cert-name">Sello de San Francisco</p>
+                <div class="cert-details">
+                    <h3>Sello San Francisco</h3>
+                    <div class="detail-section">
+                        <h4>¿Qué significa?</h4>
+                        <p>Identifica productos locales producidos bajo prácticas sostenibles y comercio justo.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>¿Cómo se consigue?</h4>
+                        <p>Verificación de producción local y prácticas sostenibles.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Desde cuándo lo tenemos</h4>
+                        <p>Desde 2021, reflejando nuestro compromiso comunitario.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card flotante expandida -->
+        <div class="certification-modal" id="certModal">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <div class="modal-body">
+                    <div class="modal-left">
+                        <img id="modalLogo" src="" alt="Logo certificación">
+                        <h3 id="modalTitle"></h3>
+                    </div>
+                    <div class="modal-right">
+                        <div id="modalDetails"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECCIÓN DE UBICACIONES MEJORADA -->
+<section class="locations-section" id="ubicaciones">
+    <div class="locations-wrapper">
+        <div class="locations-header">
+            <h2 class="locations-title">Nuestros Ubicaciones Importantes</h2>
+        </div>
+        
+        <div class="locations-tabs">
+            <div class="location-tab active" data-location="san-francisco">
+                <div class="tab-icon">🌱</div>
+                <div class="tab-content">
+                    <h4>Finca San Francisco</h4>
+                    <p>Cundinamarca (1.800 msnm)</p>
+                </div>
+            </div>
+            
+            <div class="location-tab" data-location="sede-bogota">
+                <div class="tab-icon">🏙️</div>
+                <div class="tab-content">
+                    <h4>Sede en  Bogotá</h4>
+                    <p>Punto de distribucion</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="locations-content">
+            <!-- FINCA SAN FRANCISCO -->
+            <div class="location-item active" data-location="san-francisco">
+                <div class="location-grid">
+                    <div class="location-details">
+                        <div class="coffee-info">
+                            <div class="coffee-header">
+                                <h3>Café de Altura - Finca San Francisco</h3>
+                                <div class="altitude-badge">1.800 msnm</div>
+                            </div>
+                            
+                            <div class="coffee-stats">
+                                <div class="stat-card">
+                                    <div class="stat-icon">📍</div>
+                                    <div class="stat-content">
+                                        <h4>Altitud</h4>
+                                        <p>1.800 metros sobre el nivel del mar</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-card">
+                                    <div class="stat-icon">🌳</div>
+                                    <div class="stat-content">
+                                        <h4>Entorno Natural</h4>
+                                        <p>Bosque nativo, quebradas naturales, arboles de naranja y arboles de platano</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-card">
+                                    <div class="stat-icon">🫘</div>
+                                    <div class="stat-content">
+                                        <h4>Variedad Principal</h4>
+                                        <p>Castillo 100%</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-card">
+                                    <div class="stat-icon">🌡️</div>
+                                    <div class="stat-content">
+                                        <h4>Clima</h4>
+                                        <p>Temperatura promedio: 18°C • Humedad: 75%</p>
+                                    </div>
+                                </div>
+
+                                <div class="stat-card center-card">
+                                    <div class="stat-icon">📜</div>
+                                    <div class="stat-content">
+                                        <h4>Inicio</h4>
+                                        <p>Desde 2001 (Más de 24 años de tradición)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="harvest-section">
+                                <div class="harvest-header">
+                                    <h4>📅 Temporada de Cosecha</h4>
+                                    <div class="harvest-dates">
+                                        <p><strong>Principal:</strong> Abril - Mayo (Cosecha principal)</p>
+                                        <p><strong>Secundaria:</strong> Octubre - Noviembre (Mitaca)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="harvest-chart">
+                                    <div class="chart-title">Ciclo Anual de Cosecha</div>
+                                    <div class="chart-container">
+                                        <div class="chart-months">
+                                            <div class="month" data-month="Ene">E</div>
+                                            <div class="month" data-month="Feb">F</div>
+                                            <div class="month" data-month="Mar">M</div>
+                                            <div class="month active" data-month="Abr">A</div>
+                                            <div class="month active" data-month="May">M</div>
+                                            <div class="month" data-month="Jun">J</div>
+                                            <div class="month" data-month="Jul">J</div>
+                                            <div class="month" data-month="Ago">A</div>
+                                            <div class="month" data-month="Sep">S</div>
+                                            <div class="month active" data-month="Oct">O</div>
+                                            <div class="month active" data-month="Nov">N</div>
+                                            <div class="month" data-month="Dic">D</div>
+                                        </div>
+                                        <div class="chart-bars">
+                                            <div class="bar" style="height: 30%;" data-month="Ene"></div>
+                                            <div class="bar" style="height: 40%;" data-month="Feb"></div>
+                                            <div class="bar" style="height: 60%;" data-month="Mar"></div>
+                                            <div class="bar" style="height: 95%;" data-month="Abr"></div>
+                                            <div class="bar" style="height: 100%;" data-month="May"></div>
+                                            <div class="bar" style="height: 50%;" data-month="Jun"></div>
+                                            <div class="bar" style="height: 30%;" data-month="Jul"></div>
+                                            <div class="bar" style="height: 40%;" data-month="Ago"></div>
+                                            <div class="bar" style="height: 70%;" data-month="Sep"></div>
+                                            <div class="bar" style="height: 85%;" data-month="Oct"></div>
+                                            <div class="bar" style="height: 90%;" data-month="Nov"></div>
+                                            <div class="bar" style="height: 35%;" data-month="Dic"></div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-legend">
+                                        <div class="legend-item">
+                                            <span class="legend-color"></span>
+                                            <span>Cosecha Principal</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-color secondary"></span>
+                                            <span>Cosecha Mitaca</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   <div class="location-map-container">
+                        <div class="map-header">
+                            <h3>📍 Ubicación del pueblo del Cafetal</h3>
+                        </div>
+                        <div class="location-map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5287163828584!2d-74.18055772346394!3d5.364456935276506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e45a1c8f3c9c9c9%3A0x0!2sSan%20Francisco%2C%20Cundinamarca%2C%20Colombia!5e0!3m2!1ses!2sco!4v169876543210" 
+                                width="100%" 
+                                height="500"
+                                style="border:0; border-radius: 12px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación Finca San Francisco">
+                            </iframe>
+                        </div>
+                        <!-- Espacio inferior añadido -->
+                        <div class="map-bottom-space"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BOGOTÁ LA ESPAÑOLA -->
+            <div class="location-item" data-location="sede-bogota">
+                <div class="location-grid">
+                    <div class="location-details">
+                        <div class="coffee-info">
+                            <div class="coffee-header">
+                                <h3>🏙️ Punto de distribucion Bogotá - La Española</h3>
+                                <div class="altitude-badge">2.600 msnm</div>
+                            </div>
+                            
+                            <div class="coffee-stats">
+                                <div class="stat-card">
+                                    <div class="stat-icon">📍</div>
+                                    <div class="stat-content">
+                                        <h4>Ubicación</h4>
+                                        <p>Barrio La Española, Engativá, Bogotá</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-card">
+                                    <div class="stat-icon">🕐</div>
+                                    <div class="stat-content">
+                                        <h4>Horario</h4>
+                                        <p>Lun-Vie: 9AM-6PM • Sáb: 10AM-4PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-card">
+                                    <div class="stat-icon">📞</div>
+                                    <div class="stat-content">
+                                        <h4>Contacto</h4>
+                                        <p>+57 (1) 2345-6790 • bogota@azucacafe.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-card">
+                                    <div class="stat-icon">🫘</div>
+                                    <div class="stat-content">
+                                        <h4>Variedades Disponibles</h4>
+                                        <p>Todas nuestras selecciones premium</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="store-features">
+                                <h4>🏪 Servicios de la Tienda</h4>
+                                <div class="features-grid">
+                                    <div class="feature-item">☕ Catación gratuita</div>
+                                    <div class="feature-item">🎁 Empaques para regalo</div>
+                                    <div class="feature-item">👨‍🍳 Asesoría de barista</div>
+                                    <div class="feature-item">🚚 Envíos a domicilio</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-map-container">
+                        <div class="map-header">
+                            <h3>📍 Ubicación de la Tienda</h3>
+                        </div>
+                        <div class="location-map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.2549785843527!2d-74.14550872346394!3d4.709537935276506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f7d0000000001%3A0x0!2sLa%20Espa%C3%B1ola%2C%20Engativ%C3%A1%2C%20Bogot%C3%A%2C%20Colombia!5e0!3m2!1ses!2sco!4v169876543211"
+                                width="100%" 
+                                height="500"
+                                style="border:0; border-radius: 12px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación Tienda Bogotá">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <div class="logos">
-        <div class="logo-item">
-            <img src="..\img\sellos\cafe-sello.png" alt="Café Sello">
-            <p>Federación Cafetera de Colombia</p>
+</section>
+
+<!-- SECCIÓN DE TOMOS DE PREPARACIONES E HISTORIAS DE CAFÉ -->
+<section class="tomos-section" style="background-color: #f7f7f7; padding: 80px 0;">
+    <div class="tomos-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 48px; max-width: 1200px; margin: 0 auto;">
+        <div class="tomos-image" style="flex: 1;">
+            <img src="../img/blog/tomos-cafe.jpg" alt="Preparaciones e historias de café" style="width: 100%; border-radius: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
         </div>
-        <div class="logo-item">
-            <img src="..\img\sellos\geoprotegida-sellos.png" alt="Geoprotegida Sello">
-            <p>Área Geográfica Protegida</p>
-        </div>
-        <div class="logo-item">
-            <img src="..\img\sellos\origen-sello.png" alt="Origen Sello">
-            <p>Denominación de Origen Protegida</p>
-        </div>
-        <div class="logo-item">
-            <img src="..\img\sellos\cundinamarca-sello.png" alt="Cundinamarca Sello">
-            <p>San Francisco (Cundinamarca - naturalmente mágico)</p>
-        </div>
-        <div class="logo-item">
-            <img src="..\img\sellos\sanfrancisco-sello.png" alt="San Francisco Sello">
-            <p>Sello de San Francisco</p>
+        <div class="tomos-content" style="flex: 1;">
+            <h2 style="font-size: 2.6rem; color: #222; font-weight: 700; margin-bottom: 24px;">Tomos de Preparaciones e Historias de Café</h2>
+            <p style="font-size: 1.15rem; color: #444; margin-bottom: 24px;">Descubre recetas, métodos de preparación y relatos únicos sobre el café y su cultura. Cada tomo reúne experiencias, consejos y curiosidades para los amantes del café.</p>
+            <button style="background: #556345; color: #fff; border: none; border-radius: 32px; padding: 16px 40px; font-size: 1rem; font-weight: 600; cursor: pointer;">Ver Tomos</button>
         </div>
     </div>
+</section>
+
 </body>
 </html>
