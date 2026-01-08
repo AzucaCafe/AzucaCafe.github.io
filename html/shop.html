@@ -1,113 +1,368 @@
-<!-- En tu archivo HTML principal (ej. index.html) -->
-<script src="../javascript/shop.js" defer></script>
-<script src="../javascript/components.js" defer></script>
-<!-- ... otros scripts ... -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Interactiva</title>
+    <title>Tienda - AzucaCafe</title>
+    <link rel="icon" href="../img/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/shop-styles.css">
-    <link rel="stylesheet" href="../css/compra-styles.css">
 </head>
 <body>
-    <h1 class="shop-title">Nuestros Productos</h1>
-    <div class="shop-container">
-        <!-- Granos de Café -->
-        <div class="product-card" data-product="Bolsa de Granos de Café">
-            <img src="../img/shop/grano/100.png" alt="Granos de café" class="product-image">
-            <h3>Bolsa de Granos de Café</h3>
-            <p>Selecciona la presentación y cantidad deseada</p>
-            <select class="product-select size-select">
-                <option value="100g">100g</option>
-                <option value="125g">125g</option>
-                <option value="250g">250g</option>
-                <option value="340g">340g</option>
-                <option value="500g">500g</option>
-                <option value="2500g">2500g</option>
-            </select>
-            <select class="product-select quantity-select">
-                <option value="1">1 unidad</option>
-                <option value="2">2 unidades</option>
-                <option value="3">3 unidades</option>
-                <option value="4">4 unidades</option>
-                <option value="5">5 unidades</option>
-                 <option value="6">6 unidad</option>
-                <option value="7">7 unidades</option>
-                <option value="8">8 unidades</option>
-                <option value="9">9 unidades</option>
-                <option value="10">10 unidades</option>
-            </select>
-            <div class="price">$0</div>
-            <div class="button-container">
-                <a class="buy-button" target="_blank" href="">
-                    <button class="buy-button">Comprar Ahora</button>
-                </a>
-                <button class="view-button">Ver Producto</button>
+    <!-- HERO SECTION CON ESTILO DE PLANES -->
+    <section class="shop-hero">
+        <div class="shop-hero-content">
+            <h1 class="shop-hero-title">Nuestra Tienda</h1>
+            <p class="shop-hero-subtitle">Descubre nuestros productos premium de café colombiano</p>
+            <div class="hero-decoration">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+            </div>
+        </div>
+    </section>
+
+  <!-- CONTENEDOR PRINCIPAL DE PRODUCTOS -->
+    <section class="shop-main" id="shop-container">
+        <div class="section-header">
+            <h2>Productos Destacados</h2>
+            <p>Selecciona el producto, tamaño, variedad y cantidad que deseas</p>
+        </div>
+
+        <div class="shop-container">
+            <!-- Granos de Café -->
+            <div class="product-card" data-product="Bolsa de Granos de Café">
+                <div class="product-image-container">
+                    <img src="../img/shop/grano/100.png" alt="Granos de café" class="product-image">
+                </div>
+                <div class="product-badge">Más Vendido</div>
+                <div class="product-content">
+                    <h3 class="product-name">Granos de Café</h3>
+                    <p class="product-description">Café 100% colombiano en grano, seleccionado a mano</p>
+                    
+                    <div class="product-selectors">
+                        <!-- NUEVO: Selector de variedad -->
+                        <div class="selector-group">
+                            <label class="selector-label">Variedad:</label>
+                            <select class="product-select variety-select">
+                                <option value="azuca" data-price-multiplier="1.0">Azuca</option>
+                                <option value="gyrola" data-price-multiplier="0.9">Gyrola</option>
+                            </select>
+                        </div>
+                        
+                        <div class="selector-group">
+                            <label class="selector-label">Presentación:</label>
+                            <select class="product-select size-select">
+                                <option value="100g">100g</option>
+                                <option value="125g">125g</option>
+                                <option value="250g">250g</option>
+                                <option value="340g">340g</option>
+                                <option value="500g">500g</option>
+                                <option value="2500g">2500g</option>
+                            </select>
+                        </div>
+                        
+                        <div class="selector-group">
+                            <label class="selector-label">Cantidad:</label>
+                            <select class="product-select quantity-select">
+                                <option value="1">1 unidad</option>
+                                <option value="2">2 unidades</option>
+                                <option value="3">3 unidades</option>
+                                <option value="4">4 unidades</option>
+                                <option value="5">5 unidades</option>
+                                <option value="6">6 unidades</option>
+                                <option value="7">7 unidades</option>
+                                <option value="8">8 unidades</option>
+                                <option value="9">9 unidades</option>
+                                <option value="10">10 unidades</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-price-info">
+                        <div class="price-display">
+                            <span class="price-label">Total:</span>
+                            <div class="price">$8.000</div>
+                        </div>
+                        <p class="variety-note">*Gyrola tiene 10% de descuento</p>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="buy-button">
+                            <span>Comprar Ahora</span>
+                            <span class="btn-icon">🛒</span>
+                        </button>
+                        <button class="view-button">
+                            <span>Ver Detalles</span>
+                            <span class="btn-icon">👁️</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Café Molido -->
+            <div class="product-card featured" data-product="Bolsa de Café Molido">
+                <div class="product-badge-featured">Recomendado</div>
+                <div class="product-image-container">
+                    <img src="../img/shop/molido/100.png" alt="Café molido" class="product-image">
+                </div>
+                <div class="product-badge">Listo para preparar</div>
+                <div class="product-content">
+                    <h3 class="product-name">Café Molido</h3>
+                    <p class="product-description">Café molido al instante, perfecto para cualquier método</p>
+                    
+                    <div class="product-selectors">
+                        <!-- NUEVO: Selector de variedad -->
+                        <div class="selector-group">
+                            <label class="selector-label">Variedad:</label>
+                            <select class="product-select variety-select">
+                                <option value="azuca" data-price-multiplier="1.0">Azuca</option>
+                                <option value="gyrola" data-price-multiplier="0.9">Gyrola </option>
+                            </select>
+                        </div>
+                        
+                        <div class="selector-group">
+                            <label class="selector-label">Presentación:</label>
+                            <select class="product-select size-select">
+                                <option value="100g">100g</option>
+                                <option value="125g">125g</option>
+                                <option value="250g">250g</option>
+                                <option value="340g">340g</option>
+                                <option value="500g">500g</option>
+                                <option value="2500g">2500g</option>
+                            </select>
+                        </div>
+                        
+                        <div class="selector-group">
+                            <label class="selector-label">Cantidad:</label>
+                            <select class="product-select quantity-select">
+                                <option value="1">1 unidad</option>
+                                <option value="2">2 unidades</option>
+                                <option value="3">3 unidades</option>
+                                <option value="4">4 unidades</option>
+                                <option value="5">5 unidades</option>
+                                <option value="6">6 unidades</option>
+                                <option value="7">7 unidades</option>
+                                <option value="8">8 unidades</option>
+                                <option value="9">9 unidades</option>
+                                <option value="10">10 unidades</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-price-info">
+                        <div class="price-display">
+                            <span class="price-label">Total:</span>
+                            <div class="price">$8.000</div>
+                        </div>
+                        <p class="variety-note">*Gyrola tiene 10% de descuento</p>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="buy-button featured">
+                            <span>Comprar Ahora</span>
+                            <span class="btn-icon">🛒</span>
+                        </button>
+                        <button class="view-button">
+                            <span>Ver Detalles</span>
+                            <span class="btn-icon">👁️</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Té de cáscara de café -->
+            <div class="product-card" data-product="Bolsa de Té de Cáscara de Café Fermentado">
+                <div class="product-image-container">
+                    <img src="../img/shop/te.png" alt="Té de cáscara de café" class="product-image">
+                </div>
+                <div class="product-badge">Exclusivo</div>
+                <div class="product-content">
+                    <h3 class="product-name">Té de Cáscara de Café</h3>
+                    <p class="product-description">Infusión única de cáscara de café fermentado</p>
+                    
+                    <div class="product-selectors">
+                        <div class="selector-group">
+                            <label class="selector-label">Presentación:</label>
+                            <select class="product-select size-select">
+                                <option value="100g">100g</option>
+                            </select>
+                        </div>
+                        
+                        <div class="selector-group">
+                            <label class="selector-label">Cantidad:</label>
+                            <select class="product-select quantity-select">
+                                <option value="1">1 unidad</option>
+                                <option value="2">2 unidades</option>
+                                <option value="3">3 unidades</option>
+                                <option value="4">4 unidades</option>
+                                <option value="5">5 unidades</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-price-info">
+                        <div class="price-display">
+                            <span class="price-label">Total:</span>
+                            <div class="price">$20.000</div>
+                        </div>
+                        <p class="stock-info">¡Solo disponible en 100g!</p>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="buy-button">
+                            <span>Comprar Ahora</span>
+                            <span class="btn-icon">🛒</span>
+                        </button>
+                        <button class="view-button">
+                            <span>Ver Detalles</span>
+                            <span class="btn-icon">👁️</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE ENVÍOS -->
+    <section class="shipping-info">
+        <div class="section-header">
+            <h2>Envíos y Garantías</h2>
+            <p>Tu satisfacción es nuestra prioridad</p>
+        </div>
+
+        <div class="shipping-container">
+            <div class="shipping-card">
+                <div class="shipping-icon">🚚</div>
+                <div class="shipping-content">
+                    <h3>Envío Nacional</h3>
+                    <p>Entregamos en todo Colombia:</p>
+                    <ul class="shipping-features">
+                        <li><span class="feature-icon">✓</span> Bogotá: 24-72 horas</li>
+                        <li><span class="feature-icon">✓</span> Ciudades principales: 2-3 días</li>
+                        <li><span class="feature-icon">✓</span> Resto del país: 3-5 días</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="shipping-card">
+                <div class="shipping-icon">📦</div>
+                <div class="shipping-content">
+                    <h3>Empaque Seguro</h3>
+                    <p>Cada producto viene protegido:</p>
+                    <ul class="shipping-features">
+                        <li><span class="feature-icon">✓</span> Empaque con valvula</li>
+                        <li><span class="feature-icon">✓</span> Protección contra humedad</li>
+                        <li><span class="feature-icon">✓</span> Sellado para frescura</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="shipping-card">
+                <div class="shipping-icon">🔄</div>
+                <div class="shipping-content">
+                    <h3>Garantía Total</h3>
+                    <p>Estamos seguros de nuestro café:</p>
+                    <ul class="shipping-features">
+                        <li><span class="feature-icon">✓</span> Frescura garantizada</li>
+                        <li><span class="feature-icon">✓</span> Soporte 24/7</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- Café Molido -->
-        <div class="product-card" data-product="Bolsa de Café Molido">
-            <img src="../img/shop/molido/100.png" alt="Café molido" class="product-image">
-            <h3>Bolsa de Café Molido</h3>
-            <p>Selecciona la presentación y cantidad deseada</p>
-            <select class="product-select size-select">
-                <option value="100g">100g</option>
-                <option value="125g">125g</option>
-                <option value="250g">250g</option>
-                <option value="340g">340g</option>
-                <option value="500g">500g</option>
-                <option value="2500g">2500g</option>
-            </select>
-            <select class="product-select quantity-select">
-                <option value="1">1 unidad</option>
-                <option value="2">2 unidades</option>
-                <option value="3">3 unidades</option>
-                <option value="4">4 unidades</option>
-                <option value="5">5 unidades</option>
-                <option value="6">6 unidad</option>
-                <option value="7">7 unidades</option>
-                <option value="8">8 unidades</option>
-                <option value="9">9 unidades</option>
-                <option value="10">10 unidades</option>
-            </select>
-            <div class="price">$0</div>
-            <div class="button-container">
-                <a class="buy-button" target="_blank" href="">
-                    <button class="buy-button">Comprar Ahora</button>
-                </a>
-                <button class="view-button">Ver Producto</button>
-            </div>
+        <div class="shipping-notice">
+            <div class="notice-icon">ℹ️</div>
+            <p>Los envíos son gratuitos para compras superiores a $50.000.</p>
         </div>
+    </section>
 
-        <!-- Té de cáscara de café -->
-        <div class="product-card" data-product="Bolsa de Té de Cáscara de Café Fermentado">
-            <img src="../img/shop/te.png" alt="Té" class="product-image">
-            <h3>Bolsa de Té de Cáscara de Café Fermentado</h3>
-            <p>Solo disponible en 100g</p>
-            <select class="product-select size-select">
-                <option value="100g">100g</option>
-            </select>
-            <select class="product-select quantity-select">
-                <option value="1">1 unidad</option>
-                <option value="2">2 unidades</option>
-                <option value="3">3 unidades</option>
-                <option value="4">4 unidades</option>
-                <option value="5">5 unidades</option>
-            </select>
-            <div class="price">$0</div> <!-- Valor inicial visible, el JS lo actualizará -->
-            <div class="button-container">
-                <a class="buy-button" target="_blank" href="">
-                    <button class="buy-button">Comprar Ahora</button>
-                </a>
-                <button class="view-button">Ver Producto</button>
+    <!-- SECCIÓN CTA PARA PLANES -->
+    <section class="plans-cta-section">
+        <div class="plans-cta-container">
+            <div class="plans-cta-content">
+                <h2 class="plans-cta-title">¿Ya conoces nuestros planes mensuales?</h2>
+                <p class="plans-cta-subtitle">Inscríbete ya y ahorra mes a mes disfrutando del mejor café colombiano</p>
+                
+                <div class="plans-cta-features">
+                    <div class="cta-feature">
+                        <span class="feature-check">✓</span>
+                        <span>Café fresco cada mes</span>
+                    </div>
+                    <div class="cta-feature">
+                        <span class="feature-check">✓</span>
+                        <span>Hasta 30% de descuento</span>
+                    </div>
+                    <div class="cta-feature">
+                        <span class="feature-check">✓</span>
+                        <span>Variedades exclusivas</span>
+                    </div>
+                    <div class="cta-feature">
+                        <span class="feature-check">✓</span>
+                        <span>Envio prioritario gratis</span>
+                    </div>
+                </div>
+                
+                <div class="plans-cta-buttons">
+                    <a href="#planes" class="plans-cta-btn primary">
+                        <span>Ver Planes</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <button id="plansMoreInfoBtn" class="plans-cta-btn secondary">
+                        <span>Más Información</span>
+                        <span class="btn-icon">📞</span>
+                    </button>
+                </div>
+            </div>
+        
+        <div class="plans-cta-image">
+            <!-- REEMPLAZAR ESTO -->
+            <!-- <div class="coffee-beans-decoration"></div> -->
+            
+            <!-- CON ESTO -->
+            <img src="../img/Fotos_Azuca_Cafe/Book.png" alt="Planes de Café AzucaCafe" class="cta-real-image">
+            <div class="image-overlay"></div>
+        </div>
+    </div>
+</section>
+
+    <!-- MODAL DE DETALLES DEL PRODUCTO -->
+    <div id="productDetailModal" class="product-detail-modal">
+        <div class="modal-content">
+            <button class="close-modal">×</button>
+            <div class="modal-body" id="modalProductContent">
+                <!-- Contenido dinámico -->
             </div>
         </div>
     </div>
+
+    <!-- SCRIPTS -->
+    <script src="../javascript/shop.js"></script>
+
     <script>
-        if (window.initializeShop) window.initializeShop();
+        // Inicialización inmediata para cargada directa
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("shop.html cargado directamente");
+            
+            // Inicializar inmediatamente si la tienda está presente
+            if (document.querySelector('#shop-container')) {
+                setTimeout(() => {
+                    if (window.initializeShop) {
+                        window.initializeShop();
+                    }
+                }, 300);
+            }
+        });
+        
+        // También inicializar cuando la página termine de cargar
+        window.addEventListener('load', function() {
+            if (document.querySelector('#shop-container') && !window.isShopInitialized) {
+                setTimeout(() => {
+                    if (window.initializeShop) {
+                        window.initializeShop();
+                    }
+                }, 500);
+            }
+        });
     </script>
 </body>
 </html>

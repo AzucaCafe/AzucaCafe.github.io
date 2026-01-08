@@ -25,16 +25,33 @@ function addNavLinkListeners() {
     navLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             const targetSection = this.getAttribute('data-target');
+            
+            // Caso especial para tienda
             if (targetSection === 'shop') {
                 event.preventDefault();
-                // Cambia la URL a la de la tienda y recarga la página
-                window.location.href = window.location.pathname + '#shop';
-                window.location.reload();
+                
+                // Cargar la tienda
+                loadComponentWithAnimation('content', `../html/${targetSection}.html`);
+                
+                // Actualizar URL
+                updateURL(targetSection);
+                
+                // Marcar como activo
+                setActiveLink(this);
+                
+                // Inicializar la tienda después de cargar
+                setTimeout(() => {
+                    if (window.initializeShop) {
+                        window.initializeShop();
+                    }
+                }, 800); // Delay para animaciones
+                
                 return;
             }
+            
             event.preventDefault();
             if (targetSection) {
-                loadComponentWithAnimation('content', `html/${targetSection}.html`);
+                loadComponentWithAnimation('content', `../html/${targetSection}.html`);
                 updateURL(targetSection);
                 setActiveLink(this);
             }
