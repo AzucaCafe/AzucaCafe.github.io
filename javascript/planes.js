@@ -225,11 +225,13 @@
     }
 
     // Ejecutar cuando el DOM esté listo
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initPlagesPage);
-    } else {
-        // Si el DOM ya está listo, ejecutar inmediatamente
-        initPlagesPage();
-    }
+    // Nota: Ahora se ejecuta desde loadComponentWithAnimation en utils.js
+    // cuando se carga planes.html dinámicamente
+    
+    // Mantener las funciones disponibles globalmente
+    window.initPlagesPage = initPlagesPage;
+    window.initPlansSystem = initPlansSystem;
+    window.initFaqSystem = initFaqSystem;
+    window.initScrollAnimations = initScrollAnimations;
 
 })();

@@ -1,3 +1,26 @@
+.location-details {
+    padding-left: 32px;
+}
+
+@media (max-width: 768px) {
+    .location-details {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 0.9rem;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .location-details h3 {
+        font-size: 1.1rem;
+    }
+    .location-details h4 {
+        font-size: 0.95rem;
+    }
+}
+
 /* Contenedor principal del body */
 body {
     margin: 0;
@@ -76,7 +99,7 @@ body {
 
 .welcome-title {
     font-family: 'Playfair Display', serif;
-    font-size: 4.2vw;
+    font-size: 10vw;
     margin: 0;
     color: #1a1a1a;
     font-weight: 700;
@@ -281,7 +304,7 @@ body {
 
 .cards-section {
     padding: 80px 5vw;
-    background: url('../img/wall/wall_2.jpg') center/cover no-repeat fixed;
+    background-color: #ffffff;
     max-width: 100%;
     margin: 0 auto;
     width: 100%;
@@ -308,6 +331,38 @@ body {
     color: #666;
     margin: 0;
     font-weight: 300;
+}
+
+/* Estilos para el indicador de scroll */
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -60px;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.scroll-indicator p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.arrow-bounce {
+    font-size: 1.5rem;
+    color: #556345;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(12px);
+    }
 }
 
 .cards-container {
@@ -651,53 +706,350 @@ body {
     }
 
     .welcome-title {
-        font-size: 3.2vw;
+        font-size: 2.8rem !important;
         margin-bottom: 18px;
+        line-height: 1.2;
+        text-align: center;
     }
 
     .welcome-subtitle {
-        font-size: 0.95vw;
+        font-size: 1.1rem !important;
         margin-bottom: 35px;
+        line-height: 1.5;
+        text-align: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .cta-button {
         padding: 15px 35px !important;
-        font-size: 0.85em !important;
+        font-size: 0.9rem !important;
+        margin: 0 auto;
+        display: block;
     }
 
     .pic-wall {
         max-width: 380px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
     }
 
-    .location-item.active {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .pic-wall img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: 20px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+        display: block;
+        margin: 0 auto;
     }
 
-    .location-map {
-        order: -1;
+    /* AJUSTES PARA LAS CARDS EN 1024px */
+    .cards-section {
+        padding: 60px 6vw !important;
     }
-}
 
-@media (max-width: 768px) {
-    .portfolio-header {
+    .cards-intro h2 {
+        font-size: 1.5rem !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .cards-intro p {
+        font-size: 1.2rem !important;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 25px !important;
+    }
+
+    .card {
+        min-height: 350px !important;
+        border-radius: 16px !important;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+        display: flex;
         flex-direction: column;
-        padding: 40px 20px;
-        min-height: auto;
-        gap: 25px;
+    }
+
+    .card-image-wrapper {
+        height: 180px !important;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .card-image-wrapper img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        transition: transform 0.3s ease;
+    }
+
+    .card-content {
+        padding: 20px !important;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-title {
+        font-size: 1.4rem !important;
+        margin-bottom: 12px !important;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #222;
+    }
+
+    .card-description {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        color: #555 !important;
+        margin-bottom: 0;
+        flex-grow: 1;
+    }
+
+    /* SECCIÓN DE UBICACIONES EXACTAMENTE COMO EN 700px */
+    .locations-section {
+        padding: 80px 6vw !important;
+    }
+
+    .locations-title {
+        font-size: 2.5em !important;
+        text-align: center;
+    }
+
+    .locations-subtitle {
+        font-size: 1.1em !important;
+        text-align: center;
+        margin-bottom: 40px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .locations-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+
+    .location-btn {
+        padding: 15px 25px;
+        font-size: 1em !important;
+        border-radius: 12px;
+        border: 2px solid #ddd;
+        background: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 220px;
         justify-content: center;
     }
 
-    .portfolio-header::before {
-        width: 300px;
-        height: 300px;
-        opacity: 0.3;
+    .location-btn.active {
+        border-color: #556345;
+        background: #f8f9f7;
+        color: #556345;
+        font-weight: 600;
     }
 
-    .portfolio-header::after {
-        width: 250px;
-        height: 250px;
-        opacity: 0.2;
+    .location-item {
+        display: none;
+        width: 100%;
+    }
+
+    .location-item.active {
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna para todo */
+        gap: 60px; /* Espacio grande entre la descripción y el mapa */
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .location-info {
+        width: 100%;
+        order: 1; /* Primero la información */
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
+
+    .location-info h3 {
+        font-size: 1.8em !important;
+        margin-bottom: 20px;
+        color: #222;
+    }
+
+    .location-address {
+        font-size: 1.1em !important;
+        margin-bottom: 30px;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .detail-item {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .detail-item h4 {
+        font-size: 1.1em !important;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .detail-item p {
+        font-size: 1em !important;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .location-description {
+        font-size: 1.05em !important;
+        line-height: 1.6;
+        color: #444;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+
+    .location-map-container {
+        width: 100%;
+        order: 2; /* Después el mapa */
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .map-header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .map-header h3 {
+        font-size: 1.6em !important;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    .location-map {
+        width: 100%;
+        height: 400px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .location-map iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+/* Ajuste para cuando la pantalla sea un poco más pequeña */
+@media (max-width: 900px) {
+    .welcome-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    .pic-wall {
+        max-width: 350px !important;
+    }
+
+    /* Ajuste de cards para pantallas más pequeñas dentro del rango 1024px */
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Ajustes para ubicaciones en pantallas más pequeñas */
+    .locations-section {
+        padding: 60px 5vw !important;
+    }
+
+    .locations-title {
+        font-size: 2.2em !important;
+    }
+
+    .locations-subtitle {
+        font-size: 1em !important;
+    }
+
+    .locations-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-btn {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .location-item.active {
+        gap: 40px;
+    }
+
+    .location-info {
+        padding: 30px;
+    }
+
+    .location-info h3 {
+        font-size: 1.6em !important;
+    }
+}
+
+/* Ajuste para pantallas entre 900px y 1024px */
+@media (min-width: 901px) and (max-width: 1024px) {
+    .locations-section {
+        padding: 80px 8vw !important;
+    }
+
+    .locations-buttons {
+        justify-content: center;
+    }
+
+    .location-btn {
+        min-width: 200px;
+    }
+}
+
+/* Para pantallas menores a 700px (móviles grandes/tablets pequeñas) */
+@media (max-width: 700px) {
+    /* HEADER - MÁS PADDING LATERAL Y LETRA MÁS GRANDE */
+    .portfolio-header {
+        flex-direction: column;
+        padding: 20px 20px 40px !important; /* Más padding lateral */
+        min-height: 100vh !important;
+        height: 100vh;
+        gap: 25px !important; /* Más espacio entre elementos */
+        justify-content: space-between;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
     }
 
     .title-wall {
@@ -705,210 +1057,313 @@ body {
         padding-right: 0;
         margin-bottom: 0;
         width: 100%;
+        padding: 0 15px; /* Padding lateral interno */
     }
 
     .welcome-title {
-        font-size: 2.4em;
+        font-size: 2.6em !important; /* Más grande */
         letter-spacing: 0;
-        margin-bottom: 14px;
+        margin-bottom: 18px !important;
+        line-height: 1.2;
+        padding: 0 10px; /* Padding lateral interno */
     }
 
     .welcome-subtitle {
-        font-size: 0.9em;
+        font-size: 1.05em !important; /* Más grande */
         max-width: 100%;
-        margin-bottom: 22px;
+        margin-bottom: 25px !important;
+        line-height: 1.5;
+        padding: 0 15px; /* Padding lateral interno */
     }
 
     .welcome-container::after {
-        margin: 18px auto 0;
+        margin: 20px auto 0 !important; /* Más espacio */
     }
 
     .cta-button {
-        padding: 13px 34px !important;
-        font-size: 0.8em !important;
-        letter-spacing: 1px !important;
+        padding: 14px 36px !important; /* Un poco más grande */
+        font-size: 0.85em !important;
+        letter-spacing: 1.2px !important;
     }
 
     .pic-wall {
         justify-content: center;
         width: 100%;
         max-width: 100%;
+        padding: 0 20px; /* Padding lateral para la imagen */
     }
 
     .pic-wall img {
         width: 85%;
         max-width: 350px;
-        border-radius: 15px;
+        border-radius: 18px !important; /* Más redondeado */
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08), 
                     inset 0 0 0 1px rgba(85, 99, 69, 0.1);
+        margin: 0 auto; /* Centrado */
     }
 
-    .marquee {
-        display: none;
-    }
-
+    /* CARDS EN 2 COLUMNAS - LETRA MÁS GRANDE Y PADDING LATERAL */
     .cards-section {
-        padding: 40px 20px;
+        padding: 50px 20px !important; /* Más padding vertical y lateral */
+    }
+
+    .cards-intro {
+        padding: 0 10px; /* Padding lateral interno */
     }
 
     .cards-intro h2 {
-        font-size: 2em;
+        font-size: 2.4em !important; /* Más grande */
+        margin-bottom: 20px !important;
+        padding: 0 5px; /* Pequeño padding lateral */
     }
 
     .cards-intro p {
-        font-size: 1em;
+        font-size: 1.15em !important; /* Más grande */
+        margin-bottom: 30px !important;
+        line-height: 1.6;
+        padding: 0 5px; /* Pequeño padding lateral */
     }
 
     .cards-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important; /* Más espacio entre cards */
+        padding: 0 5px; /* Padding lateral interno */
     }
 
     .card {
-        min-height: 350px;
+        min-height: 300px !important; /* Un poco más alto */
+        max-height: 300px !important;
+        border-radius: 16px !important;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0; /* Resetear cualquier padding interno del card */
     }
 
     .card-image-wrapper {
-        height: 200px;
+        height: 150px !important; /* Más alto */
+        flex-shrink: 0;
+        padding: 0; /* Sin padding */
+    }
+
+    .card-content {
+        padding: 18px 15px !important; /* Más padding interno */
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .card-title {
-        font-size: 1.3em;
+        font-size: 1.3em !important; /* Más grande */
+        margin-bottom: 10px !important;
+        font-weight: 700 !important;
+        line-height: 1.3;
+        padding: 0; /* Sin padding extra */
     }
 
     .card-description {
-        font-size: 0.9em;
+        font-size: 0.95em !important; /* Más grande */
+        line-height: 1.5 !important;
+        color: #555 !important;
+        margin-bottom: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0; /* Sin padding extra */
     }
 
-    .locations-section {
-        padding: 50px 20px;
+    .card-button {
+        transition: transform 0.2s ease !important;
+        border-radius: 16px !important;
+        padding: 0; /* Sin padding */
+        margin: 0; /* Sin margen */
+        width: 100%;
     }
-
-    .locations-title {
-        font-size: 2em;
-    }
-
-    .locations-subtitle {
-        font-size: 0.95em;
-        margin-bottom: 30px;
-    }
-
-    .locations-buttons {
-        gap: 15px;
-        margin-bottom: 30px;
-    }
-
-    .location-btn {
-        padding: 12px 20px;
-        font-size: 0.9em;
-        gap: 8px;
-    }
-
-    .location-item.active {
-        gap: 20px;
-    }
-
-    .location-info h3 {
-        font-size: 1.5em;
-    }
-
-    .location-address {
-        font-size: 0.9em;
-    }
-
-    .detail-item h4 {
-        font-size: 0.9em;
-    }
-
-    .detail-item p {
-        font-size: 0.85em;
-    }
-
-    .location-description {
-        font-size: 0.9em;
+    
+    .card-button:active {
+        transform: scale(0.96) !important;
     }
 }
 
+/* Para pantallas menores a 480px (móviles pequeños) */
 @media (max-width: 480px) {
+    /* HEADER - MÁS COMPACTO PERO CON PADDING LATERAL */
     .portfolio-header {
-        padding: 30px 16px;
-        gap: 25px;
-        min-height: auto;
-    }
-
-    .portfolio-header::before {
-        width: 250px;
-        height: 250px;
-        opacity: 0.2;
-    }
-
-    .portfolio-header::after {
-        width: 200px;
-        height: 200px;
-        opacity: 0.1;
+        padding: 20px 15px 35px !important; /* Padding lateral ajustado */
+        gap: 20px !important;
     }
 
     .welcome-title {
-        font-size: 1.6em;
-        margin-bottom: 10px;
+        font-size: 2.2em !important;
+        margin-bottom: 15px !important;
+        padding: 0 8px;
     }
 
     .welcome-subtitle {
-        font-size: 0.85em;
-        margin-bottom: 18px;
+        font-size: 0.95em !important;
+        margin-bottom: 20px !important;
+        padding: 0 10px;
     }
 
-    .welcome-container::after {
-        width: 35px;
-        margin-top: 12px;
-    }
-
-    .cta-button {
-        padding: 11px 26px !important;
-        font-size: 0.7em !important;
-        letter-spacing: 0.8px !important;
+    .pic-wall {
+        padding: 0 15px;
     }
 
     .pic-wall img {
         width: 90%;
-        max-width: 300px;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 
-                    inset 0 0 0 1px rgba(85, 99, 69, 0.1);
+        max-width: 320px;
+        border-radius: 16px !important;
     }
 
-    .marquee {
-        display: none;
-    }
-
+    /* CARDS - MÁS COMPACTAS PERO CON LETRA LEGIBLE Y PADDING LATERAL */
     .cards-section {
-        padding: 30px 15px;
+        padding: 40px 15px !important; /* Padding lateral mantenido */
+    }
+
+    .cards-intro {
+        padding: 0 8px;
     }
 
     .cards-intro h2 {
-        font-size: 1.5em;
+        font-size: 2em !important;
+        margin-bottom: 15px !important;
+    }
+
+    .cards-intro p {
+        font-size: 1em !important;
+        margin-bottom: 25px !important;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important; /* Menos espacio */
+        padding: 0 5px;
+    }
+
+    .card {
+        min-height: 270px !important;
+        max-height: 270px !important;
+        border-radius: 14px !important;
+    }
+
+    .card-image-wrapper {
+        height: 130px !important;
     }
 
     .card-content {
-        padding: 20px 15px;
+        padding: 15px 12px !important; /* Padding interno ajustado */
     }
 
     .card-title {
-        font-size: 1.1em;
+        font-size: 1.15em !important;
+        margin-bottom: 8px !important;
     }
 
     .card-description {
-        font-size: 0.85em;
+        font-size: 0.85em !important; /* Aún legible */
+        -webkit-line-clamp: 2;
+    }
+}
+
+/* Para pantallas muy pequeñas (menos de 380px) */
+@media (max-width: 380px) {
+    .cards-container {
+        grid-template-columns: 1fr !important; /* Cambiar a 1 columna */
+        gap: 15px !important;
+        padding: 0 5px;
     }
 
-    .locations-buttons {
-        flex-direction: column;
-        gap: 10px;
+    .card {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto;
     }
 
-    .location-btn {
-        width: 100%;
-        justify-content: center;
+    .card-image-wrapper {
+        height: 160px !important;
+    }
+
+    .card-content {
+        padding: 18px 15px !important;
+    }
+
+    .card-title {
+        font-size: 1.3em !important;
+    }
+
+    .card-description {
+        font-size: 0.95em !important;
+        -webkit-line-clamp: 3;
+    }
+}
+
+/* Para tablets medianas (entre 700px y 900px) - mantener 2 columnas con buen padding */
+@media (min-width: 701px) and (max-width: 900px) {
+    .portfolio-header {
+        padding: 30px 25px 50px !important; /* Más padding lateral */
+    }
+    
+    .title-wall {
+        padding: 0 20px;
+    }
+    
+    .welcome-title {
+        font-size: 2.8em !important;
+        padding: 0 15px;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1.1em !important;
+        padding: 0 20px;
+    }
+    
+    .pic-wall {
+        padding: 0 25px;
+    }
+    
+    .cards-section {
+        padding: 60px 25px !important; /* Más padding lateral */
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px !important;
+        padding: 0 10px;
+    }
+
+    .card {
+        min-height: 320px !important;
+    }
+
+    .card-image-wrapper {
+        height: 170px !important;
+    }
+
+    .card-title {
+        font-size: 1.4em !important;
+    }
+
+    .card-description {
+        font-size: 1em !important;
+    }
+}
+
+/* Asegurar que los botones y enlaces también tengan buen padding */
+@media (max-width: 700px) {
+    .cta-button, 
+    .card-button, 
+    .location-btn,
+    .subscription-btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: fit-content;
+        min-width: 200px;
     }
 }
 
@@ -4203,35 +4658,95 @@ body {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+/* RESPONSIVE */
+@media (max-width: 1068px) {
     .locations-section {
-        padding: 40px 20px;
+        padding: 40px 25px !important;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    
+    .locations-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    
+    .locations-header {
+        padding: 0 15px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .locations-title {
         font-size: 2rem;
+        text-align: center;
+        padding: 0 15px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     
     .locations-tabs {
         flex-direction: column;
         align-items: center;
+        padding: 0 20px !important;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
     }
     
     .location-tab {
         width: 100%;
-        max-width: 300px;
+        max-width: 350px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 20px 25px !important;
+    }
+    
+    .location-content {
+        width: 100%;
+        padding: 0 20px !important;
+        box-sizing: border-box;
     }
     
     .location-grid {
         grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0 20px !important;
+        box-sizing: border-box;
+        margin: 0 auto;
     }
     
     .location-map {
         min-height: 300px;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+    
+    .location-map-container {
+        padding: 0 15px !important;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 auto;
     }
     
     .chart-container {
         height: 150px;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
     
     .month {
@@ -4246,20 +4761,225 @@ body {
     
     .features-grid {
         grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0 20px !important;
+        box-sizing: border-box;
+        gap: 15px;
+    }
+    
+    /* Asegurar padding lateral para todos los elementos internos */
+    .coffee-info,
+    .location-details,
+    .harvest-section,
+    .store-features,
+    .coffee-stats,
+    .harvest-dates,
+    .detail-item,
+    .stat-card,
+    .feature-item {
+        width: 100%;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box;
+    }
+    
+    /* Asegurar que los iframes no se desborden */
+    iframe {
+        max-width: 100% !important;
+        width: 100% !important;
+        border-radius: 16px;
+    }
+    
+    /* Forzar que los elementos respeten el contenedor */
+    * {
+        max-width: 100%;
+    }
+
+    /* SECCIÓN DE TOMOS - PADDING LATERAL MANTENIENDO FILA */
+    .tomos-section {
+        padding: 80px 25px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .tomos-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        flex-direction: row; /* Mantener en fila */
+    }
+    
+    .tomos-image {
+        flex: 1;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    
+    .tomos-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .tomos-content {
+        flex: 1;
+        padding: 0 20px;
+        box-sizing: border-box;
+        text-align: left; /* Mantener alineación izquierda */
+    }
+    
+    .tomos-content h2 {
+        font-size: 2.2rem;
+        padding: 0;
+        margin-bottom: 20px;
+        line-height: 1.3;
+        color: #222;
+    }
+    
+    .tomos-content p {
+        font-size: 1.1rem;
+        padding: 0;
+        margin-bottom: 25px;
+        line-height: 1.6;
+        color: #444;
+    }
+    
+    .tomos-content button {
+        background: #556345;
+        color: #fff;
+        border: none;
+        border-radius: 32px;
+        padding: 16px 40px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin: 0; /* Sin centrado automático */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Solo para pantallas menores a 768px cambiar a columna */
+    .tomos-wrapper {
+        flex-direction: column !important;
+        gap: 30px;
+        padding: 0 15px;
+        text-align: center;
+    }
+    
+    .tomos-image,
+    .tomos-content {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .tomos-image img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .tomos-content {
+        text-align: center;
+    }
+    
+    .tomos-content button {
+        margin: 0 auto;
+        display: block;
+        min-width: 180px;
+        padding: 14px 30px;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
+    .locations-section {
+        padding: 30px 20px !important;
+    }
+    
+    .locations-wrapper {
+        padding: 0 15px !important;
+    }
+    
     .coffee-stats {
         grid-template-columns: 1fr;
+        padding: 0 15px !important;
+        box-sizing: border-box;
+        gap: 15px;
     }
     
     .harvest-dates p {
         font-size: 0.9rem;
+        padding: 0 15px !important;
     }
     
     .chart-legend {
         gap: 15px;
+        padding: 0 20px !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Reducir padding interno de tarjetas en móviles pero mantener lateral */
+    .stat-card,
+    .feature-item,
+    .detail-item {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .location-tab {
+        max-width: 100% !important;
+        padding: 15px 20px !important;
+    }
+    
+    .locations-tabs {
+        padding: 0 10px !important;
+    }
+    
+    .location-content,
+    .location-grid {
+        padding: 0 10px !important;
+    }
+    
+    .location-map-container {
+        padding: 0 10px !important;
+    }
+    
+    /* Asegurar que todo el contenido se mantenga dentro */
+    .locations-section > * {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* SECCIÓN DE TOMOS EN MÓVILES PEQUEÑOS */
+    .tomos-section {
+        padding: 40px 20px !important;
+    }
+    
+    .tomos-wrapper {
+        padding: 0 10px;
+        gap: 25px;
+    }
+    
+    .tomos-image img {
+        max-width: 95%;
+        border-radius: 16px;
+    }
+    
+    .tomos-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .tomos-content p {
+        font-size: 1rem;
     }
 }
 
@@ -4410,4 +5130,361 @@ body {
     display: block;
 }
 
+/* PADDING PARA LA VENTANA EMERGENTE (MODAL) */
+.subscription-modal {
+    padding: 20px !important; /* Padding alrededor del modal */
+    box-sizing: border-box !important;
+}
 
+/* Padding interno del contenido del modal */
+.modal-content {
+    padding: 30px !important;
+}
+
+/* Asegurar que el botón de cerrar no quede fuera */
+.modal-close {
+    right: 30px !important; /* Ajustado para el padding */
+    top: 25px !important;
+}
+
+/* Padding específico para la sección de planes en el modal */
+.modal-section .plans-container {
+    gap: 35px !important; /* Más espacio entre planes */
+    row-gap: 40px !important; /* Más espacio vertical */
+    padding: 20px 0 !important;
+}
+
+/* Asegurar que los planes no se superpongan */
+.plan-card {
+    min-width: 0 !important; /* Evita que se expandan demasiado */
+    margin: 0 auto !important; /* Centra cada tarjeta */
+    width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important; /* Necesario para posicionar el badge */
+}
+
+/* ESPACIO ENTRE EL BADGE Y EL TÍTULO DEL PLAN */
+.plan-card .plan-badge {
+    top: 230px !important; /* Aumentado para más espacio con la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #556345;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    z-index: 1;
+    margin-bottom: 15px !important; /* Espacio debajo del badge */
+    display: inline-block !important;
+}
+
+/* Más espacio arriba del header del plan */
+.plan-header {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 70px !important; /* Aumentado para más espacio después del badge */
+    padding-top: 20px !important; /* Padding adicional arriba */
+}
+
+/* Espacio específico entre la imagen y el badge */
+.plan-image-large {
+    margin-bottom: 10px !important; /* Espacio debajo de la imagen */
+}
+
+.plan-image-large img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* Grid responsivo para planes */
+@media (min-width: 1200px) {
+    .plans-container {
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 columnas en pantallas grandes */
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .plans-container {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 899px) {
+    .plans-container {
+        grid-template-columns: 1fr !important; /* 1 columna en móviles */
+        max-width: 400px !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    body > section,
+    body > div:not(.portfolio-header) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    /* Más padding para el modal en móviles */
+    .subscription-modal {
+        padding: 15px !important;
+    }
+    
+    .modal-container {
+        max-width: 90vw !important;
+        margin: 10px auto !important;
+        border-radius: 20px !important;
+    }
+    
+    .modal-content {
+        padding: 20px 15px !important; /* Menos padding interno en móviles */
+    }
+    
+    /* Ajustes para planes en móviles */
+    .plan-card .plan-badge {
+        top: 180px !important; /* Ajustado para pantallas más pequeñas */
+        padding: 6px 18px !important;
+        font-size: 12px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .plan-header {
+        margin-top: 60px !important; /* Menos espacio en móviles */
+        padding-top: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body > section,
+    body > div:not(.portfolio-header) {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Aún más padding para móviles pequeños */
+    .subscription-modal {
+        padding: 10px !important;
+    }
+    
+    .modal-container {
+        max-width: 95vw !important;
+        margin: 5px auto !important;
+        border-radius: 18px !important;
+    }
+    
+    .modal-content {
+        padding: 15px 10px !important;
+    }
+    
+    .modal-close {
+        right: 15px !important;
+        top: 15px !important;
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 20px !important;
+    }
+    
+    /* Ajustes para planes en móviles pequeños */
+    .plan-card {
+        padding: 20px 15px !important; /* Menos padding en móviles */
+    }
+    
+    .plan-card .plan-badge {
+        top: 150px !important; /* Ajustado para móviles pequeños */
+        padding: 5px 15px !important;
+        font-size: 11px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .plan-header {
+        margin-top: 50px !important;
+        padding-top: 10px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .plan-image-large {
+        margin-bottom: 5px !important;
+    }
+}
+
+/* Ajustes para el portfolio-header (ya tiene su propio padding) */
+.portfolio-header {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+}
+
+/* Ajustes para certificaciones */
+.certifications-section {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+}
+
+/* Ajustes para la sección de ubicaciones */
+.locations-section {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+}
+
+/* Ajuste específico para el modal de certificaciones */
+.certification-modal {
+    padding: 20px !important;
+}
+
+.certification-modal .modal-content {
+    border-radius: 20px !important;
+    margin: 10px !important;
+}
+
+@media (max-width: 768px) {
+    .certification-modal {
+        padding: 15px !important;
+    }
+    
+    .certification-modal .modal-content {
+        margin: 5px !important;
+        border-radius: 15px !important;
+    }
+}
+
+/* Asegurar que el modal tenga scroll si es necesario */
+.modal-container {
+    overflow-y: auto !important;
+    max-height: 85vh !important;
+}
+
+/* Permitir scroll en el contenido del modal */
+.modal-content {
+    overflow: visible !important;
+}
+
+/* Estilo principal para el h1 en .header-content */
+.header-content h1 {
+    font-size: 5.2rem; /* Tamaño inicial grande */
+    font-weight: bold; /* Negrita */
+    line-height: 1.1; /* Altura de línea para mejor legibilidad */
+    margin: 0 0 20px 0; /* Márgenes */
+    color: #1a1a1a; /* Color del texto */
+    letter-spacing: -0.02em; /* Espaciado de letras ligeramente negativo */
+}
+
+/* Media queries para tamaños responsivos */
+@media (max-width: 1200px) {
+    .header-content h1 {
+        font-size: 4.5rem; /* Reducción para pantallas grandes */
+    }
+}
+
+@media (max-width: 992px) {
+    .header-content h1 {
+        font-size: 4rem; /* Reducción para tablets grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 3.2rem; /* Reducción para tablets */
+        text-align: center; /* Centrar texto en móviles */
+        line-height: 1.15; /* Ajustar altura de línea */
+    }
+}
+
+@media (max-width: 576px) {
+    .header-content h1 {
+        font-size: 2.5rem; /* Reducción para móviles */
+        margin-bottom: 15px; /* Menos espacio debajo */
+    }
+}
+
+@media (max-width: 400px) {
+    .header-content h1 {
+        font-size: 2rem; /* Reducción para móviles pequeños */
+        line-height: 1.2; /* Ajustar altura de línea */
+    }
+}
+
+/* Estilo principal para el h2 en .cards-intro */
+.cards-intro h2 {
+    font-size: 3.2rem; /* Tamaño inicial grande */
+    font-weight: bold; /* Negrita */
+    line-height: 1.1; /* Altura de línea para mejor legibilidad */
+    margin: 0 0 15px 0; /* Márgenes - menos espacio debajo que el h1 */
+    color: #111; /* Color del texto (ya tienes inline style) */
+    letter-spacing: -0.02em; /* Espaciado de letras ligeramente negativo */
+    font-family: 'Playfair Display', serif; /* Mantener consistencia */
+}
+
+/* Media queries para tamaños responsivos */
+@media (max-width: 1200px) {
+    .cards-intro h2 {
+        font-size: 4.5rem; /* Reducción para pantallas grandes */
+    }
+}
+
+@media (max-width: 992px) {
+    .cards-intro h2 {
+        font-size: 4rem; /* Reducción para tablets grandes */
+        text-align: center; /* Centrar en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-intro h2 {
+        font-size: 3.2rem; /* Reducción para tablets */
+        line-height: 1.15; /* Ajustar altura de línea */
+        margin-bottom: 10px; /* Menos espacio debajo */
+    }
+}
+
+@media (max-width: 576px) {
+    .cards-intro h2 {
+        font-size: 2.5rem; /* Reducción para móviles */
+        margin-bottom: 8px; /* Menos espacio debajo */
+    }
+}
+
+@media (max-width: 400px) {
+    .cards-intro h2 {
+        font-size: 2rem; /* Reducción para móviles pequeños */
+        line-height: 1.2; /* Ajustar altura de línea */
+    }
+}
+
+/* También ajustar el párrafo para que sea proporcional */
+.cards-intro p {
+    font-size: 1.8rem; /* Tamaño base */
+    font-weight: 300; /* Peso ligero para contraste */
+    color: #222; /* Color (ya tienes inline style) */
+    margin: 0; /* Sin márgenes */
+    line-height: 1.4; /* Altura de línea */
+    font-family: 'Montserrat', sans-serif; /* Fuente sans-serif para contraste */
+}
+
+/* Media queries para el párrafo */
+@media (max-width: 992px) {
+    .cards-intro p {
+        font-size: 1.6rem; /* Reducción */
+        text-align: center; /* Centrar con el h2 */
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-intro p {
+        font-size: 1.4rem; /* Reducción */
+    }
+}
+
+@media (max-width: 576px) {
+    .cards-intro p {
+        font-size: 1.2rem; /* Reducción */
+    }
+}
+
+@media (max-width: 400px) {
+    .cards-intro p {
+        font-size: 1.1rem; /* Reducción */
+    }
+}

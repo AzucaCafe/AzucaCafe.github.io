@@ -1,31 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - AzucaCafe</title>
-    <link rel="icon" href="../img/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/home-styles.css">
-    <script src="../javascript/navbar.js" defer></script>
-    <script src="../javascript/utils.js" defer></script>
-    <script src="../javascript/home.js" defer></script>
-    <script src="../javascript/components.js" defer></script>
-</head>
-<body>
-    <!-- SECCIÓN DE BIENVENIDA MEJORADA -->
+<!-- SECCIÓN DE BIENVENIDA MEJORADA -->
     <div class="portfolio-header" style="display: flex; align-items: center; justify-content: center; gap: 48px; max-width: 1200px; margin: 0 auto; padding: 80px 0;">
         <div class="header-image" style="flex: 1; display: flex; justify-content: center; align-items: center;">
-            <img src="../img/wall.jpg" alt="Imagen de presentación" style="width: 100%; max-width: 480px; border-radius: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+            <img src="../img/Fotos_Azuca_Cafe/Wall.JPG" alt="Imagen de presentación" style="width: 100%; max-width: 480px; border-radius: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
         </div>
         <div class="header-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-            <h1 style="font-size: 3.2rem; color: #222; font-weight: 700; margin-bottom: 24px;">Bienvenido a Azuca Café</h1>
+            <h1 style=" color: #222; font-weight: 700; margin-bottom: 24px;">Bienvenido a Azuca Café</h1>
             <p style="font-size: 1.25rem; color: #444; margin-bottom: 32px; max-width: 420px;">Café con alma de aves, tradición y esencia colombiana que despierta tus sentidos.</p>
             <button style="background: #556345; color: #fff; border: none; border-radius: 32px; padding: 16px 40px; font-size: 1rem; font-weight: 600; cursor: pointer;">Vuela hacia tu plan</button>
         </div>
     </div>
 
+    <!-- Flecha animada -->
+    <div class="scroll-indicator">
+        <p>Desplaza para conocer más</p>
+        <div class="arrow-bounce">
+            <span>↓</span>
+        </div>
+    </div>
+
     <!-- SECCIÓN DE TARJETAS MEJORADAS CON FONDO -->
-    <div class="cards-section" style="background-color: #f7f7f7; position: relative;">
+    <div class="cards-section" style=" position: relative;">
         <!-- Overlay eliminado para mostrar el fondo gris claro -->
         
         <div class="cards-content" style="position: relative; z-index: 2;">
@@ -38,7 +32,7 @@
                 <button class="card-button" data-target="shop" aria-label="Ir a tienda">
                     <div class="card">
                         <div class="card-image-wrapper">
-                            <img src="../img/cards/1.jpg" alt="Tienda de café">
+                            <img src="../img/Fotos_Azuca_Cafe/Shop.JPG" alt="Tienda de café">
                             <div class="card-overlay"></div>
                         </div>
                         <div class="card-content">
@@ -51,7 +45,7 @@
                 <button class="card-button" data-target="planes" aria-label="Ir a planes">
                     <div class="card">
                         <div class="card-image-wrapper">
-                            <img src="../img/cards/Home1.jpg" alt="Planes de suscripción">
+                            <img src="../img/Planes/Plan_Colibri_Frente_Azul.png" alt="Planes de suscripción">
                             <div class="card-overlay"></div>
                         </div>
                         <div class="card-content">
@@ -64,9 +58,10 @@
                 <button class="card-button" data-target="history" aria-label="Ir a nuestra historia">
                     <div class="card">
                         <div class="card-image-wrapper">
-                            <img src="../img/cards/Home1.jpg" alt="Nuestra historia">
+                            <img src="../img/Fotos_Azuca_Cafe/History.JPG" alt="Nuestra historia">
                             <div class="card-overlay"></div>
                         </div>
+
                         <div class="card-content">
                             <h3 class="card-title">Nuestra Historia</h3>
                             <p class="card-description">Conoce nuestra pasión por el café desde hace mas de 24 años</p>
@@ -77,7 +72,7 @@
                 <button class="card-button" data-target="blog" aria-label="Ir a blog">
                     <div class="card">
                         <div class="card-image-wrapper">
-                            <img src="../img/cards/3.jpg" alt="Blog de café">
+                            <img src="../img/Fotos_Azuca_Cafe/Blog.JPG" alt="Blog de café">
                             <div class="card-overlay"></div>
                         </div>
                         <div class="card-content">
@@ -179,7 +174,7 @@
             
             <div class="subscription-image">
                 <div class="image-container">
-                    <img src="../img/cards/Home.png" alt="Suscripción de café mensual" class="main-image">
+                    <img src="../img/Fotos_Azuca_Cafe/Planes.JPG" alt="Suscripción de café mensual" class="main-image">
                     <div class="image-decoration">
                         <div class="decoration-circle circle-1"></div>
                         <div class="decoration-circle circle-2"></div>
@@ -724,7 +719,7 @@
                                         </div>
                                         <div class="legend-item">
                                             <span class="legend-color secondary"></span>
-                                            <span>Cosecha Mitaca</span>
+                                            <span>Cosecha Segundaria</span>
                                         </div>
                                     </div>
                                 </div>
@@ -761,7 +756,7 @@
                     <div class="location-details">
                         <div class="coffee-info">
                             <div class="coffee-header">
-                                <h3>🏙️ Punto de distribucion Bogotá - La Española</h3>
+                                <h3>🏙️ Punto de distribucion Bogotá</h3>
                                 <div class="altitude-badge">2.600 msnm</div>
                             </div>
                             
@@ -778,7 +773,7 @@
                                     <div class="stat-icon">🕐</div>
                                     <div class="stat-content">
                                         <h4>Horario</h4>
-                                        <p>Lun-Vie: 9AM-6PM • Sáb: 10AM-4PM</p>
+                                        <p>Lun-Vie: 9AM-8PM • Sáb: 8AM-8PM</p>
                                     </div>
                                 </div>
                                 
@@ -786,7 +781,7 @@
                                     <div class="stat-icon">📞</div>
                                     <div class="stat-content">
                                         <h4>Contacto</h4>
-                                        <p>+57 (1) 2345-6790 • bogota@azucacafe.com</p>
+                                        <p>+57 323 2056895 • azucacafe@gmail.com</p>
                                     </div>
                                 </div>
                                 
@@ -794,18 +789,8 @@
                                     <div class="stat-icon">🫘</div>
                                     <div class="stat-content">
                                         <h4>Variedades Disponibles</h4>
-                                        <p>Todas nuestras selecciones premium</p>
+                                        <p>Todas nuestras selecciones</p>
                                     </div>
-                                </div>
-                            </div>
-                            
-                            <div class="store-features">
-                                <h4>🏪 Servicios de la Tienda</h4>
-                                <div class="features-grid">
-                                    <div class="feature-item">☕ Catación gratuita</div>
-                                    <div class="feature-item">🎁 Empaques para regalo</div>
-                                    <div class="feature-item">👨‍🍳 Asesoría de barista</div>
-                                    <div class="feature-item">🚚 Envíos a domicilio</div>
                                 </div>
                             </div>
                         </div>
@@ -838,7 +823,7 @@
 <section class="tomos-section" style="background-color: #f7f7f7; padding: 80px 0;">
     <div class="tomos-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 48px; max-width: 1200px; margin: 0 auto;">
         <div class="tomos-image" style="flex: 1;">
-            <img src="../img/blog/tomos-cafe.jpg" alt="Preparaciones e historias de café" style="width: 100%; border-radius: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+            <img src="../img/Fotos_Azuca_Cafe/Book.png" alt="Preparaciones e historias de café" style="width: 100%; border-radius: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
         </div>
         <div class="tomos-content" style="flex: 1;">
             <h2 style="font-size: 2.6rem; color: #222; font-weight: 700; margin-bottom: 24px;">Tomos de Preparaciones e Historias de Café</h2>
@@ -847,6 +832,3 @@
         </div>
     </div>
 </section>
-
-</body>
-</html>

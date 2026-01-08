@@ -814,8 +814,9 @@ function hideBarTooltip() {
     // ============================================
     // INICIALIZACIÓN PRINCIPAL
     // ============================================
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('📄 DOM cargado, inicializando sistemas...');
+    // Función wrapper para ejecutar todos los inicializadores
+    function initHomePageSystems() {
+        console.log('📄 Inicializando sistemas de Home...');
         
         // Agregar estilos dinámicos primero
         addDynamicStyles();
@@ -838,43 +839,34 @@ function hideBarTooltip() {
             initLocationsSystem();
         }, 400);
         
-        console.log('✅ Todos los sistemas en proceso de inicialización');
-    });
+        console.log('✅ Sistemas de Home completamente inicializados');
+    }
     
-    // Si el DOM ya está listo
+    // Hacer funciones disponibles globalmente
+    window.initHomePageSystems = initHomePageSystems;
+    window.initCardsSystem = initCardsSystem;
+    window.initLocationsSystem = initLocationsSystem;
+    window.initCertificationsSystem = initCertificationsSystem;
+    window.initSubscriptionSystem = initSubscriptionSystem;
+    window.addDynamicStyles = addDynamicStyles;
+    
+    // Ejecutar automáticamente solo en index.html cuando se cargue directamente
+    // (no cuando se carga dinámicamente)
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
-            // Agregar estilos dinámicos primero
-            addDynamicStyles();
-            
-            // Inicializar certificaciones (ya funciona)
-            initCertificationsSystem();
-            
-            // Inicializar suscripción con retraso
-            setTimeout(function() {
-                initSubscriptionSystem();
-            }, 300);
-            
-            // Inicializar cards
-            setTimeout(function() {
-                initCardsSystem();
-            }, 200);
-            
-            // Inicializar ubicaciones
-            setTimeout(function() {
-                initLocationsSystem();
-            }, 400);
-            
-            console.log('✅ Todos los sistemas inicializados');
+            // Solo auto-ejecutar si ya hay contenido de home cargado
+            if (document.getElementById('content') && 
+                document.getElementById('content').innerHTML.includes('card-button')) {
+                initHomePageSystems();
+            }
         });
     } else {
-        // Ejecutar directamente si el DOM ya está listo
+        // Si el DOM ya está listo
         setTimeout(function() {
-            addDynamicStyles();
-            initCertificationsSystem();
-            initSubscriptionSystem();
-            initCardsSystem();
-            initLocationsSystem();
+            if (document.getElementById('content') && 
+                document.getElementById('content').innerHTML.includes('card-button')) {
+                initHomePageSystems();
+            }
         }, 100);
     }
     

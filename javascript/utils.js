@@ -17,9 +17,27 @@ function loadComponentWithAnimation(id, file) {
                     // ✅ Reactiva los listeners en el nuevo contenido
                     addNavLinkListeners();
 
-                    // Opcional: podrías hacer algo específico para home si quieres
+                    // ✅ Ejecutar inicializadores específicos según el archivo cargado
+                    console.log('📄 Componente cargado:', file);
+                    
                     if (file.includes('home.html')) {
-                        // lógica específica para home si es necesaria
+                        console.log('🏠 Home cargado, inicializando sistemas...');
+                        setTimeout(() => {
+                            if (typeof initHomePageSystems === 'function') {
+                                initHomePageSystems();
+                            } else {
+                                console.warn('initHomePageSystems no está disponible');
+                            }
+                        }, 100);
+                    } else if (file.includes('planes.html')) {
+                        console.log('📋 Planes cargado, inicializando sistemas...');
+                        setTimeout(() => {
+                            if (typeof initPlagesPage === 'function') {
+                                initPlagesPage();
+                            } else {
+                                console.warn('initPlagesPage no está disponible');
+                            }
+                        }, 100);
                     }
 
                 }, 100);
