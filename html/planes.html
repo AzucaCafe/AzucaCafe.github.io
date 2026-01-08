@@ -7,10 +7,8 @@
     <link rel="icon" href="../img/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/planes-styles.css">
-    <script src="../javascript/planes.js" defer></script>
 </head>
 <body>
-    <!-- SECCIÓN DE BIENVENIDA A PLANES -->
     <section class="planes-hero">
         <div class="planes-hero-content">
             <h1 class="planes-hero-title">Nuestros Planes</h1>
@@ -22,100 +20,219 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE PLANES -->
-    <section class="planes-section">
-        <div class="planes-container">
-            <!-- PLAN BÁSICO -->
-            <div class="plan-card" data-plan="basico">
-                <div class="plan-header">
-                    <div class="plan-badge">Principiante</div>
-                    <h3 class="plan-name">Plan Básico</h3>
-                    <p class="plan-description">Perfecto para descubrir nuevos sabores</p>
-                </div>
-                
-                <div class="plan-price">
-                    <span class="currency">$</span>
-                    <span class="amount">29.990</span>
-                    <span class="period">/mes</span>
-                </div>
+    <!-- SECCIÓN DE TODOS LOS PLANES -->
+    <section class="all-plans-section">
+        <div class="section-header">
+            <h2>Todos Nuestros Planes de Suscripción</h2>
+            <p>Selecciona el que mejor se adapte a tu estilo de vida y preferencias</p>
+        </div>
 
-                <div class="plan-features">
-                    <ul>
-                        <li><span class="feature-icon">✓</span> 250g de café mensual</li>
-                        <li><span class="feature-icon">✓</span> Selección de 1 variedad</li>
+        <div class="all-plans-container">
+            <!-- PLAN TANGARA REAL -->
+            <div class="all-plan-card" data-plan="tangara">
+                <div class="all-plan-image">
+                    <img src="../img/Planes/Plan_Tangara_Real.png" alt="Plan Tangara Real" class="all-plan-img">
+                </div>
+                <div class="all-plan-badge">Ideal para empezar</div>
+                <div class="all-plan-content">
+                    <h3 class="all-plan-name">Tangara Real</h3>
+                    <div class="all-plan-price">$29.900<span>/mes</span></div>
+                    <p class="all-plan-description">Perfecto para descubrir nuevos sabores</p>
+                    
+                    <ul class="all-plan-features">
+                        <li><span class="feature-icon">✓</span> 250g de café al mes</li>
+                        <li><span class="feature-icon">✓</span> 1 variedad a elegir</li>
                         <li><span class="feature-icon">✓</span> Grano o molido a tu gusto</li>
-                        <li><span class="feature-icon">✓</span> Envío gratis en Colombia</li>
-                        <li><span class="feature-icon">✗</span> Acceso a degustaciones</li>
-                        <li><span class="feature-icon">✗</span> Descuento especial</li>
+                        <li><span class="feature-icon">✓</span> Envío estándar</li>
+                        <li><span class="feature-icon">✗</span> Regalo sorpresa</li>
+                        <li><span class="feature-icon">✗</span> Descuento adicional</li>
                     </ul>
+                    
+                    <button class="all-plan-btn" data-plan="tangara">
+                        <span>Seleccionar Plan</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
                 </div>
-
-                <button class="plan-btn" data-plan="basico">
-                    <span>Seleccionar Plan</span>
-                    <span class="btn-arrow">→</span>
-                </button>
             </div>
 
-            <!-- PLAN PROFESIONAL -->
-            <div class="plan-card featured" data-plan="profesional">
-                <div class="plan-badge-featured">Popular</div>
-                <div class="plan-header">
-                    <h3 class="plan-name">Plan Profesional</h3>
-                    <p class="plan-description">La opción más completa y versátil</p>
+            <!-- PLAN COLIBRI FRENTE AZUL -->
+            <div class="all-plan-card featured" data-plan="colibri">
+                <div class="plan-badge-featured">Más Popular</div>
+                <div class="all-plan-image">
+                    <img src="../img/Planes/Plan_Colibri_Frente_Azul.png" alt="Plan Colibri Frente Azul" class="all-plan-img">
                 </div>
-                
-                <div class="plan-price">
-                    <span class="currency">$</span>
-                    <span class="amount">59.990</span>
-                    <span class="period">/mes</span>
-                </div>
-
-                <div class="plan-features">
-                    <ul>
-                        <li><span class="feature-icon">✓</span> 500g de café mensual</li>
-                        <li><span class="feature-icon">✓</span> Selección de 2 variedades</li>
+                <div class="all-plan-badge">Completo y equilibrado</div>
+                <div class="all-plan-content">
+                    <h3 class="all-plan-name">Colibri Frente Azul</h3>
+                    <div class="all-plan-price">$59.900<span>/mes</span></div>
+                    <p class="all-plan-description">La opción más completa y versátil</p>
+                    
+                    <ul class="all-plan-features">
+                        <li><span class="feature-icon">✓</span> 500g de café al mes</li>
+                        <li><span class="feature-icon">✓</span> 2 variedades a elegir</li>
                         <li><span class="feature-icon">✓</span> Grano o molido a tu gusto</li>
-                        <li><span class="feature-icon">✓</span> Envío gratis en Colombia</li>
-                        <li><span class="feature-icon">✓</span> Acceso a degustaciones</li>
-                        <li><span class="feature-icon">✓</span> 10% descuento en compras</li>
+                        <li><span class="feature-icon">✓</span> Envío prioritario</li>
+                        <li><span class="feature-icon">✓</span> Regalo sorpresa incluido</li>
+                        <li><span class="feature-icon">✓</span> 15% descuento en tienda</li>
                     </ul>
+                    
+                    <button class="all-plan-btn featured" data-plan="colibri">
+                        <span>Seleccionar Plan</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
                 </div>
-
-                <button class="plan-btn featured" data-plan="profesional">
-                    <span>Seleccionar Plan</span>
-                    <span class="btn-arrow">→</span>
-                </button>
             </div>
 
-            <!-- PLAN PREMIUM -->
-            <div class="plan-card" data-plan="premium">
-                <div class="plan-badge">Premium</div>
-                <div class="plan-header">
-                    <h3 class="plan-name">Plan Premium</h3>
-                    <p class="plan-description">Para los verdaderos apasionados</p>
+            <!-- PLAN CARPINTERO GIGANTE -->
+            <div class="all-plan-card" data-plan="carpintero">
+                <div class="all-plan-image">
+                    <img src="../img/Planes/Plan_Carpintero.png" alt="Plan Carpintero" class="all-plan-img">
                 </div>
-                
-                <div class="plan-price">
-                    <span class="currency">$</span>
-                    <span class="amount">99.990</span>
-                    <span class="period">/mes</span>
-                </div>
-
-                <div class="plan-features">
-                    <ul>
-                        <li><span class="feature-icon">✓</span> 1kg de café mensual</li>
-                        <li><span class="feature-icon">✓</span> Selección de 4 variedades</li>
+                <div class="all-plan-badge">Para conocedores</div>
+                <div class="all-plan-content">
+                    <h3 class="all-plan-name">Carpintero Gigante</h3>
+                    <div class="all-plan-price">$79.900<span>/mes</span></div>
+                    <p class="all-plan-description">Para los verdaderos apasionados</p>
+                    
+                    <ul class="all-plan-features">
+                        <li><span class="feature-icon">✓</span> 1Kg de café al mes</li>
+                        <li><span class="feature-icon">✓</span> 4 variedades a elegir</li>
                         <li><span class="feature-icon">✓</span> Grano o molido a tu gusto</li>
-                        <li><span class="feature-icon">✓</span> Envío gratis en Colombia</li>
-                        <li><span class="feature-icon">✓</span> Acceso VIP a degustaciones</li>
-                        <li><span class="feature-icon">✓</span> 20% descuento en compras</li>
+                        <li><span class="feature-icon">✓</span> Envío express 24h</li>
+                        <li><span class="feature-icon">✓</span> Doble regalo sorpresa</li>
+                        <li><span class="feature-icon">✓</span> 20% descuento en tienda</li>
+                    </ul>
+                    
+                    <button class="all-plan-btn" data-plan="carpintero">
+                        <span>Seleccionar Plan</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- PLAN HALCON MURCIELAGUERO -->
+            <div class="all-plan-card" data-plan="halcon">
+                <div class="all-plan-image">
+                    <img src="../img/Planes/Plan_Halcon_Murcielago.png" alt="Plan Halcon Murcielaguero" class="all-plan-img">
+                </div>
+                <div class="all-plan-badge">Experiencia completa</div>
+                <div class="all-plan-content">
+                    <h3 class="all-plan-name">Halcon Murcielaguero</h3>
+                    <div class="all-plan-price">$199.900<span>/mes</span></div>
+                    <p class="all-plan-description">La máxima experiencia cafetera</p>
+                    
+                    <ul class="all-plan-features">
+                        <li><span class="feature-icon">✓</span> 2.5Kg de café al mes</li>
+                        <li><span class="feature-icon">✓</span> Todas las variedades</li>
+                        <li><span class="feature-icon">✓</span> Envío express 24h</li>
+                        <li><span class="feature-icon">✓</span> Kit de degustación mensual</li>
+                        <li><span class="feature-icon">✓</span> 30% descuento en tienda</li>
+                        <li><span class="feature-icon">✓</span> Acceso a ediciones limitadas</li>
+                    </ul>
+                    
+                    <button class="all-plan-btn" data-plan="halcon">
+                        <span>Seleccionar Plan</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- PLAN BUHO MEGASCOPS -->
+            <div class="all-plan-card" data-plan="buho">
+                <div class="all-plan-image">
+                    <img src="../img/Planes/Plan_Buho_Megascops.png" alt="Plan Buho Megascops" class="all-plan-img">
+                </div>
+                <div class="all-plan-badge">Refrescante</div>
+                <div class="all-plan-content">
+                    <h3 class="all-plan-name">Buho Megascops</h3>
+                    <div class="all-plan-price">$69.900<span>/mes</span></div>
+                    <p class="all-plan-description">Para los amantes del café frío</p>
+                    
+                    <ul class="all-plan-features">
+                        <li><span class="feature-icon">✓</span> 500g de café al mes</li>
+                        <li><span class="feature-icon">✓</span> 6 botellas Cold Brew 350ml</li>
+                        <li><span class="feature-icon">✓</span> 10% descuento por devolución de envases</li>
+                        <li><span class="feature-icon">✓</span> Envío prioritario</li>
+                        <li><span class="feature-icon">✓</span> Regalo sorpresa incluido</li>
+                        <li><span class="feature-icon">✓</span> 20% descuento en tienda</li>
+                    </ul>
+                    
+                    <button class="all-plan-btn" data-plan="buho">
+                        <span>Seleccionar Plan</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- PLAN CARDENAL PICO DE PLATA -->
+            <div class="all-plan-card" data-plan="cardenal">
+                <div class="all-plan-image">
+                    <img src="../img/Planes/Plan_Tangara_Pico_Plata.png" alt="Plan Cardenal Pico de Plata" class="all-plan-img">
+                </div>
+                <div class="all-plan-badge">Innovador</div>
+                <div class="all-plan-content">
+                    <h3 class="all-plan-name">Cardenal Pico de Plata</h3>
+                    <div class="all-plan-price">$39.900<span>/mes</span></div>
+                    <p class="all-plan-description">Café + Té de cáscara de café</p>
+                    
+                    <ul class="all-plan-features">
+                        <li><span class="feature-icon">✓</span> 250g de café en grano</li>
+                        <li><span class="feature-icon">✓</span> 200g de té de cáscara de café</li>
+                        <li><span class="feature-icon">✓</span> Guía de preparación</li>
+                        <li><span class="feature-icon">✓</span> Envío estándar</li>
+                        <li><span class="feature-icon">✓</span> Infusor de tés incluido</li>
+                        <li><span class="feature-icon">✓</span> Muestra de miel local</li>
+                    </ul>
+                    
+                    <button class="all-plan-btn" data-plan="cardenal">
+                        <span>Seleccionar Plan</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE VARIEDADES -->
+    <section class="varieties-section">
+        <div class="section-header">
+            <h2>Nuestras Variedades Exclusivas</h2>
+            <p>Descubre los cafés que puedes disfrutar con cualquiera de nuestros planes</p>
+        </div>
+
+        <div class="varieties-container">
+            <div class="variety-card">
+                <div class="variety-image">
+                    <div class="coffee-bean-large"></div>
+                </div>
+                <div class="variety-info">
+                    <h3>Castilla - Finca San Francisco</h3>
+                    <p>Café de altura cultivado en las montañas de Colombia. Notas achocolatadas con un toque cítrico y cuerpo balanceado. Perfecto para los amantes del café tradicional colombiano.</p>
+                    <ul class="variety-details">
+                        <li><strong>Origen:</strong> Finca San Francisco, Colombia</li>
+                        <li><strong>Altura:</strong> 1,650 msnm</li>
+                        <li><strong>Tueste:</strong> Medio</li>
+                        <li><strong>Intensidad:</strong> 8/10</li>
+                        <li><strong>Notas:</strong> Chocolate, caramelo, cítricos suaves</li>
                     </ul>
                 </div>
+            </div>
 
-                <button class="plan-btn" data-plan="premium">
-                    <span>Seleccionar Plan</span>
-                    <span class="btn-arrow">→</span>
-                </button>
+            <div class="variety-card">
+                <div class="variety-image">
+                    <div class="coffee-bean-large"></div>
+                </div>
+                <div class="variety-info">
+                    <h3>Blend Borbón Rosado & Papayo</h3>
+                    <p>Mezcla exclusiva de dos variedades premium del Huila. El Borbón Rosado aporta dulzor y cuerpo, mientras que el Papayo añade notas frutales únicas. Una experiencia sensorial inigualable.</p>
+                    <ul class="variety-details">
+                        <li><strong>Origen:</strong> Huila, Colombia</li>
+                        <li><strong>Composición:</strong> 70% Borbón Rosado, 30% Papayo</li>
+                        <li><strong>Tueste:</strong> Medio-oscuro</li>
+                        <li><strong>Intensidad:</strong> 9/10</li>
+                        <li><strong>Notas:</strong> Frutos rojos, chocolate amargo, miel</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -126,9 +243,12 @@
         <div class="comparison-table">
             <div class="table-row header-row">
                 <div class="table-cell feature">Características</div>
-                <div class="table-cell">Básico</div>
-                <div class="table-cell">Profesional</div>
-                <div class="table-cell">Premium</div>
+                <div class="table-cell">Tangara Real</div>
+                <div class="table-cell">Colibri Frente Azul</div>
+                <div class="table-cell">Carpintero Gigante</div>
+                <div class="table-cell">Halcon Murcielaguero</div>
+                <div class="table-cell">Buho Megascops</div>
+                <div class="table-cell">Cardenal Pico Plata</div>
             </div>
             
             <div class="table-row">
@@ -136,6 +256,9 @@
                 <div class="table-cell">250g</div>
                 <div class="table-cell">500g</div>
                 <div class="table-cell">1kg</div>
+                <div class="table-cell">2.5kg</div>
+                <div class="table-cell">500g + 6 Cold Brew</div>
+                <div class="table-cell">250g + 200g té</div>
             </div>
             
             <div class="table-row">
@@ -143,41 +266,49 @@
                 <div class="table-cell">1</div>
                 <div class="table-cell">2</div>
                 <div class="table-cell">4</div>
+                <div class="table-cell">Todas</div>
+                <div class="table-cell">2</div>
+                <div class="table-cell">1</div>
             </div>
             
             <div class="table-row">
-                <div class="table-cell feature">Envío Gratis</div>
-                <div class="table-cell">✓</div>
-                <div class="table-cell">✓</div>
-                <div class="table-cell">✓</div>
+                <div class="table-cell feature">Envío</div>
+                <div class="table-cell">Estándar</div>
+                <div class="table-cell">Prioritario</div>
+                <div class="table-cell">Express 24h</div>
+                <div class="table-cell">Express 24h</div>
+                <div class="table-cell">Prioritario</div>
+                <div class="table-cell">Estándar</div>
             </div>
             
             <div class="table-row">
-                <div class="table-cell feature">Degustaciones</div>
+                <div class="table-cell feature">Regalo Sorpresa</div>
                 <div class="table-cell">✗</div>
                 <div class="table-cell">✓</div>
-                <div class="table-cell">VIP ✓</div>
+                <div class="table-cell">Doble ✓</div>
+                <div class="table-cell">Kit Degustación</div>
+                <div class="table-cell">✓</div>
+                <div class="table-cell">Infusor + Miel</div>
             </div>
             
             <div class="table-row">
-                <div class="table-cell feature">Descuento</div>
+                <div class="table-cell feature">Descuento Tienda</div>
                 <div class="table-cell">-</div>
-                <div class="table-cell">10%</div>
+                <div class="table-cell">15%</div>
                 <div class="table-cell">20%</div>
+                <div class="table-cell">30%</div>
+                <div class="table-cell">20%</div>
+                <div class="table-cell">10%</div>
             </div>
             
             <div class="table-row">
-                <div class="table-cell feature">Soporte Prioritario</div>
-                <div class="table-cell">✗</div>
-                <div class="table-cell">✗</div>
-                <div class="table-cell">✓</div>
-            </div>
-            
-            <div class="table-row">
-                <div class="table-cell feature">Cancelación</div>
-                <div class="table-cell">Flexible</div>
-                <div class="table-cell">Flexible</div>
-                <div class="table-cell">Flexible</div>
+                <div class="table-cell feature">Precio Mensual</div>
+                <div class="table-cell">$29.900</div>
+                <div class="table-cell">$59.900</div>
+                <div class="table-cell">$79.900</div>
+                <div class="table-cell">$199.900</div>
+                <div class="table-cell">$69.900</div>
+                <div class="table-cell">$39.900</div>
             </div>
         </div>
     </section>
@@ -202,7 +333,7 @@
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Recibiras tu café a través de correo nacional certificado. El envío es gratis para todos nuestros planes y toma entre 3-5 días hábiles.</p>
+                    <p>Recibirás tu café a través de correo nacional certificado. El envío estándar toma 3-5 días, prioritario 2-3 días y express 24 horas en áreas urbanas.</p>
                 </div>
             </div>
 
@@ -232,7 +363,7 @@
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Sí, los planes Profesional y Premium incluyen descuentos en compras adicionales. Además, los clientes VIP reciben ofertas exclusivas regulares.</p>
+                    <p>Sí, todos los planes incluyen descuentos adicionales en compras en la tienda. Además, los clientes premium reciben ofertas exclusivas regulares.</p>
                 </div>
             </div>
 
@@ -248,20 +379,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE LLAMADA A ACCIÓN -->
-    <section class="planes-cta">
-        <div class="cta-content">
-            <h2>¿Listo para elevar tu experiencia con el café?</h2>
-            <p>Únete a cientos de clientes felices que ya disfrutan de café premium cada mes</p>
-            <div class="cta-buttons">
-                <button class="cta-btn primary" onclick="document.querySelector('.plan-card.featured').scrollIntoView({behavior: 'smooth'})">
-                    Ver Planes
-                </button>
-                <button class="cta-btn secondary" onclick="window.location.hash = 'home'">
-                    Volver al Inicio
-                </button>
-            </div>
-        </div>
-    </section>
+    <script src="../javascript/planes.js"></script>
 </body>
 </html>
