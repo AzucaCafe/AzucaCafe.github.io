@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Responsividad - Azuca Café</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #556345 0%, #6a7c58 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #556345;
+        }
+
+        .section h2 {
+            color: #556345;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .device-sizes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .device {
+            background: white;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .device:hover {
+            border-color: #556345;
+            background: #f5f5f5;
+            transform: translateY(-2px);
+        }
+
+        .device-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .device-size {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .instructions {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .instructions h3 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .instructions li {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            background: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .device-sizes {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 Prueba de Responsividad</h1>
+            <p>Verifica la adaptabilidad del sitio en diferentes dispositivos</p>
+        </div>
+
+        <div class="content">
+            <div class="instructions">
+                <h3>🎯 Instrucciones para Probar</h3>
+                <ol>
+                    <li><strong>Abre Chrome DevTools:</strong> Presiona F12 o Click derecho → Inspeccionar</li>
+                    <li><strong>Activa modo responsivo:</strong> Presiona Ctrl+Shift+M (o Cmd+Shift+M en Mac)</li>
+                    <li><strong>Prueba en los siguientes tamaños:</strong> Ver lista debajo</li>
+                    <li><strong>Verifica:</strong> Que no haya sobreposiciones ni overflow horizontal</li>
+                    <li><strong>Rota el dispositivo:</strong> Prueba en horizontal y vertical</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>📏 Tamaños de Pantalla para Probar</h2>
+                <p>Haz clic en cualquiera para copiar la resolución:</p>
+                
+                <div class="device-sizes">
+                    <div class="device" onclick="alert('iPhone SE: 375x667px')">
+                        <div class="device-name">📱 iPhone SE</div>
+                        <div class="device-size">375 × 667</div>
+                    </div>
+
+                    <div class="device" onclick="alert('iPhone 12: 390x844px')">
+                        <div class="device-name">📱 iPhone 12</div>
+                        <div class="device-size">390 × 844</div>
+                    </div>
+
+                    <div class="device" onclick="alert('Galaxy S20: 360x800px')">
+                        <div class="device-name">📱 Galaxy S20</div>
+                        <div class="device-size">360 × 800</div>
+                    </div>
+
+                    <div class="device" onclick="alert('iPad: 768x1024px')">
+                        <div class="device-name">📱 iPad</div>
+                        <div class="device-size">768 × 1024</div>
+                    </div>
+
+                    <div class="device" onclick="alert('iPad Pro: 1024x1366px')">
+                        <div class="device-name">📱 iPad Pro</div>
+                        <div class="device-size">1024 × 1366</div>
+                    </div>
+
+                    <div class="device" onclick="alert('Desktop: 1440x900px')">
+                        <div class="device-name">🖥️ Desktop</div>
+                        <div class="device-size">1440 × 900</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>✅ Lo Que Deberías Ver</h2>
+                <ul class="checklist">
+                    <li>Header responsive con contenido bien ordenado</li>
+                    <li>Cards en 1 columna en móvil pequeño</li>
+                    <li>Cards en 2 columnas en móvil grande</li>
+                    <li>Imagen de bienvenida escalada correctamente</li>
+                    <li>Botones con tamaño apropiado para tocar</li>
+                    <li>Texto legible sin necesidad de zoom</li>
+                    <li>Sin sobreposición de elementos</li>
+                    <li>Sin scroll horizontal no deseado</li>
+                    <li>Espaciado consistente en todos los tamaños</li>
+                    <li>Ubicaciones y mapas responsivos</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🔍 Puntos Críticos a Verificar</h2>
+                <ul class="checklist">
+                    <li><strong>Sección Header:</strong> Imagen debajo del texto en móvil</li>
+                    <li><strong>Cards:</strong> Cambio de 2 a 1 columna en móviles pequeños</li>
+                    <li><strong>Ubicaciones:</strong> Tabs verticales en móvil</li>
+                    <li><strong>Suscripción:</strong> Orden correcto de elementos</li>
+                    <li><strong>Certificaciones:</strong> Legible en pantalla pequeña</li>
+                    <li><strong>Tomos:</strong> Imagen arriba en móvil, lado a lado en desktop</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🎨 Cambios Realizados</h2>
+                <p><strong>Antes:</strong> Estilos inline conflictivos, sobreposición de elementos, overflow horizontal</p>
+                <p><strong>Después:</strong> Mobile-first approach, flexbox dinámico, media queries organizadas</p>
+                
+                <h3 style="margin-top: 15px; color: #556345;">Nuevo Flujo de Media Queries:</h3>
+                <ul class="checklist">
+                    <li>&lt; 380px: Móvil muy pequeño</li>
+                    <li>380px - 480px: Móvil pequeño</li>
+                    <li>480px - 700px: Móvil grande</li>
+                    <li>700px - 768px: Transición tablet</li>
+                    <li>768px - 1024px: Tablet</li>
+                    <li>&gt; 1024px: Desktop</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🚀 Próximo Paso</h2>
+                <p>Si todo se ve bien en todos los tamaños, ¡puedes hacer push a producción!</p>
+                <p>El código está completamente limpio y optimizado para todos los dispositivos.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Página de prueba - Azuca Café | Generada automáticamente después del refactor mobile</p>
+        </div>
+    </div>
+</body>
+</html>
