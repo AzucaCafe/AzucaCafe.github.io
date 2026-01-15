@@ -35,9 +35,168 @@ body {
 }
 
 /* ========================
-   PORTFOLIO HEADER - HERO PREMIUM BLANCO COMPACTO
+   NUEVOS ESTILOS HEADER - MOBILE FIRST
 ======================== */
 .portfolio-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    background: #ffffff;
+    min-height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.header-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+.header-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: block;
+    object-fit: cover;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    order: 1;
+    padding: 0 12px;
+}
+
+.header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #222;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+}
+
+.header-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin: 0 0 16px 0;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.header-button {
+    background: #556345;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-button:active {
+    transform: scale(0.98);
+}
+
+/* TOMOS SECTION - MOBILE FIRST */
+.tomos-section {
+    background-color: #f7f7f7;
+    padding: 40px 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tomos-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.tomos-image {
+    width: 100%;
+    max-width: 100%;
+}
+
+.tomos-img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    display: block;
+}
+
+.tomos-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tomos-title {
+    font-size: 1.6rem;
+    color: #222;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    font-family: 'Playfair Display', serif;
+}
+
+.tomos-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tomos-button {
+    background: #556345;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    align-self: flex-start;
+}
+
+.tomos-button:active {
+    transform: scale(0.98);
+}
+
+/* ========================
+   PORTFOLIO HEADER - HERO PREMIUM BLANCO COMPACTO
+======================== */
+.portfolio-header-old {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1037,119 +1196,248 @@ body {
     }
 }
 
+/* ===========================
+   MEDIA QUERIES NUEVOS - MOBILE FIRST
+=========================== */
+
+/* Tablet grande y desktop */
+@media (min-width: 768px) {
+    .portfolio-header {
+        flex-direction: row;
+        padding: 60px 40px;
+        gap: 40px;
+        min-height: 500px;
+    }
+
+    .header-image {
+        flex: 1;
+        order: 2;
+    }
+
+    .header-img {
+        max-width: 450px;
+    }
+
+    .header-content {
+        flex: 1;
+        order: 1;
+        text-align: center;
+        padding: 0;
+    }
+
+    .header-title {
+        font-size: 2.5rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .header-button {
+        padding: 14px 32px;
+        font-size: 0.95rem;
+    }
+
+    /* TOMOS SECTION TABLET */
+    .tomos-section {
+        padding: 60px 40px;
+    }
+
+    .tomos-wrapper {
+        flex-direction: row;
+        gap: 48px;
+    }
+
+    .tomos-image {
+        flex: 1;
+    }
+
+    .tomos-content {
+        flex: 1;
+        gap: 16px;
+    }
+
+    .tomos-title {
+        font-size: 2rem;
+    }
+
+    .tomos-description {
+        font-size: 1rem;
+    }
+
+    .tomos-button {
+        align-self: flex-start;
+        padding: 14px 32px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1024px) {
+    .portfolio-header {
+        padding: 80px 80px;
+        gap: 60px;
+        min-height: 550px;
+    }
+
+    .header-img {
+        max-width: 500px;
+    }
+
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .header-button {
+        padding: 16px 40px;
+        font-size: 1rem;
+    }
+
+    /* TOMOS SECTION DESKTOP */
+    .tomos-section {
+        padding: 80px 80px;
+    }
+
+    .tomos-wrapper {
+        gap: 60px;
+        max-width: 1400px;
+    }
+
+    .tomos-title {
+        font-size: 2.2rem;
+    }
+
+    .tomos-description {
+        font-size: 1.1rem;
+    }
+}
+
 /* Para pantallas menores a 700px (móviles grandes/tablets pequeñas) */
 @media (max-width: 700px) {
-    /* HEADER - MÁS PADDING LATERAL Y LETRA MÁS GRANDE */
+    /* HEADER MOBILE - YA ESTÁ EN MOBILE FIRST */
     .portfolio-header {
+        padding: 20px 16px;
+        min-height: auto;
+        gap: 16px;
+    }
+
+    .header-image {
+        order: 2;
+        width: 100%;
+    }
+
+    .header-img {
+        max-width: 100%;
+        border-radius: 14px;
+    }
+
+    .header-content {
+        order: 1;
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .header-title {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .header-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+    }
+
+    .header-button {
+        padding: 11px 24px;
+        font-size: 0.85rem;
+    }
+
+    /* TOMOS SECTION MOBILE */
+    .tomos-section {
+        padding: 32px 16px;
+    }
+
+    .tomos-wrapper {
         flex-direction: column;
-        padding: 20px 20px 40px !important; /* Más padding lateral */
-        min-height: 100vh !important;
-        height: 100vh;
-        gap: 25px !important; /* Más espacio entre elementos */
-        justify-content: space-between;
-        box-sizing: border-box;
-        overflow: hidden;
-        position: relative;
+        gap: 16px;
     }
 
-    .title-wall {
-        text-align: center;
-        padding-right: 0;
-        margin-bottom: 0;
+    .tomos-image {
         width: 100%;
-        padding: 0 15px; /* Padding lateral interno */
     }
 
-    .welcome-title {
-        font-size: 2.6em !important; /* Más grande */
-        letter-spacing: 0;
-        margin-bottom: 18px !important;
-        line-height: 1.2;
-        padding: 0 10px; /* Padding lateral interno */
-    }
-
-    .welcome-subtitle {
-        font-size: 1.05em !important; /* Más grande */
-        max-width: 100%;
-        margin-bottom: 25px !important;
-        line-height: 1.5;
-        padding: 0 15px; /* Padding lateral interno */
-    }
-
-    .welcome-container::after {
-        margin: 20px auto 0 !important; /* Más espacio */
-    }
-
-    .cta-button {
-        padding: 14px 36px !important; /* Un poco más grande */
-        font-size: 0.85em !important;
-        letter-spacing: 1.2px !important;
-    }
-
-    .pic-wall {
-        justify-content: center;
+    .tomos-content {
         width: 100%;
-        max-width: 100%;
-        padding: 0 20px; /* Padding lateral para la imagen */
+        gap: 10px;
     }
 
-    .pic-wall img {
-        width: 85%;
-        max-width: 350px;
-        border-radius: 18px !important; /* Más redondeado */
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08), 
-                    inset 0 0 0 1px rgba(85, 99, 69, 0.1);
-        margin: 0 auto; /* Centrado */
+    .tomos-title {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .tomos-description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .tomos-button {
+        padding: 11px 24px;
+        font-size: 0.85rem;
     }
 
     /* CARDS EN 2 COLUMNAS - LETRA MÁS GRANDE Y PADDING LATERAL */
     .cards-section {
-        padding: 50px 20px !important; /* Más padding vertical y lateral */
+        padding: 40px 16px !important;
     }
 
     .cards-intro {
-        padding: 0 10px; /* Padding lateral interno */
+        padding: 0 10px;
     }
 
     .cards-intro h2 {
-        font-size: 2.4em !important; /* Más grande */
-        margin-bottom: 20px !important;
-        padding: 0 5px; /* Pequeño padding lateral */
+        font-size: 1.8rem !important;
+        margin-bottom: 16px !important;
+        padding: 0 5px;
     }
 
     .cards-intro p {
-        font-size: 1.15em !important; /* Más grande */
-        margin-bottom: 30px !important;
-        line-height: 1.6;
-        padding: 0 5px; /* Pequeño padding lateral */
+        font-size: 1rem !important;
+        margin-bottom: 24px !important;
+        line-height: 1.5;
+        padding: 0 5px;
     }
 
     .cards-container {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 20px !important; /* Más espacio entre cards */
-        padding: 0 5px; /* Padding lateral interno */
+        gap: 16px !important;
+        padding: 0 5px;
     }
 
     .card {
-        min-height: 300px !important; /* Un poco más alto */
-        max-height: 300px !important;
-        border-radius: 16px !important;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
+        min-height: 280px !important;
+        max-height: 280px !important;
+        border-radius: 14px !important;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1) !important;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 0; /* Resetear cualquier padding interno del card */
+        padding: 0;
     }
 
     .card-image-wrapper {
-        height: 150px !important; /* Más alto */
+        height: 140px !important;
         flex-shrink: 0;
-        padding: 0; /* Sin padding */
+        padding: 0;
     }
 
     .card-content {
-        padding: 18px 15px !important; /* Más padding interno */
+        padding: 14px 12px !important;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
@@ -1157,120 +1445,497 @@ body {
     }
 
     .card-title {
-        font-size: 1.3em !important; /* Más grande */
-        margin-bottom: 10px !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 6px !important;
         font-weight: 700 !important;
         line-height: 1.3;
-        padding: 0; /* Sin padding extra */
+        padding: 0;
     }
 
     .card-description {
-        font-size: 0.95em !important; /* Más grande */
-        line-height: 1.5 !important;
-        color: #555 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        color: #666 !important;
         margin-bottom: 0;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding: 0; /* Sin padding extra */
+        padding: 0;
     }
 
-    .card-button {
-        transition: transform 0.2s ease !important;
-        border-radius: 16px !important;
-        padding: 0; /* Sin padding */
-        margin: 0; /* Sin margen */
+    .card-icon {
+        font-size: 2em !important;
+        margin-top: 8px;
+    }
+
+    /* SCROLL INDICATOR MOBILE */
+    .scroll-indicator {
+        margin-top: -40px;
+    }
+
+    .scroll-indicator p {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+
+    .arrow-bounce {
+        font-size: 1.2rem;
+    }
+
+    /* CERTIFICACIONES MOBILE */
+    .certifications-section {
+        padding: 40px 16px !important;
+    }
+
+    .certifications-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    .discover-text {
+        margin-bottom: 24px;
+    }
+
+    .discover-text p {
+        font-size: 0.95rem !important;
+    }
+
+    .certifications-container {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .cert-item {
+        padding: 16px !important;
+    }
+
+    .cert-img-wrapper {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .cert-name {
+        font-size: 1rem !important;
+        margin-top: 10px !important;
+    }
+
+    /* UBICACIONES MOBILE */
+    .locations-section {
+        padding: 40px 16px !important;
+    }
+
+    .locations-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .locations-subtitle {
+        font-size: 0.95rem !important;
+        margin-bottom: 24px !important;
+    }
+
+    .locations-tabs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .location-tab {
+        padding: 12px 16px !important;
+        border-radius: 12px !important;
+        border: 2px solid #ddd;
+        background: white;
         width: 100%;
     }
-    
-    .card-button:active {
-        transform: scale(0.96) !important;
+
+    .location-tab.active {
+        border-color: #556345;
+        background: #f8f9f7;
+        color: #556345;
+    }
+
+    .tab-icon {
+        font-size: 1.4rem !important;
+    }
+
+    .tab-content h4 {
+        font-size: 1rem !important;
+    }
+
+    .tab-content p {
+        font-size: 0.85rem !important;
+    }
+
+    .location-item.active {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .location-details {
+        padding-left: 0 !important;
+        order: 1;
+    }
+
+    .coffee-header h3 {
+        font-size: 1.4rem !important;
+        margin-bottom: 12px !important;
+    }
+
+    .altitude-badge {
+        padding: 6px 14px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .coffee-stats {
+        gap: 12px !important;
+    }
+
+    .stat-card {
+        padding: 12px !important;
+    }
+
+    .stat-icon {
+        font-size: 1.2rem !important;
+    }
+
+    .stat-content h4 {
+        font-size: 0.95rem !important;
+    }
+
+    .stat-content p {
+        font-size: 0.85rem !important;
+    }
+
+    .harvest-section {
+        margin-top: 16px;
+    }
+
+    .harvest-header h4 {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .harvest-dates {
+        font-size: 0.9rem !important;
+    }
+
+    .harvest-dates p {
+        margin: 6px 0 !important;
+    }
+
+    .chart-title {
+        font-size: 0.95rem !important;
+    }
+
+    .chart-months {
+        gap: 6px !important;
+    }
+
+    .month {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 0.7rem !important;
+    }
+
+    .chart-bars {
+        gap: 6px !important;
+    }
+
+    .bar {
+        width: 20px !important;
+    }
+
+    .location-map-container {
+        order: 2;
+        width: 100%;
+    }
+
+    .map-header h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .location-map {
+        height: 300px !important;
+        border-radius: 12px !important;
+    }
+
+    /* SUSCRIPCIÓN MOBILE */
+    .subscription-section {
+        padding: 40px 16px !important;
+    }
+
+    .subscription-wrapper {
+        flex-direction: column !important;
+    }
+
+    .subscription-info {
+        order: 2;
+    }
+
+    .subscription-image {
+        order: 1;
+        width: 100%;
+    }
+
+    .subscription-title {
+        font-size: 1.6rem !important;
+    }
+
+    .subscription-subtitle {
+        font-size: 0.95rem !important;
+    }
+
+    .subscription-steps {
+        gap: 12px !important;
+    }
+
+    .step-card {
+        padding: 16px !important;
+    }
+
+    .step-number {
+        font-size: 1.4rem !important;
+    }
+
+    .step-title {
+        font-size: 1rem !important;
+    }
+
+    .step-description {
+        font-size: 0.85rem !important;
+    }
+
+    .subscription-btn {
+        padding: 12px 24px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .subscription-stats {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .stat-number {
+        font-size: 1.6rem !important;
+    }
+
+    .stat-label {
+        font-size: 0.85rem !important;
+    }
+
+    .image-container {
+        margin-bottom: 16px;
+    }
+
+    .main-image {
+        max-width: 100%;
+        border-radius: 14px;
+    }
+
+    .decoration-circle {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .floating-element {
+        font-size: 1.6rem !important;
     }
 }
 
 /* Para pantallas menores a 480px (móviles pequeños) */
 @media (max-width: 480px) {
-    /* HEADER - MÁS COMPACTO PERO CON PADDING LATERAL */
     .portfolio-header {
-        padding: 20px 15px 35px !important; /* Padding lateral ajustado */
+        padding: 20px 15px 35px !important;
         gap: 20px !important;
     }
 
-    .welcome-title {
-        font-size: 2.2em !important;
-        margin-bottom: 15px !important;
-        padding: 0 8px;
+    .header-title {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
     }
 
-    .welcome-subtitle {
-        font-size: 0.95em !important;
-        margin-bottom: 20px !important;
-        padding: 0 10px;
+    .header-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
     }
 
-    .pic-wall {
-        padding: 0 15px;
+    .header-button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
     }
 
-    .pic-wall img {
-        width: 90%;
-        max-width: 320px;
-        border-radius: 16px !important;
+    .header-img {
+        max-width: 280px;
+        border-radius: 12px;
     }
 
-    /* CARDS - MÁS COMPACTAS PERO CON LETRA LEGIBLE Y PADDING LATERAL */
+    /* CARDS MOBILE PEQUEÑO */
     .cards-section {
-        padding: 40px 15px !important; /* Padding lateral mantenido */
-    }
-
-    .cards-intro {
-        padding: 0 8px;
+        padding: 32px 15px !important;
     }
 
     .cards-intro h2 {
-        font-size: 2em !important;
-        margin-bottom: 15px !important;
+        font-size: 1.5rem !important;
     }
 
     .cards-intro p {
-        font-size: 1em !important;
-        margin-bottom: 25px !important;
+        font-size: 0.9rem !important;
     }
 
     .cards-container {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px !important; /* Menos espacio */
-        padding: 0 5px;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
     }
 
     .card {
-        min-height: 270px !important;
-        max-height: 270px !important;
-        border-radius: 14px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
     }
 
     .card-image-wrapper {
-        height: 130px !important;
-    }
-
-    .card-content {
-        padding: 15px 12px !important; /* Padding interno ajustado */
+        height: 150px !important;
     }
 
     .card-title {
-        font-size: 1.15em !important;
-        margin-bottom: 8px !important;
+        font-size: 1rem !important;
     }
 
     .card-description {
-        font-size: 0.85em !important; /* Aún legible */
-        -webkit-line-clamp: 2;
+        font-size: 0.8rem !important;
+    }
+
+    /* TOMOS MOBILE PEQUEÑO */
+    .tomos-section {
+        padding: 28px 15px;
+    }
+
+    .tomos-title {
+        font-size: 1.3rem;
+    }
+
+    .tomos-description {
+        font-size: 0.85rem;
+    }
+
+    /* OTROS AJUSTES PEQUEÑOS */
+    .certifications-section {
+        padding: 32px 15px !important;
+    }
+
+    .locations-section {
+        padding: 32px 15px !important;
+    }
+
+    .subscription-section {
+        padding: 32px 15px !important;
     }
 }
 
 /* Para pantallas muy pequeñas (menos de 380px) */
+@media (max-width: 380px) {
+    .portfolio-header {
+        padding: 16px 12px 28px !important;
+        gap: 14px;
+    }
+
+    .header-title {
+        font-size: 1.3rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .header-button {
+        padding: 9px 18px;
+        font-size: 0.75rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .card-title {
+        font-size: 0.95rem !important;
+    }
+
+    .card-description {
+        font-size: 0.75rem !important;
+    }
+}
+
+/* Para tablets medianas (entre 700px y 900px) */
+@media (min-width: 701px) and (max-width: 900px) {
+    .portfolio-header {
+        padding: 40px 30px;
+        gap: 30px;
+    }
+
+    .header-title {
+        font-size: 2.2rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .header-img {
+        max-width: 400px;
+    }
+
+    /* CARDS TABLET MEDIANO */
+    .cards-section {
+        padding: 50px 30px !important;
+    }
+
+    .cards-intro h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .cards-intro p {
+        font-size: 1.05rem !important;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+
+    .card {
+        min-height: 320px !important;
+    }
+
+    .card-image-wrapper {
+        height: 160px !important;
+    }
+
+    .card-title {
+        font-size: 1.2rem !important;
+    }
+
+    .card-description {
+        font-size: 0.95rem !important;
+    }
+
+    /* TOMOS TABLET MEDIANO */
+    .tomos-section {
+        padding: 50px 30px;
+    }
+
+    .tomos-wrapper {
+        flex-direction: row;
+        gap: 36px;
+    }
+
+    .tomos-title {
+        font-size: 1.9rem;
+    }
+
+    .tomos-description {
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas menores a 380px (móviles muy pequeños) */
 @media (max-width: 380px) {
     .cards-container {
         grid-template-columns: 1fr !important; /* Cambiar a 1 columna */
@@ -1350,20 +2015,6 @@ body {
 
     .card-description {
         font-size: 1em !important;
-    }
-}
-
-/* Asegurar que los botones y enlaces también tengan buen padding */
-@media (max-width: 700px) {
-    .cta-button, 
-    .card-button, 
-    .location-btn,
-    .subscription-btn {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: fit-content;
-        min-width: 200px;
     }
 }
 
