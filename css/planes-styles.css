@@ -1,3 +1,16 @@
+/* ===================================
+   GLOBAL FIX - PREVENIR OVERFLOW
+=================================== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
 /* ========================
    PLANES STYLES - DISEÑO PROFESIONAL
 ======================== */
@@ -8,7 +21,9 @@ body {
     font-family: 'Playfair Display', serif;
     color: #2c3e2e;
     background-color: #ffffff;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* ========================
@@ -446,9 +461,12 @@ body {
     display: grid;
     gap: 0;
     border-radius: 15px;
-    overflow: hidden;
+    overflow-x: auto;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    min-width: 1000px;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .table-row {
@@ -755,6 +773,7 @@ body {
 @media (max-width: 768px) {
     .planes-hero {
         padding: 60px 20px;
+        text-align: center;
     }
     
     .planes-hero-title {
@@ -766,74 +785,129 @@ body {
     }
     
     .all-plans-section {
-        padding: 60px 20px;
+        padding: 50px 16px;
     }
     
     .all-plans-container {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .section-header {
+        text-align: center;
     }
     
     .section-header h2 {
         font-size: 2em;
     }
     
+    .all-plan-image {
+        height: 180px;
+        padding: 12px;
+    }
+    
+    .all-plan-img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    
+    .all-plan-content {
+        padding: 0 16px 20px;
+        text-align: center;
+    }
+    
+    .all-plan-badge {
+        align-self: center;
+        margin: 10px auto 8px;
+    }
+    
     .all-plan-name {
         font-size: 1.5em;
+        text-align: center;
     }
     
     .all-plan-price {
         font-size: 2em;
+        text-align: center;
+    }
+    
+    .all-plan-features {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .all-plan-features li {
+        font-size: 0.9em;
+        justify-content: center;
+    }
+    
+    .all-plan-btn {
+        padding: 11px 22px;
+        font-size: 0.9em;
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
     }
     
     .variety-info h3 {
         font-size: 1.8em;
+        text-align: center;
     }
     
     .planes-comparison {
-        padding: 60px 20px;
+        padding: 50px 16px;
     }
     
     .planes-comparison h2 {
         font-size: 2em;
+        text-align: center;
     }
     
     .table-cell {
-        padding: 15px 10px;
+        padding: 12px 8px;
+        font-size: 0.85em;
     }
     
     .planes-faq {
-        padding: 60px 20px;
+        padding: 50px 16px;
     }
     
     .planes-faq h2 {
         font-size: 2em;
+        text-align: center;
     }
     
     .planes-cta {
-        padding: 60px 20px;
+        padding: 50px 16px;
     }
     
     .cta-content h2 {
         font-size: 2em;
+        text-align: center;
     }
     
     .cta-content p {
         font-size: 1em;
+        text-align: center;
     }
     
     .cta-buttons {
-        gap: 15px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
     }
     
     .cta-btn {
-        padding: 12px 30px;
-        font-size: 0.95em;
+        padding: 11px 26px;
+        font-size: 0.9em;
+        width: fit-content;
     }
 }
 
 @media (max-width: 480px) {
     .planes-hero {
-        padding: 40px 15px;
+        padding: 40px 12px;
     }
     
     .planes-hero-title {
@@ -845,32 +919,36 @@ body {
     }
     
     .all-plans-section {
-        padding: 40px 15px;
+        padding: 40px 12px;
     }
     
     .all-plan-image {
-        height: 180px;
+        height: 150px;
+        padding: 10px;
     }
     
     .all-plan-content {
-        padding: 0 15px 20px;
+        padding: 0 12px 18px;
+        text-align: center;
     }
     
     .all-plan-features li {
         font-size: 0.85em;
+        justify-content: center;
     }
     
     .all-plan-btn {
-        padding: 12px 20px;
-        font-size: 0.9em;
+        padding: 10px 20px;
+        font-size: 0.85em;
+        margin: 0 auto;
     }
     
     .faq-question {
-        padding: 15px;
+        padding: 12px;
     }
     
     .faq-answer p {
-        padding: 15px;
+        padding: 12px;
     }
     
     .cta-buttons {
@@ -878,8 +956,10 @@ body {
     }
     
     .cta-btn {
-        width: 100%;
+        width: fit-content;
+        margin: 0 auto;
     }
+}
     
     .variety-card {
         padding: 20px;

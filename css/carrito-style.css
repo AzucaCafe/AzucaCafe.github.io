@@ -1,5 +1,19 @@
+/* ===================================
+   GLOBAL FIX - PREVENIR OVERFLOW
+=================================== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
 .carrito-container {
-    max-width: 1000px;
+    max-width: 100%;
+    width: 100%;
     margin: 40px auto;
     background: #fff;
     border-radius: 16px;
@@ -8,14 +22,19 @@
     display: flex;
     gap: 32px;
     align-items: flex-start;
-    font-family: 'Montserrat', 'Arial', sans-serif; /* Se aplica fuente aquí */
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .carrito-carrusel {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    min-width: 400px;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .carrusel-thumbs {
@@ -126,12 +145,77 @@
         flex-direction: column;
         align-items: center;
         padding: 16px;
+        text-align: center;
     }
     .carrito-carrusel {
         min-width: unset;
         margin-bottom: 24px;
+        justify-content: center;
     }
     .carrito-info {
         padding-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .carrito-container {
+        padding: 12px;
+        gap: 16px;
+    }
+    
+    .carrito-carrusel {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .carrito-info {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .carrito-info h1 {
+        font-size: 1.6em;
+        text-align: center;
+    }
+    
+    .carrito-info p {
+        text-align: center;
+        font-size: 0.95em;
+    }
+    
+    .buy-button {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 1em;
+    }
+    
+    .back-link {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrito-container {
+        padding: 10px;
+        gap: 12px;
+    }
+    
+    .carrito-info {
+        padding: 12px;
+    }
+    
+    .carrito-info h1 {
+        font-size: 1.4em;
+    }
+    
+    .buy-button {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 0.95em;
     }
 }

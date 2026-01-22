@@ -1,9 +1,25 @@
+/* ===================================
+   GLOBAL FIX - PREVENIR OVERFLOW
+=================================== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #000;
     font-family: 'Playfair Display', serif;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
 }
 
 .history-section {
@@ -164,12 +180,70 @@ body {
 
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
+    .history-section {
+        padding: 16px;
+        margin: 20px auto;
+    }
+    
+    .history-section h2 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+    
+    .history-section p {
+        font-size: 1em;
+        text-align: center;
+    }
+    
     .awards {
-        flex-direction: column; /* Alinea los premios en una columna en pantallas pequeñas */
+        flex-direction: column;
         justify-content: center;
     }
 
     .awards li {
-        max-width: 100%; /* En pantallas pequeñas, los premios ocuparán el ancho completo */
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .awards ol li {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+        text-align: center;
+    }
+    
+    .award-image {
+        width: 50px;
+        height: 50px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-section {
+        padding: 12px;
+        margin: 15px auto;
+    }
+    
+    .history-section h2 {
+        font-size: 1.4em;
+    }
+    
+    .history-section p {
+        font-size: 0.9em;
+        text-align: center;
+    }
+    
+    .awards ol li {
+        padding: 12px;
+        gap: 8px;
+    }
+    
+    .award-image {
+        width: 40px;
+        height: 40px;
     }
 }

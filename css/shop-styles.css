@@ -1,3 +1,16 @@
+/* ===================================
+   GLOBAL FIX - PREVENIR OVERFLOW
+=================================== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
 /* ========================
    SHOP STYLES - DISEÑO COMO PLANES
 ======================== */
@@ -8,7 +21,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #2c3e2e;
     background-color: #ffffff;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* ========================
@@ -524,24 +539,37 @@ body {
 
 @media (max-width: 768px) {
     .shop-hero {
-        padding: 30px 5vw 20px;
+        padding: 30px 16px 20px;
         min-height: 100px;
+        text-align: center;
     }
     
     .shop-hero-title {
-        font-size: 2.8em;
+        font-size: 2.2em;
+        text-align: center;
     }
     
     .shop-hero-subtitle {
-        font-size: 1.2em;
+        font-size: 1rem;
+        text-align: center;
     }
     
     .shop-main {
-        padding: 60px 20px;
+        padding: 40px 16px;
+        text-align: center;
+    }
+    
+    .section-header {
+        text-align: center;
     }
     
     .section-header h2 {
-        font-size: 2em;
+        font-size: 1.8em;
+        text-align: center;
+    }
+    
+    .section-header p {
+        text-align: center;
     }
     
     .shop-container {
@@ -549,11 +577,13 @@ body {
     }
     
     .product-name {
-        font-size: 1.5em;
+        font-size: 1.3em;
+        text-align: center;
     }
     
     .product-actions {
         flex-direction: column;
+        align-items: center;
     }
     
     .info-container {
@@ -563,28 +593,31 @@ body {
 
 @media (max-width: 480px) {
     .shop-hero {
-        padding: 25px 4vw 15px;
-        min-height: 90px;
+        padding: 20px 12px 15px;
+        min-height: 80px;
     }
     
     .shop-hero-title {
-        font-size: 2.3em;
+        font-size: 1.8em;
+        text-align: center;
     }
     
     .shop-hero-subtitle {
-        font-size: 1.1em;
+        font-size: 0.9em;
+        text-align: center;
     }
     
     .shop-main {
-        padding: 40px 15px;
+        padding: 30px 12px;
     }
     
     .product-image-container {
-        height: 180px;
+        height: 150px;
     }
     
     .product-content {
-        padding: 0 15px 20px;
+        padding: 0 12px 20px;
+        text-align: center;
     }
     
     .product-select {
@@ -593,7 +626,13 @@ body {
     }
     
     .price {
-        font-size: 1.8em;
+        font-size: 1.6em;
+        text-align: center;
+    }
+    
+    .section-header h2 {
+        font-size: 1.4em;
+        text-align: center;
     }
 }
 

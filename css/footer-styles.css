@@ -1,7 +1,24 @@
+/* ===================================
+   GLOBAL FIX - PREVENIR OVERFLOW
+=================================== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
 .footer-jv {
-    background-color: #556345; /* Rojo principal (puedes cambiarlo) */
+    background-color: #556345;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -107,12 +124,81 @@
     .footer-main {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
+        padding: 60px 30px;
+        text-align: center;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+    
+    .footer-col h2 {
+        text-align: center;
+    }
+    
+    .footer-col h3 {
+        text-align: center;
+    }
+    
+    .footer-col p {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .footer-col ul li {
+        text-align: center;
+    }
+    
+    .footer-newsletter form {
+        max-width: 100%;
+        justify-content: center;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 520px) {
     .footer-main {
         grid-template-columns: 1fr;
-        padding: 60px 30px;
+        padding: 40px 16px;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+    
+    .footer-col h2 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+    
+    .footer-col h3 {
+        font-size: 1.1em;
+        text-align: center;
+    }
+    
+    .footer-col p {
+        font-size: 0.9em;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .footer-col ul li {
+        text-align: center;
+    }
+    
+    .footer-col ul li a {
+        font-size: 0.9em;
+    }
+    
+    .footer-newsletter form {
+        max-width: 100%;
+    }
+    
+    .footer-bottom {
+        padding: 15px 10px;
+        font-size: 0.85em;
+        text-align: center;
     }
 }
