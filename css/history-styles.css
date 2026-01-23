@@ -11,239 +11,990 @@ html, body {
     overflow-x: hidden !important;
 }
 
+/* ========================
+   HISTORY STYLES - DISEÑO PROFESIONAL
+======================== */
+
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    color: #000;
     font-family: 'Playfair Display', serif;
+    color: #2c3e2e;
+    background-color: #ffffff;
+    overflow-x: hidden !important;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden !important;
 }
 
-.history-section {
-    max-width: 900px; /* Limita el ancho para mejor legibilidad */
-    margin: 40px auto; /* Centra el contenido y agrega espacio superior e inferior */
-    padding: 20px;
-    background-color: #fff; /* Fondo blanco para que resalte */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+/* ========================
+   HERO SECTION
+======================== */
+.history-hero {
+    background: linear-gradient(135deg, #3a4a2c 0%, #556345 50%, #6a7c58 100%);
+    padding:50px 5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
 }
 
-.history-section h2 {
+.history-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.history-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.history-hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: #925632;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 4vw;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.history-section p {
+.history-hero-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    color: #000000;
-    line-height: 1.8; /* Mejora la legibilidad del texto */
-    margin-bottom: 15px;
-    text-align: justify; /* Justifica el texto para una apariencia más profesional */
-}
-
-.centered-content {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: #925632;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column; /* Cambia para alinear los elementos en columna */
-    justify-content: center; /* Alinea los elementos al centro verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    gap: 20px; /* Espacio entre los elementos */
-    padding: 20px;
-    text-align: center; /* Centra el texto */
-    padding-left: 50px;
-    padding-right: 50px;
-    border-radius: 15px;
-}
-
-.centered-content h3 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 36px; /* Ajusta el tamaño según tu preferencia */
-    margin-bottom: 20px;
-    color: #925632;
-}
-
-.wall-awards {
-    width: 100%; /* Hace que el contenedor de la imagen principal ocupe todo el ancho disponible */
-    max-height: 200px;
-    display: flex;
-    justify-content: center; /* Centra la imagen dentro del contenedor */
-    margin-bottom: 20px; /* Añade un espacio debajo de la imagen */
-    
-}
-
-.wall-awards img {
-    max-width: 100%; /* La imagen ocupa todo el ancho disponible */ /* Ajusta la altura máxima para que la imagen no se distorsione */
-    object-fit: cover; /* Corta la imagen en lugar de estirarla */
-    width: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.years {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los contenedores se distribuyan en filas */
-    justify-content: center; /* Centra los contenedores horizontalmente */
-    gap: 20px; /* Espacio entre los contenedores */
-    align-items: center; /* Mantiene los elementos alineados en la parte superior pero permite diferentes alturas */
-    
-}
-
-.year {
-    flex: 1 1 300px;
-    max-width: 400px;
-    padding: 10px;
-    background-color: #fff ;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
-}
-
-.year p {
-    font-weight: bold;
-    font-size: 30px; /* Ajusta el tamaño del año */
-    text-align: center;
-    margin-bottom: 10px;
-    color: #000000;
-}
-
-.awards {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 5px;
-    font-weight: normal;
-    font-size: 18px;
-    background-color: #925632;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.awards ol {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
+    font-size: 1.3vw;
     margin: 0;
-    width: 100%;
-    background-color: #925632;
-    border-radius: 15px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
-.awards li {
-    background-color: #ffffff; /* Color de fondo del premio */
-    border-radius: 15px;
-    color: #000000;
-    padding: 50px;
-    flex: 1 1 300px; /* Los elementos flexibles ocuparán al menos 300px de ancho */
-    max-width: 500px; /* Limita el ancho máximo de cada premio */
-    margin: 10px; /* Espacio alrededor de cada premio */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-    list-style-position: inside; /* Alinea la numeración con el texto */
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
-
+.hero-decoration {
+    position: relative;
+    height: 40px;
+    margin-top: 30px;
 }
 
-.awards ol li {
-    display: flex;
-    justify-content: space-between; /* Alinea el texto y la imagen de la medalla a los lados */
-    align-items: center; /* Alinea el contenido verticalmente */
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    background: white;
+    top: -80px;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    background: white;
+    top: -50px;
+    right: 10%;
+    animation: float 8s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(20px); }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================
+   HISTORIA PRINCIPAL
+======================== */
+.history-main {
+    padding: 100px 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.history-content {
     background-color: #ffffff;
+    padding: 60px 50px;
     border-radius: 15px;
-    color: #000000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.history-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #2c3e2e;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.history-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Imagen horizontal en history */
+.history-image-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    height: 350px;
+    width: 100%;
+}
+
+.history-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.history-image-wrapper:hover .history-image {
+    transform: scale(1.02);
+}
+
+/* ========================
+   COMMITMENT SECTION
+======================== */
+.commitment-section {
+    padding: 100px 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.commitment-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.commitment-image-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(58, 74, 44, 0.2);
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.commitment-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.commitment-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #2c3e2e;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.commitment-text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.commitment-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.8;
+    font-weight: 500;
     padding: 20px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, rgba(58, 74, 44, 0.05) 0%, rgba(85, 99, 69, 0.05) 100%);
+    border-left: 4px solid #3a4a2c;
+    border-radius: 8px;
 }
 
-.award-image {
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 0; /* Evita bordes redondeados */
+.commitment-box {
+    padding: 25px 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #3a4a2c;
+    transition: all 0.3s ease;
 }
 
-.awards ol li .award-image {
-    width: 50px; /* Ajusta el tamaño de la medalla */
-    height: auto;
-    margin-left: 10px; /* Espacio entre el texto y la medalla */
+.commitment-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(58, 74, 44, 0.15);
 }
 
-/* Media Queries para pantallas pequeñas */
+.commitment-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    color: #2c3e2e;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+}
+
+.commitment-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .commitment-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .commitment-image-wrapper {
+        aspect-ratio: auto;
+        height: 300px;
+    }
+
+    .commitment-content h2 {
+        font-size: 2.2em;
+    }
+}
+
 @media (max-width: 768px) {
-    .history-section {
-        padding: 16px;
-        margin: 20px auto;
-    }
-    
-    .history-section h2 {
-        font-size: 1.8em;
-        text-align: center;
-    }
-    
-    .history-section p {
-        font-size: 1em;
-        text-align: center;
-    }
-    
-    .awards {
-        flex-direction: column;
-        justify-content: center;
+    .commitment-section {
+        padding: 60px 5vw;
     }
 
-    .awards li {
-        max-width: 100%;
-        text-align: center;
-        justify-content: center;
-        gap: 10px;
+    .commitment-container {
+        gap: 30px;
     }
-    
-    .awards ol li {
-        flex-direction: column;
-        align-items: center;
-        padding: 16px;
-        text-align: center;
+
+    .commitment-content h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
     }
-    
-    .award-image {
-        width: 50px;
-        height: 50px;
-        margin-left: 0;
-        margin-top: 10px;
+
+    .commitment-intro {
+        font-size: 1em;
+    }
+
+    .commitment-box {
+        padding: 20px 25px;
+    }
+
+    .commitment-box h3 {
+        font-size: 1.2em;
+    }
+
+    .commitment-box p {
+        font-size: 0.9em;
     }
 }
 
 @media (max-width: 480px) {
-    .history-section {
-        padding: 12px;
-        margin: 15px auto;
+    .commitment-section {
+        padding: 50px 4vw;
     }
-    
-    .history-section h2 {
-        font-size: 1.4em;
+
+    .commitment-image-wrapper {
+        height: 250px;
     }
-    
-    .history-section p {
+
+    .commitment-content h2 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    .commitment-text {
+        gap: 20px;
+    }
+
+    .commitment-intro {
         font-size: 0.9em;
-        text-align: center;
+        padding: 15px;
     }
-    
-    .awards ol li {
+
+    .commitment-box {
+        padding: 15px 20px;
+    }
+
+    .commitment-box h3 {
+        font-size: 1.1em;
+    }
+
+    .commitment-box p {
+        font-size: 0.85em;
+    }
+}
+
+/* ========================
+   ACHIEVEMENTS SECTION
+======================== */
+.achievements-section {
+    padding: 100px 5vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(58, 74, 44, 0.03) 0%, rgba(85, 99, 69, 0.03) 100%);
+    border-radius: 25px;
+    margin-top: 60px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #2c3e2e;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========================
+   TIMELINE PROFESIONAL
+======================== */
+.timeline-container {
+    position: relative;
+    padding: 50px 0;
+}
+
+/* Línea central del timeline */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, #3a4a2c 0%, #556345 50%, #6a7c58 100%);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Items del timeline */
+.timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 10;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 3px solid #3a4a2c;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(58, 74, 44, 0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 0 0 6px rgba(58, 74, 44, 0.2);
+}
+
+.timeline-item.important .timeline-dot {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #3a4a2c 0%, #556345 100%);
+    border-color: #556345;
+}
+
+.timeline-item.important:hover .timeline-dot {
+    width: 32px;
+    height: 32px;
+    box-shadow: 0 0 0 8px rgba(58, 74, 44, 0.3);
+}
+
+.milestone-dot {
+    width: 28px !important;
+    height: 28px !important;
+    background: linear-gradient(135deg, #d4af37 0%, #3a4a2c 100%) !important;
+    border-color: #d4af37 !important;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5) !important;
+}
+
+/* Contenedor del contenido */
+.timeline-content {
+    width: calc(50% - 40px);
+    padding: 30px 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.timeline-content:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+.timeline-content.left {
+    margin-left: 0;
+    text-align: right;
+}
+
+.timeline-content.right {
+    margin-left: 50%;
+    text-align: left;
+}
+
+/* Decoración de conexión */
+.timeline-content.left::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 35px;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3a4a2c);
+}
+
+.timeline-content.right::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 35px;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #3a4a2c);
+}
+
+/* Elementos dentro del contenido */
+.timeline-year {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(135deg, #3a4a2c 0%, #556345 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em;
+    color: #2c3e2e;
+    margin: 10px 0 15px 0;
+    font-weight: 700;
+}
+
+.timeline-award {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95em;
+    color: #3a4a2c;
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 8px 0;
+}
+
+.timeline-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+/* Imágenes en timeline */
+.timeline-image-wrapper {
+    margin: 15px 0 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item.important:hover .timeline-image {
+    transform: scale(1.05);
+}
+
+/* Estilo especial para años importantes */
+.timeline-item.important .timeline-content {
+    background: linear-gradient(135deg, #fffbf0 0%, #ffffff 100%);
+    border-left: 4px solid #d4af37;
+}
+
+.timeline-item.milestone .timeline-content {
+    border-left: 4px solid #d4af37;
+    box-shadow: 0 8px 35px rgba(212, 175, 55, 0.15);
+}
+
+/* Pie de timeline */
+.timeline-footer {
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 2px solid rgba(58, 74, 44, 0.1);
+}
+
+.timeline-footer p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    color: #2c3e2e;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* ========================
+   ORIGINS/RAÍCES SECTION
+======================== */
+
+.origins-section {
+    padding: 80px 40px;
+    background: #ffffff;
+}
+
+.origins-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.origins-map {
+    width: 100%;
+}
+
+.origins-map img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(58, 74, 44, 0.15);
+    object-fit: cover;
+}
+
+.origins-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.origin-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(58, 74, 44, 0.04);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(58, 74, 44, 0.08);
+}
+
+.origin-item:hover {
+    background: rgba(58, 74, 44, 0.08);
+    transform: translateX(8px);
+    box-shadow: 0 8px 20px rgba(58, 74, 44, 0.12);
+    border-color: rgba(58, 74, 44, 0.15);
+}
+
+.origin-dot {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-top: 2px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.origin-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    color: #2c3e2e;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.origin-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95em;
+    color: #555;
+    margin: 0;
+    line-height: 1.65;
+}
+
+/* ========================
+   RESPONSIVE TIMELINE
+======================== */
+
+@media (max-width: 1024px) {
+    .history-hero-title {
+        font-size: 3em;
+    }
+
+    .history-hero-subtitle {
+        font-size: 1.1em;
+    }
+
+    .history-content {
+        padding: 40px 35px;
+    }
+
+    .history-text h2 {
+        font-size: 2.5em;
+    }
+
+    .history-image-wrapper {
+        height: 300px;
+    }
+
+    .timeline-container::before {
+        left: 30px;
+    }
+
+    .timeline-marker {
+        left: 30px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-content.left,
+    .timeline-content.right {
+        width: calc(100% - 80px);
+        margin-left: 80px !important;
+        text-align: left;
+    }
+
+    .timeline-content.left::after,
+    .timeline-content.right::before {
+        display: none;
+    }
+
+    .timeline-content::before {
+        content: '';
+        position: absolute;
+        left: -42px;
+        top: 35px;
+        width: 42px;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #3a4a2c);
+    }
+}
+
+@media (max-width: 768px) {
+    .history-hero {
+        padding: 80px 5vw;
+    }
+
+    .history-hero-title {
+        font-size: 2.5em;
+    }
+
+    .history-hero-subtitle {
+        font-size: 1em;
+    }
+
+    .history-main {
+        padding: 60px 5vw;
+    }
+
+    .history-content {
+        padding: 35px 25px;
+    }
+
+    .history-text h2 {
+        font-size: 2em;
+    }
+
+    .history-text p {
+        font-size: 0.95em;
+        text-align: left;
+    }
+
+    .history-image-wrapper {
+        height: 250px;
+    }
+
+    .achievements-section {
+        padding: 80px 5vw;
+    }
+
+    .section-header h2 {
+        font-size: 2.2em;
+    }
+
+    .timeline-container {
+        padding: 30px 0;
+    }
+
+    .timeline-container::before {
+        left: 25px;
+    }
+
+    .timeline-marker {
+        left: 25px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 75px);
+        margin-left: 75px !important;
+        padding: 25px 30px;
+        text-align: left;
+    }
+
+    .timeline-year {
+        font-size: 1.5em;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3em;
+    }
+
+    .timeline-image {
+        height: 150px;
+    }
+
+    .timeline-footer p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-hero {
+        padding: 60px 4vw;
+    }
+
+    .history-hero-title {
+        font-size: 1.8em;
+    }
+
+    .history-hero-subtitle {
+        font-size: 0.9em;
+    }
+
+    .history-main {
+        padding: 50px 4vw;
+    }
+
+    .history-content {
+        padding: 20px 15px;
+    }
+
+    .history-text h2 {
+        font-size: 1.6em;
+    }
+
+    .history-text p {
+        font-size: 0.9em;
+        text-align: left;
+    }
+
+    .history-image-wrapper {
+        height: 200px;
+    }
+
+    .achievements-section {
+        padding: 60px 4vw;
+        border-radius: 15px;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8em;
+    }
+
+    .section-header p {
+        font-size: 0.9em;
+    }
+
+    .timeline-container::before {
+        left: 18px;
+    }
+
+    .timeline-marker {
+        left: 18px;
+    }
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+        border-width: 2px;
+    }
+
+    .timeline-item.important .timeline-dot {
+        width: 20px;
+        height: 20px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+        padding: 20px 20px;
+    }
+
+    .timeline-year {
+        font-size: 1.3em;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1em;
+    }
+
+    .timeline-award {
+        font-size: 0.85em;
+    }
+
+    .timeline-description {
+        font-size: 0.85em;
+    }
+
+    .timeline-image {
+        height: 120px;
+    }
+
+    .timeline-footer p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .origins-section {
+        padding: 60px 30px;
+    }
+
+    .origins-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .origin-item {
+        padding: 18px;
+    }
+
+    .origin-text h3 {
+        font-size: 1.2em;
+    }
+
+    .origin-text p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .origins-section {
+        padding: 50px 20px;
+    }
+
+    .origins-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .origins-map {
+        width: 100%;
+    }
+
+    .origins-content {
+        gap: 15px;
+    }
+
+    .origin-item {
+        padding: 15px;
+    }
+
+    .origin-dot {
+        width: 18px;
+        height: 18px;
+    }
+
+    .origin-text h3 {
+        font-size: 1.1em;
+    }
+
+    .origin-text p {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .origins-section {
+        padding: 40px 15px;
+    }
+
+    .origins-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .origin-item {
         padding: 12px;
-        gap: 8px;
+        gap: 15px;
     }
-    
-    .award-image {
-        width: 40px;
-        height: 40px;
+
+    .origin-dot {
+        width: 16px;
+        height: 16px;
+        margin-top: 2px;
+    }
+
+    .origin-text h3 {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    .origin-text p {
+        font-size: 0.8em;
+        line-height: 1.5;
     }
 }
