@@ -214,3 +214,14 @@ nav ul li a:hover {
         padding-top: 200px;
     }
 }
+
+/* ===============================
+   NAVBAR HIDE / SHOW ON SCROLL
+================================ */
+.navbar-container {
+    transition: transform 0.35s ease-in-out;
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
+}

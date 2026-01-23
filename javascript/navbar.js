@@ -71,3 +71,40 @@ document.addEventListener('DOMContentLoaded', function () {
     highlightActiveLink();
     addNavLinkListeners();
 });
+
+/* =====================================
+   SMART NAVBAR SCROLL BEHAVIOR
+===================================== */
+
+let lastScrollTop = 0;
+let navbar;
+const scrollThreshold = 10; // evita micro-movimientos molestos
+
+function handleNavbarScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (!navbar) return;
+
+    // Scroll hacia abajo → esconder
+    if (scrollTop > lastScrollTop + scrollThreshold) {
+        navbar.classList.add('navbar-hidden');
+    }
+    // Scroll hacia arriba → mostrar
+    else if (scrollTop < lastScrollTop - scrollThreshold) {
+        navbar.classList.remove('navbar-hidden');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // El navbar se carga dinámicamente, esperamos a que exista
+    const waitForNavbar = setInterval(() => {
+        navbar = document.querySelector('.navbar-container');
+
+        if (navbar) {
+            clearInterval(waitForNavbar);
+            window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+        }
+    }, 50);
+});
