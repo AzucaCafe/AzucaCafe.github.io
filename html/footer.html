@@ -5,7 +5,7 @@
         <!-- Columna 1 -->
         <div class="footer-col footer-brand">
             <h2>Azuca Cafe</h2>
-            <p>For Colombian coffee lovers.</p>
+            <p>Para los amantes del café colombiano.</p>
 
             <div class="footer-socials">
                 <a href="https://www.instagram.com/azucafecol/" target="_blank">Instagram</a>
@@ -17,35 +17,24 @@
 
         <!-- Columna 2 -->
         <div class="footer-col">
-            <h3>Navigate</h3>
+            <h3>Navegación</h3>
             <ul>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Subscribe</a></li>
-                <li><a href="#">Locations</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Columna 3 -->
-        <div class="footer-col">
-            <h3>Explore More</h3>
-            <ul>
-                <li><a href="#">Terms and Conditions</a></li>
-                <li><a href="#">Accessibility</a></li>
-                <li><a href="#">Wholesale</a></li>
+                <li><a href="#" data-target="home">Inicio</a></li>
+                <li><a href="#" data-target="planes">Planes</a></li>
+                <li><a href="#" data-target="shop">Tienda</a></li>
+                <li><a href="#" data-target="history">Nuestra Historia</a></li>
+                <li><a href="#" data-target="blog">Blog</a></li>
             </ul>
         </div>
 
         <!-- Columna 4 -->
         <div class="footer-col footer-newsletter">
-            <h3>Newsletter</h3>
+            <h3>Boletín</h3>
             <form>
-                <input type="email" placeholder="Enter your email">
+                <input type="email" placeholder="Ingresa tu correo">
                 <button type="submit">→</button>
             </form>
         </div>
-
     </div>
 
     <div class="footer-bottom">
@@ -53,3 +42,37 @@
     </div>
 
 </footer>
+
+<script>
+    // Navegación en Footer - Compatible con navbar
+    document.addEventListener('DOMContentLoaded', function() {
+        const footerLinks = document.querySelectorAll('footer a[data-target]');
+        
+        footerLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetSection = this.getAttribute('data-target');
+                
+                if (targetSection) {
+                    // Caso especial para tienda
+                    if (targetSection === 'shop') {
+                        loadComponentWithAnimation('content', `html/${targetSection}.html`);
+                        updateURL(targetSection);
+                        
+                        setTimeout(() => {
+                            if (window.initializeShop) {
+                                window.initializeShop();
+                            }
+                        }, 800);
+                        
+                        return;
+                    }
+                    
+                    // Navegación estándar
+                    loadComponentWithAnimation('content', `html/${targetSection}.html`);
+                    updateURL(targetSection);
+                }
+            });
+        });
+    });
+</script>
