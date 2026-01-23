@@ -3,115 +3,930 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Blog - Azuca Café</title>
     <link rel="icon" href="..\img\icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/blog-style.css">
-    <script src="../javascript/navbar.js" defer></script> <!-- Incluye el archivo de navegación -->
-    <script src="../javascript/utils.js" defer></script>
-    <script src="../javascript/utils.js" defer></script>
+    <link rel="stylesheet" href="../css/blog-style-new.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="../javascript/navbar.js" defer></script>
     <script src="../javascript/components.js" defer></script>
+    <script src="../javascript/blog.js" defer></script>
 </head>
 <body>
-    <div class="blog-container">
-        <div class="blog-post">
-            <h2>Los Orígenes del Café en Colombia</h2>
-            <p>
-                El café llegó a Colombia a finales del siglo XVIII, traído por sacerdotes jesuitas desde el Caribe. Su cultivo se fue expandiendo gradualmente por el país, estableciéndose en las regiones andinas donde el clima y el suelo eran ideales para su producción. Para mediados del siglo XIX, el café se convirtió en uno de los productos agrícolas clave de Colombia.
-            </p>
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="blog-hero-content">
+            <h1>Conocimiento del Café</h1>
+            <p>Explora el viaje completo del grano: desde la tierra hasta tu taza</p>
         </div>
-    
-        <div class="blog-post">
-            <h2>Expansión a Mercados Internacionales</h2>
-            <p>
-                Durante los siglos XIX y XX, el café colombiano comenzó a ganar una fuerte reputación a nivel internacional. Para la década de 1950, Colombia ya se había establecido como uno de los principales exportadores de café del mundo. La creación de la Federación Nacional de Cafeteros (FNC) en 1927 ayudó a estandarizar y promover la alta calidad del café colombiano en el exterior.
-            </p>
-        </div>
-    
-        <div class="blog-post">
-            <h2>La Influencia Cultural del Café</h2>
-            <p>
-                El café no es solo un motor económico en Colombia; está profundamente entrelazado con la cultura e identidad del país. La región del "Eje Cafetero", donde se cultiva gran parte del café colombiano, ha sido declarada Patrimonio de la Humanidad por la UNESCO, resaltando su importancia en el patrimonio nacional. El café es central en muchas reuniones sociales y tradiciones del país.
-            </p>
-        </div>
-    
-        <div class="blog-post">
-            <h2>Innovación en el Cultivo del Café</h2>
-            <p>
-                En las últimas décadas, los caficultores colombianos han enfrentado desafíos como el cambio climático y la fluctuación de precios en los mercados internacionales. Sin embargo, la innovación y las prácticas sostenibles han permitido que los agricultores sigan prosperando. Programas para mejorar la calidad del café, junto con certificaciones como el Comercio Justo, han abierto nuevos mercados para el café colombiano.
-            </p>
-        </div>
-    
-        <div class="blog-post">
-            <h2>El Futuro del Café Colombiano</h2>
-            <p>
-                A medida que Colombia continúa evolucionando en la industria del café, sus agricultores están adoptando nuevas tecnologías y prácticas para garantizar la sostenibilidad de la producción. Los esfuerzos por preservar la biodiversidad, proteger los recursos hídricos y mejorar las condiciones laborales forman parte de la visión de Colombia para seguir siendo uno de los principales productores de café del mundo.
-            </p>
-        </div>
-    </div>
+    </section>
 
-    <div class="home-content">
-        <div class="left-container">
-            <!-- Título fijo -->
-           <div class="left-header">
-                <h3>Próximas Ferias de Café</h3>
-                <p>Actualmente no tenemos planes de asistir a nuevas ferias este año, pero te recomendamos las siguientes ferias para este año:</p>
-            </div>
-            <!-- Contenedor desplazable de proyectos -->
-            <div class="project-list">
-                <a href="https://ficca.com.co/" target="_blank" class="project-link">
-                    <div class="project-card">
-                        <div class="project-text">
-                            <h3>Feria Internacional de Café, Cacao y Agroturismo (FICCA) 2024</h3>
-                            <p>Evento líder en la promoción del café y cacao en Huila, que reúne a productores, tostadores y compradores del sector.</p>
-                        </div>
-                        <img src="..\img\ferias-cafe\ficca-logo.png" alt="ficca-logo">
+    <!-- Blog Container -->
+    <section class="blog-section">
+        <div class="blog-wrapper">
+            <!-- Introducción -->
+            <article class="blog-article">
+                <button class="article-header" data-article="intro">
+                    <div class="article-number">01</div>
+                    <div class="article-title">Introducción</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="intro">
+                    <div class="article-image">
+                        <img src="../img/blog/1.png" alt="Plantaciones de café en Colombia">
                     </div>
-                </a>
-                
-                <a href="https://cafesdecolombiaexpo.com/" target="_blank" class="project-link">
-                    <div class="project-card">
-                        <div class="project-text">
-                            <h3>Cafés de Colombia Expo 2024</h3>
-                            <p>La feria más importante del café en Colombia, con espacios académicos, comerciales y culturales en Bogotá.</p>
-                        </div>
-                        <img src="..\img\ferias-cafe\cafesdecolombiaexpo-logo.jpg" alt="cafesdecolombiaexpo-logo">
+                    <div class="article-body">
+                        <p>Bienvenido al apasionante mundo del café colombiano, una bebida que trasciende lo cotidiano para convertirse en una experiencia sensorial única. En Azuca Café, tenemos el privilegio de trabajar en cada eslabón de la cadena de valor, desde los cultivadores en las majestuosas montañas de San Francisco, Cundinamarca, hasta los consumidores más exigentes alrededor del mundo.</p>
+                        <p>El café es mucho más que una simple bebida; es un viaje de transformación que comienza en una pequeña semilla y culmina en cada sorbo que disfrutas. Esta transformación involucra ciencia, arte, tradición y pasión. En Azuca Café, creemos que entender profundamente cada etapa de este proceso es fundamental para garantizar la excelencia en cada taza que servimos.</p>
+                        <p>Esta guía integral está diseñada para llevarte en un recorrido educativo a través de los conocimientos fundamentales sobre el café. Exploraremos desde cómo crece en las distintas regiones colombianas, los meticulosos procesos de recolección y beneficio, los factores que determinan su calidad y clasificación como especialidad, hasta las técnicas óptimas para prepararlo y disfrutarlo en tu hogar, resaltando siempre su origen y trazabilidad.</p>
+                        <h3>¿Por qué es importante conocer sobre café?</h3>
+                        <p>Entender el café nos permite desarrollar una apreciación más profunda y consciente de lo que consumimos, transformando un acto diario en un momento de conexión cultural y sensorial. Este conocimiento nos empodera para tomar decisiones más informadas, valorando la calidad, el origen ético y las prácticas sostenibles. Además, comprender el trabajo, la dedicación y el conocimiento tradicional detrás de cada grano nos conecta directamente con los agricultores y sus familias, quienes dedican sus vidas a cultivar este preciado fruto, honrando así su esfuerzo y legado.</p>
                     </div>
-                </a>
-                
-                <a href="https://expoejecafe.com/" target="_blank" class="project-link">
-                    <div class="project-card">
-                        <div class="project-text">
-                            <h3>Expo Eje Café 2024</h3>
-                            <p>Feria que reúne a productores y comercializadores de café en el Eje Cafetero, promoviendo innovación y negocios.</p>
-                        </div>
-                        <img src="..\img\ferias-cafe\expoejecafe-logo.png" alt="expoejecafe-logo">
-                    </div>
-                </a>
-                
-                <a href="https://www.calarca-quindio.gov.co/" target="_blank" class="project-link">
-                    <div class="project-card">
-                        <div class="project-text">
-                            <h3>Fiesta Nacional del Café en Calarcá 2024</h3>
-                            <p>Un evento tradicional en Calarcá, Quindío, que celebra la cultura cafetera con desfiles y concursos gastronómicos.</p>
-                        </div>
-                        <img src="..\img\ferias-cafe\fiestanacionaldelcafe-logo.png" alt="calarca-logo">
-                    </div>
-                </a>
-                
-                <a href="https://expoartesano.com.co/" target="_blank" class="project-link">
-                    <div class="project-card">
-                        <div class="project-text">
-                            <h3>Expoartesano 2024</h3>
-                            <p>Una feria que destaca las tradiciones y el arte de los artesanos colombianos, celebrada en Medellín.</p>
-                        </div>
-                        <img src="..\img\ferias-cafe\expoartesano-logo.png" alt="expoartesano-logo">
-                    </div>
-                </a>
-                
-            </div>
-        </div>
-        <div class="right-container" style="background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHdweXFndXBveHd1cWlmZ3h4NmN5NnN0eTZld280aTV4N3RlaWJhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2Cshsv8zJZfyfWWnhX/giphy.gif');"></div>
-    </div>
+                </div>
+            </article>
 
+            <!-- Qué son los cafés especiales -->
+            <article class="blog-article">
+                <button class="article-header" data-article="special">
+                    <div class="article-number">02</div>
+                    <div class="article-title">¿Qué son los cafés especiales?</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="special">
+                    <div class="article-image">
+                        <img src="../img/blog/2.png" alt="Granos de café especial en mano">
+                    </div>
+                    <div class="article-body">
+                        <p>Los cafés especiales representan la cúspide de la calidad, abarcando aproximadamente el 15% superior de toda la producción mundial de café. Este término va mucho más allá de un simple café "bueno"; define un estándar riguroso que implica una cadena de valor impecable, desde la semilla hasta la taza. Se trata de un café que ha sido cultivado con precisión agronómica, procesado con métodos meticulosos, tostado para resaltar su perfil único y preparado con técnica experta, todo para alcanzar y superar un umbral de excelencia sensorial definido internacionalmente.</p>
+                        <h3>Características fundamentales de un café especial:</h3>
+                        <ul>
+                            <li><strong>Puntuación de calidad superior:</strong> Debe obtener una calificación de 80 puntos o más (sobre 100) en la rigurosa escala de catación de la Specialty Coffee Association (SCA), evaluado por catadores certificados Q Grader.</li>
+                            <li><strong>Trazabilidad absoluta:</strong> Se conoce con precisión su origen geográfico, pudiendo rastrearse hasta la finca, lote e incluso la variedad específica y el proceso aplicado.</li>
+                            <li><strong>Proceso cuidadoso y documentado:</strong> Implica una cosecha selectiva (solo granos en su punto óptimo de maduración), un beneficio controlado (lavado, natural, honey) y un manejo post-cosecha (secado, almacenamiento) que preserve la integridad del grano.</li>
+                            <li><strong>Perfil sensorial único y libre de defectos:</strong> Presenta características aromáticas y de sabor distintivas, complejas y agradables, sin sabores off (a madera, fermento, tierra) asociados a granos defectuosos.</li>
+                            <li><strong>Sostenibilidad y equidad:</strong> Se producen bajo prácticas ambientalmente responsables y garantizan una retribución justa y transparente para los productores, promoviendo el desarrollo económico de las comunidades cafeteras.</li>
+                        </ul>
+                        <p>En Azuca Café, nuestra filosofía se basa exclusivamente en el café especial. Cada variedad que ofrecemos ha sido seleccionada mediante un riguroso proceso de cupping (catación) y trabajada en colaboración directa con productores para garantizar que, cuando llegue a tu taza, cuente una historia auténtica de su región, sus métodos de cultivo responsables y exprese un sabor distintivo e inconfundible.</p>
+                        <h3>La gran diferencia con el café comercial:</h3>
+                        <p>El café comercial o commodity se enfoca principalmente en la consistencia a gran volumen, el precio bajo y la homogenización del sabor, mezclando granos de múltiples orígenes y calidades. El café especial, en contraste, celebra y preserva la identidad única del origen, buscando resaltar las características intrínsecas que el terroir (suelo, clima, altitud), la variedad botánica y el savoir-faire del productor imprimen en el grano. No es una mercancía, es una expresión agrícola y cultural.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Aprende a hablar con los expertos -->
+            <article class="blog-article">
+                <button class="article-header" data-article="experts">
+                    <div class="article-number">03</div>
+                    <div class="article-title">Aprende a hablar con los expertos</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="experts">
+                    <div class="article-image">
+                        <img src="../img/blog/3.png" alt="Degustación profesional de café">
+                    </div>
+                    <div class="article-body">
+                        <p>Al igual que en el mundo del vino, el whisky o el chocolate fino, el café de especialidad ha desarrollado un lenguaje sensorial sofisticado y específico. Los catadores profesionales (Q Graders) utilizan un léxico preciso para describir de manera objetiva y reproducible los aromas, sabores, texturas y sensaciones que encuentran en cada taza. Comprender este vocabulario no solo te permitirá comunicarte mejor con baristas y tostadores, sino que también enriquecerá enormemente tu propia experiencia de degustación, ayudándote a identificar y apreciar matices que antes pasaban desapercibidos.</p>
+                        <h3>Vocabulario esencial para describir el café:</h3>
+                        <h4>Descriptores de aroma (Fragrance & Aroma):</h4>
+                        <ul>
+                            <li><strong>Floral:</strong> Aromas delicados y evocadores que recuerdan a jazmín, lavanda, rosa, bergamota o azahar. Común en cafés de alta altitud y procesados con gran cuidado.</li>
+                            <li><strong>Frutal:</strong> Notas que van desde frutas rojas (fresa, frambuesa, cereza), frutas amarillas (durazno, albaricoque), frutas tropicales (maracuyá, mango) hasta frutos secos (avellana, almendra tostada).</li>
+                            <li><strong>Especiado:</strong> Aromas cálidos y complejos que recuerdan a canela, cardamomo, clavo, nuez moscada, pimienta negra o anís.</li>
+                            <li><strong>Terroso / Herbáceo:</strong> Notas que evocan tierra húmeda, madera fresca, cedro, heno o té verde. En equilibrio son deseables; en exceso pueden indicar defectos.</li>
+                            <li><strong>Chocolate / Cacao / Caramelo:</strong> Notas dulces y reconfortantes que van desde el chocolate con leche y el cacao en polvo hasta el caramelo, la miel o el azúcar moreno. Muy asociadas a cafés colombianos bien balanceados.</li>
+                        </ul>
+                        <h4>Descriptores de sabor y sensación en boca (Flavor & Mouthfeel):</h4>
+                        <ul>
+                            <li><strong>Acidez:</strong> No se refiere al pH bajo (ácido) sino a la sensación de vivacidad, brillo y frescura en la boca, similar a la de una fruta madura. Es un atributo deseable y complejo (cítrica, málica, fosfórica).</li>
+                            <li><strong>Cuerpo (Body):</strong> La sensación táctil de peso, densidad o viscosidad que el café deja en la lengua y el paladar. Puede ser ligero (como el té), medio o con mucho cuerpo (como la leche entera).</li>
+                            <li><strong>Dulzura (Sweetness):</strong> La percepción de azúcares naturales presentes en el grano, que equilibran la acidez y la amargura. Puede recordar a la caña de azúcar, miel o melaza.</li>
+                            <li><strong>Amargura (Bitterness):</strong> Sabor básico percibido en la parte posterior de la lengua. En su justa medida aporta estructura y balance; en exceso resulta desagradable y áspero, producto de una sobre-extracción o tueste excesivo.</li>
+                            <li><strong>Aftertaste / Retrogusto (Finish):</strong> Los sabores y sensaciones que permanecen en el paladar después de tragar el café. Un retrogusto limpio, persistente y agradable es signo de alta calidad.</li>
+                            <li><strong>Balance:</strong> La armoniosa interacción entre acidez, dulzura, cuerpo y amargura, donde ningún atributo domina desagradablemente sobre los demás.</li>
+                        </ul>
+                        <h3>Guía práctica para una cata (cupping) básica en casa:</h3>
+                        <p>1. <strong>Aroma seco (Fragrance):</strong> Huele profundamente el café recién molido en seco, antes de agregar agua. Identifica las primeras impresiones.</p>
+                        <p>2. <strong>Aroma húmedo (Aroma):</strong> Vierte agua caliente (93°C) y deja reposar 4 minutos. Rompe la costra que se forma en la superficie con una cuchara, acercando la nariz para inhalar los aromas liberados.</p>
+                        <p>3. <strong>Sorbo (Slurping):</strong> Con una cuchara, toma una pequeña cantidad y aspira el café con fuerza para atomizarlo en toda la boca, cubriendo todas las papilas gustativas.</p>
+                        <p>4. <strong>Evaluación:</strong> Deja que el café se deslice por tu lengua. Piensa: ¿Qué sabor identifico primero? ¿Es ácido? ¿Es dulce? ¿Qué cuerpo tiene? ¿Qué recuerdo de sabor me deja?</p>
+                        <p>5. <strong>Comparación:</strong> Si catas varios cafés, prueba agua limpia entre uno y otro para limpiar el paladar. Toma notas sencillas de lo que percibes en cada uno.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Agronomía -->
+            <article class="blog-article">
+                <button class="article-header" data-article="agronomy">
+                    <div class="article-number">04</div>
+                    <div class="article-title">Agronomía: El Cultivo del Café</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="agronomy">
+                    <div class="article-image">
+                        <img src="../img/blog/4.png" alt="Plantación de café con plantas sombrío">
+                    </div>
+                    <div class="article-body">
+                        <p>La agronomía del café es la ciencia y el arte detrás del cultivo de la planta Coffea. Este fascinante proceso comienza con una pequeña semilla, que será germinada, cultivada y cuidada con esmero hasta convertirse en un árbol productivo. El ciclo completo, desde la semilla hasta la primera cosecha comercial, toma entre 3 y 5 años de trabajo paciente y dedicado, un testimonio de la paciencia y visión a largo plazo del caficultor.</p>
+                        <h3>El ciclo de vida del cafeto:</h3>
+                        <h4>1. Germinación (3 a 8 semanas)</h4>
+                        <p>La semilla (grano de café sin tostar) se siembra en un sustrato especial, comúnmente en camas de arena o aserrín esterilizado, bajo condiciones controladas de humedad, sombra parcial y temperatura (alrededor de 25°C). La semilla absorbe agua, se hincha y eventualmente emerge una pequeña radícula y el tallo con los cotiledones, conocidos coloquialmente como "palillo de café".</p>
+                        <h4>2. Etapa de vivero (1 a 2 años)</h4>
+                        <p>La plántula, una vez robusta, se trasplanta a bolsas individuales con tierra enriquida con materia orgánica. En esta fase crítica, se fortalece el sistema radicular y el tallo principal. Requiere riego regular, fertilización balanceada, control de malezas y protección contra plagas y enfermedades como la "chupadera". Aquí se seleccionan las plántulas más vigorosas.</p>
+                        <h4>3. Plantación en campo definitivo (3 a 5 años hasta producción)</h4>
+                        <p>Los cafetos jóvenes se trasplantan al terreno definitivo, usualmente en laderas montañosas. Tradicionalmente y de manera sostenible, se plantan bajo sombra de árboles mayores (como plátano, guamo, nogal o cítricos), los cuales protegen a las plantas del exceso de sol, reducen la erosión del suelo, mantienen la humedad, fomentan la biodiversidad y mejoran la calidad de la cereza.</p>
+                        <h4>4. Fase de producción (20 a 30 años de vida útil productiva)</h4>
+                        <p>Una vez que el árbol alcanza la madurez, produce racimos de flores blancas, fragantes y efímeras (que duran apenas 2-3 días). Tras la polinización, se desarrolla el fruto: la cereza de café. Inicialmente verde, madura a un rojo intenso (o amarillo, naranja o rosado según la variedad) en un proceso que puede durar varios meses. Con cuidados agronómicos adecuados (poda, fertilización, control fitosanitario), un cafeto puede producir cosechas comerciales de calidad durante décadas.</p>
+                        <h3>Factores agroecológicos clave para la calidad:</h3>
+                        <ul>
+                            <li><strong>Altitud:</strong> Es el factor más influyente. En Colombia, el café de mejor calidad se cultiva entre los 1,200 y 2,000 metros sobre el nivel del mar (msnm). A mayor altitud, las temperaturas más frescas alargan el ciclo de maduración, permitiendo una mayor acumulación de azúcares y compuestos aromáticos en la cereza.</li>
+                            <li><strong>Temperatura:</strong> El rango ideal oscila entre los 17°C y 23°C. Temperaturas extremas (frío o calor) afectan negativamente el desarrollo de la planta y la maduración del fruto.</li>
+                            <li><strong>Precipitación y distribución de lluvias:</strong> Se requieren entre 1,500 y 2,500 mm anuales, bien distribuidos. Un período seco definido es crucial para inducir la floración, y lluvias oportunas son necesarias para el llenado del grano.</li>
+                            <li><strong>Suelo:</strong> Prospera en suelos profundos, bien drenados, fértiles, ricos en materia orgánica y de origen volcánico (como los andisoles), con un pH ligeramente ácido (5.0 a 6.0).</li>
+                            <li><strong>Sombra:</strong> El cultivo bajo sombra (sistemas agroforestales) no solo es amigable con el ambiente, sino que produce cerezas de mejor calidad, más uniformes y con perfiles de taza más complejos, al tiempo que sirve de hábitat para la fauna.</li>
+                            <li><strong>Variedad:</strong> La elección de la variedad (Castillo, Caturra, Borbón, etc.) adaptada a la zona específica es fundamental para la resistencia a enfermedades y el perfil de taza.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Procesamiento en finca -->
+            <article class="blog-article">
+                <button class="article-header" data-article="processing">
+                    <div class="article-number">05</div>
+                    <div class="article-title">Procesamiento en Finca: Del Fruto al Grano</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="processing">
+                    <div class="article-image">
+                        <img src="../img/blog/5.png" alt="Máquina de procesamiento de café">
+                    </div>
+                    <div class="article-body">
+                        <p>Una vez cosechada selectivamente, la cereza de café en su punto óptimo de madurez (roja, amarilla, etc.) debe ser procesada para extraer las valiosas semillas (granos verdes) que llevarán el sabor a tu taza. Este es quizás el paso más crítico y transformador en la cadena de calidad, donde el productor, a través de su método elegido, imprime un carácter decisivo en el perfil final del café. Un buen procesamiento resalta y preserva; uno deficiente, arruina incluso la mejor cereza.</p>
+                        <h3>Método Húmedo o Lavado (Washed Process):</h3>
+                        <p>Es el método predominante en Colombia y el que utilizamos en Azuca Café para gran parte de nuestros cafés. Busca producir tazas limpias, brillantes, con acidez definida y perfiles claros. Requiere una cantidad significativa de agua limpia y un manejo técnico preciso.</p>
+                        <ol>
+                            <li><strong>Recepción y flotación:</strong> Las cerezas se sumergen en agua; las buenas se hunden y las vanas o defectuosas flotan, siendo descartadas.</li>
+                            <li><strong>Despulpado (Pulping):</strong> La cereza pasa por una máquina despulpadora que, mediante fricción, remueve la piel y la mayor parte de la pulpa externa, liberando los granos cubiertos por una capa mucilaginosa dulce y pegajosa.</li>
+                            <li><strong>Fermentación (Fermentation):</strong> Los granos con mucílago se depositan en tanques de agua o canales por 12 a 48 horas. Enzimáticamente, los microorganismos naturales descomponen el mucílago. El tiempo, la temperatura y el pH son críticos: afectan directamente la acidez, dulzura y cuerpo finales.</li>
+                            <li><strong>Lavado (Washing):</strong> Se lavan con agua limpia en canales o tanques de agitación para remover por completo todo resto de mucílago fermentado, dejando el grano "limpio" con solo su pergamino.</li>
+                            <li><strong>Secado (Drying):</strong> Los granos húmedos (con pergamino) se secan hasta alcanzar una humedad del 10-12%. Puede ser al sol en camas africanas (patios elevados) por 8-15 días (ideal para sabor), o en secadores mecánicos (más rápido). Un secado uniforme y lento es esencial para evitar sabores astringentes.</li>
+                        </ol>
+                        <h3>Método Natural o Seco (Natural / Dry Process):</h3>
+                        <p>La cereza completa (con toda su pulpa) se seca al sol durante varias semanas (15-30 días) en patios o camas africanas. Durante este tiempo, los azúcares de la pulpa fermentan e impregnan el grano. El resultado son cafés con cuerpo muy pesado y sedoso, baja acidez y notas intensamente frutales, silvestres y a veces con un dulzor similar al vino. Requiere un clima seco constante.</p>
+                        <h3>Método Honey o Semi-Lavado (Honey / Pulped Natural Process):</h3>
+                        <p>Un punto intermedio. Se despulpa la cereza pero se deja secar el grano con parte o todo el mucílago (miel) adherido. Según la cantidad de mucílago, se habla de Yellow, Red o Black Honey. Produce cafés con más cuerpo y dulzura que los lavados, y más equilibrio que los naturales, con notas frutales pero sin la fermentación intensa. Es un método muy artesanal que demanda gran cuidado.</p>
+                        <h3>La importancia del agua y la sostenibilidad:</h3>
+                        <p>El proceso húmedo tradicional puede consumir grandes volúmenes de agua. En las fincas aliadas de Azuca Café, implementamos tecnologías como el reciclaje de agua, el uso de despulpadoras ecológicas que reducen el consumo, y sistemas de tratamiento de aguas mieles (residuales del proceso) a través de lombricultivos o biodigestores, transformando un potencial contaminante en abono orgánico, cerrando así ciclos de manera sostenible y responsable con el entorno.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tostión -->
+            <article class="blog-article">
+                <button class="article-header" data-article="roasting">
+                    <div class="article-number">06</div>
+                    <div class="article-title">El Arte y Ciencia de la Tostión</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="roasting">
+                    <div class="article-image">
+                        <img src="../img/blog/6.png" alt="Tostador artesanal de café">
+                    </div>
+                    <div class="article-body">
+                        <p>El tostado es la alquimia moderna donde el café verde, un grano duro, inodoro e insípido, se transforma en la joya aromática, frágil y deliciosa que conocemos. Es un acto de equilibrio entre ciencia (química, física, termodinámica) y arte (intuición, experiencia, estilo). El maestro tostador (roaster) es el traductor final, decidiendo cómo "contar la historia" que el productor y el proceso iniciaron.</p>
+                        <h3>Las etapas químicas y físicas del tostado:</h3>
+                        <h4>1. Fase de Secado (0-5 minutos, 160-180°C):</h4>
+                        <p>El grano absorbe calor y pierde su humedad residual (del 10-12% al ~5%). Cambia de color verde opaco a amarillo pálido y huele a hierba o paja. Es crucial calentar gradualmente para un desarrollo uniforme.</p>
+                        <h4>2. Fase de Maillard y Caramelización (5-10 minutos, 180-210°C):</h4>
+                        <p>La etapa más importante para el desarrollo del sabor. Ocurren miles de reacciones químicas complejas, principalmente la Reacción de Maillard (entre aminoácidos y azúcares reductores), que genera cientos de compuestos de sabor, aroma y color (melanoidinas). El grano se expande ligeramente, se vuelve marrón y libera aromas a pan tostado o nueces.</p>
+                        <h4>3. Primer Crack (First Crack) - (~8-12 minutos, ~205°C):</h4>
+                        <p>La presión interna por el vapor de agua y los gases (principalmente CO2) hace que la estructura celular del grano se fracture con un sonido distintivo de palomitas de maíz. El grano se duplica en volumen, se vuelve más poroso y pierde alrededor del 18% de su peso. Aquí nacen los tostados claros y medios. La acidez y los sabores originarios son más pronunciados.</p>
+                        <h4>4. Desarrollo (10-15 minutos, 210-225°C):</h4>
+                        <p>El tostador controla con precisión la tasa de aumento de temperatura (Rate of Rise) para desarrollar los azúcares caramelizados y equilibrar la acidez con el cuerpo y la dulzura. Es la fase donde se define el perfil de tueste (desarrollo del sabor).</p>
+                        <h4>5. Segundo Crack (Second Crack) - (>15 minutos, >230°C):</h4>
+                        <p>Otra explosión, más rápida y crujiente, causada por la fractura de las estructuras de celulosa y la liberación de aceites. Si se permite, produce tostados muy oscuros (espresso italiano, francés), donde predominan los sabores carbonizados y amargos del propio tueste, opacando el origen.</p>
+                        <h3>Niveles de Tueste y sus Características:</h3>
+                        <ul>
+                            <li><strong>Tostado Claro (Cinnamon / Light City):</strong> Justo después del primer crack. Color canela. Muy alta acidez, cuerpo ligero, sabores herbáceos/florales/frutales muy vivos. Resalta totalmente el origen.</li>
+                            <li><strong>Tostado Medio (American / Medium / Full City):</strong> El punto medio entre cracks. Color marrón medio. Balance perfecto entre acidez, cuerpo y dulzura. Sabores a chocolate con leche, caramelo, nueces, con toques frutales. Versátil y popular para métodos filtrados y espresso.</li>
+                            <li><strong>Tostado Medio-Oscuro (Full City+ / Vienna):</strong> Al inicio del segundo crack. Color marrón oscuro, con algo de aceite en superficie. Cuerpo más pesado, acidez baja, amargor ligero, sabores a chocolate amargo, especias, ahumado ligero. Ideal para espresso tradicional.</li>
+                            <li><strong>Tostado Oscuro (French / Italian):</strong> Bien entrado el segundo crack. Color casi negro, superficie aceitosa. Cuerpo delgado (los aceites y azúcares se han quemado), acidez casi nula, amargor pronunciado, sabores a carbón, alquitrán, amargor intenso. Enmascera completamente el origen.</li>
+                        </ul>
+                        <p><strong>Filosofía de Azuca Café:</strong> Creemos en el "tueste por perfil". No aplicamos un mismo tiempo/temperatura a todos los cafés. Analizamos cada lote (densidad, humedad, origen) y diseñamos una curva de tueste personalizada que busque resaltar sus mejores atributos intrínsecos. Por ello, tostamos principalmente a nivel Medio (Full City) y Medio-Claro, preservando la identidad, dulzura y complejidad de nuestros cafés especiales colombianos.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Especies y variedades -->
+            <article class="blog-article">
+                <button class="article-header" data-article="varieties">
+                    <div class="article-number">07</div>
+                    <div class="article-title">Especies y Variedades: La Genética del Sabor</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="varieties">
+                    <div class="article-image">
+                        <img src="../img/blog/7.png" alt="Variedades de plantas de café">
+                    </div>
+                    <div class="article-body">
+                        <p>Así como en la uva para el vino, la especie y variedad botánica del café son el "ADN" que determina su potencial de sabor, su adaptación al ambiente y su resistencia. Comprenderlas es clave para apreciar la diversidad en tu taza. Existen más de 120 especies dentro del género Coffea, pero solo dos dominan el mercado global: Arábica y Robusta.</p>
+                        <h3>Coffea arabica (Café Arábica):</h3>
+                        <p>Originaria de las tierras altas de Etiopía, representa aproximadamente el 60-70% de la producción mundial y es sinónimo de calidad superior. Es una especie más delicada, susceptible a plagas y enfermedades, y requiere condiciones específicas de altitud, clima y cuidado.</p>
+                        <ul>
+                            <li><strong>Altitud ideal:</strong> 900 - 2,200+ metros sobre el nivel del mar.</li>
+                            <li><strong>Perfil de taza:</strong> Mayor acidez (vivacidad), complejidad aromática, con notas frutales, florales, chocolate, caramelo y azúcares complejos. Su contenido de cafeína es menor (0.8%-1.4%).</li>
+                            <li><strong>Forma del grano:</strong> Aplanado, con un surco sinuoso en forma de "S".</li>
+                            <li><strong>Rendimiento y precio:</strong> Menor producción por árbol, mayor costo de producción, precio de mercado más alto.</li>
+                        </ul>
+                        <h3>Coffea canephora (Café Robusta):</h3>
+                        <p>Originaria del África central y occidental, es más robusta (de ahí su nombre), resistente a enfermedades y de mayor rendimiento. Crece a menores altitudes y temperaturas más altas.</p>
+                        <ul>
+                            <li><strong>Altitud ideal:</strong> 0 - 900 metros sobre el nivel del mar.</li>
+                            <li><strong>Perfil de taza:</strong> Menos ácido, más amargo, cuerpo pesado y astringente, con notas terrosas, a madera y grano. Contiene casi el doble de cafeína que el Arábica (1.7%-4.0%).</li>
+                            <li><strong>Forma del grano:</strong> Más redondeado y pequeño, con un surco recto.</li>
+                            <li><strong>Uso principal:</strong> Cafés comerciales instantáneos, mezclas (blends) para espresso (aportando crema y cuerpo) y productos de café soluble.</li>
+                        </ul>
+                        <p><strong>Nota:</strong> En Azuca Café trabajamos exclusivamente con Coffea arabica de especialidad.</p>
+                        <h3>Variedades de Arábica que cultivamos y sus perfiles:</h3>
+                        <p>Dentro de la especie Arábica, existen numerosas variedades (cultivares), resultado de selección natural, mutación o mejoramiento genético. Cada una aporta una personalidad única.</p>
+                        <h4>Variedad Castillo®:</h4>
+                        <p>Desarrollada por Cenicafé en Colombia, es la variedad más plantada en el país. Es el resultado del mejoramiento genético de la variedad Caturra con resistencia a la roya. Se adapta a diferentes pisos térmicos y ofrece una excelente productividad.</p>
+                        <ul>
+                            <li><strong>Perfil de Taza (típico):</strong> Muy balanceado, con notas claras de chocolate con leche, caramelo, avellana y una acidez media-cítrica. Es el sabor clásico, confiable y delicioso del café colombiano.</li>
+                            <li><strong>En Azuca Café:</strong> Es la base de nuestro café de San Francisco, Cundinamarca, ofreciendo una taza consistente y representativa de la región.</li>
+                        </ul>
+                        <h4>Variedad Borbón (Bourbon):</h4>
+                        <p>Una de las variedades "heirloom" o patrimoniales más apreciadas, originaria de la Isla de Borbón (Reunión). Es menos productiva que el Castillo pero produce granos de densidad superior y calidad de taza excepcional.</p>
+                        <ul>
+                            <li><strong>Perfil de Taza:</strong> Notablemente dulce, con una acidez vibrante (a menudo cítrica o málica), cuerpo redondo y sabores complejos que pueden incluir frutas rojas, caramelo y un acabado limpio.</li>
+                            <li><strong>En Azuca Café:</strong> La incluimos en nuestro blend del Huila, donde aporta esa dulzura inherente y complejidad que eleva la mezcla.</li>
+                        </ul>
+                        <h4>Variedad Caturra:</h4>
+                        <p>Una mutación natural del Borbón descubierta en Brasil. Es de porte bajo (enano), lo que facilita la cosecha, y es muy productiva. Aunque susceptible a la roya, es famosa por su calidad.</p>
+                        <ul>
+                            <li><strong>Perfil de Taza:</strong> Similar al Borbón pero con un perfil generalmente más brillante y una acidez más pronunciada. Muy limpia y balanceada.</li>
+                            <li><strong>En Azuca Café:</strong> También presente en algunas de nuestras fincas aliadas, aportando vivacidad a nuestras mezclas.</li>
+                        </ul>
+                        <h4>Variedad Tabi:</h4>
+                        <p>Otra creación de Cenicafé (híbrido de Typica, Borbón y un híbrido Timor). Combina buena resistencia a enfermedades con una calidad de taza muy alta, heredando la elegancia de sus padres.</p>
+                        <ul>
+                            <li><strong>Perfil de Taza:</strong> Tazas muy aromáticas, con notas florales (jazmín) y frutales (cítricos, durazno), acidez cítrica refinada y cuerpo sedoso.</li>
+                        </ul>
+                        <p>La elección de la variedad es una decisión estratégica del productor, que balancea productividad, resistencia y calidad potencial. En Azuca Café, valoramos esta diversidad y trabajamos con productores que cultivan variedades específicas para lograr perfiles de taza diferenciados y memorables.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Teoría de extracción -->
+            <article class="blog-article">
+                <button class="article-header" data-article="extraction">
+                    <div class="article-number">08</div>
+                    <div class="article-title">Teoría de Extracción: La Física del Sabor Perfecto</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="extraction">
+                    <div class="article-image">
+                        <img src="../img/blog/8.png" alt="Vertimiento de café para extracción">
+                    </div>
+                    <div class="article-body">
+                        <p>Preparar café es, en esencia, el arte y la ciencia de la extracción. Es el proceso de disolver los compuestos de savor deseados del café molido en agua. No se trata simplemente de "hacer café"; se trata de extraer lo mejor posible de ese grano tostado, buscando un equilibrio donde los sabores agradables (ácidos, dulces, complejos) se expresen armoniosamente, mientras se evitan los desagradables (amargos excesivos, astringentes).</p>
+                        <h3>¿Qué es exactamente la extracción?</h3>
+                        <p>Cuando el agua caliente entra en contacto con el café molido, actúa como un solvente. Diferentes compuestos químicos se disuelven a diferentes velocidades y en diferentes momentos. La meta es alcanzar una "extracción equilibrada", que técnicamente se sitúa entre el 18% y el 22% del peso total del café. Esto significa que hemos logrado disolver entre el 18% y el 22% de la masa del café en el agua. Por debajo del 18%, la extracción es <strong>subóptima</strong> (sub-extraída); por encima del 22%, es <strong>excesiva</strong> (sobre-extraída).</p>
+                        <h3>El orden de extracción de los sabores:</h3>
+                        <ol>
+                            <li><strong>Ácidos y sales minerales (primeros 10-15 segundos):</strong> Los primeros compuestos en disolverse son los ácidos orgánicos (cítrico, málico) y las sales. Esto aporta la vivacidad, brillo y frescura inicial. En una sub-extracción, estos sabores dominan, resultando en un café agrio, salino y plano.</li>
+                            <li><strong>Azúcares y compuestos de caramelización (15-25 segundos):</strong> Luego se extraen los azúcares (fructosa, sacarosa) y los compuestos resultantes de la caramelización durante el tueste. Esta etapa aporta la dulzura natural, el cuerpo y los sabores complejos (chocolate, caramelo, frutas). Es el corazón del equilibrio.</li>
+                            <li><strong>Compuestos amargos deseables (25-35 segundos):</strong> Posteriormente, se extraen los alcaloides como la cafeína y algunos compuestos fenólicos, que en su justa medida aportan estructura, profundidad y un final de boca agradable, balanceando la acidez.</li>
+                            <li><strong>Compuestos amargos y astringentes indeseables (después de 40 segundos):</strong> Finalmente, si la extracción continúa demasiado, se disuelven compuestos lignínicos y taninos muy amargos y astringentes, que ahogan todos los sabores agradables anteriores. Este es el sabor de la sobre-extracción: amargo, áspero y seco.</li>
+                        </ol>
+                        <h3>Las variables clave de la extracción (El "Triángulo Dorado"):</h3>
+                        <p>Para controlar la extracción, manipulamos cuatro variables principales, interconectadas entre sí:</p>
+                        <ul>
+                            <li><strong>1. Tamaño de molido (Grind Size):</strong> Es la variable más importante y la primera que debes ajustar.
+                                <ul>
+                                    <li><strong>Molido fino:</strong> Mayor superficie de contacto → Extracción <strong>más rápida y fuerte</strong>. Riesgo de sobre-extracción y amargor si el tiempo es excesivo.</li>
+                                    <li><strong>Molido grueso:</strong> Menor superficie de contacto → Extracción <strong>más lenta y suave</strong>. Riesgo de sub-extracción y acidez agria si el tiempo es insuficiente.</li>
+                                </ul>
+                            </li>
+                            <li><strong>2. Tiempo de contacto (Brew Time):</strong> Cuánto tiempo el agua está en contacto con el café.
+                                <ul>
+                                    <li>Molido fino + tiempo largo = Sobre-extracción segura.</li>
+                                    <li>Molido grueso + tiempo corto = Sub-extracción segura.</li>
+                                </ul>
+                            </li>
+                            <li><strong>3. Temperatura del agua (Water Temperature):</strong>
+                                <ul>
+                                    <li><strong>Agua más caliente (93-96°C):</strong> Extrae más rápido y completamente. Ideal para tostados medios y métodos filtrados.</li>
+                                    <li><strong>Agua más fría (85-93°C):</strong> Extrae más lento y selectivamente. Útil para tostados oscuros o métodos de inmersión (prensa francesa) para evitar amargor excesivo.</li>
+                                </ul>
+                            </li>
+                            <li><strong>4. Proporción café-agua (Brew Ratio):</strong> La cantidad de café vs. la cantidad de agua. Se expresa como ratio (ej: 1:16).
+                                <ul>
+                                    <li><strong>Ratio bajo (1:14):</strong> Más café por agua → bebida más fuerte y concentrada, pero la extracción debe ser más cuidadosa para no sacar sabores amargos.</li>
+                                    <li><strong>Ratio alto (1:18):</strong> Menos café por agua → bebida más ligera y suave, más fácil de extraer completamente.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3>Diagnóstico práctico de tu extracción:</h3>
+                        <p><strong>Si tu café sabe…</strong></p>
+                        <ul>
+                            <li><strong>Agrio, salino, débil y sin cuerpo:</strong> Es <strong>SUB-EXTRACTADO</strong>. Solución: Moler más fino, aumentar el tiempo de contacto, usar agua más caliente o aumentar la proporción de café.</li>
+                            <li><strong>Amargo, áspero, seco y con sabor a ceniza:</strong> Es <strong>SOBRE-EXTRACTADO</strong>. Solución: Moler más grueso, disminuir el tiempo de contacto, usar agua más fría o disminuir la proporción de café.</li>
+                            <li><strong>Balanceado, dulce, con acidez agradable y un final limpio:</strong> ¡Felicidades! Lograste una <strong>EXTRACCIÓN EQUILIBRADA</strong>.</li>
+                        </ul>
+                        <p>Recuerda: ajusta solo una variable a la vez (empezando por el molido) y toma notas. La consistencia es la clave para replicar tu taza perfecta.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Preparación de filtrados -->
+            <article class="blog-article">
+                <button class="article-header" data-article="brewing">
+                    <div class="article-number">09</div>
+                    <div class="article-title">Preparación de Filtrados: Métodos Clásicos y Modernos</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="brewing">
+                    <div class="article-image">
+                        <img src="../img/blog/9.png" alt="Preparación manual de café filtrado">
+                    </div>
+                    <div class="article-body">
+                        <p>Los métodos de filtrado (pour-over o goteo) son la puerta de entrada al café de especialidad para millones de personas. Son accesibles, relativamente simples y permiten un control notable sobre la extracción. El principio es común: el agua caliente pasa a través de un lecho de café molido y un filtro (de papel, tela o metal), extrayendo los sabores y dejando atrás los sólidos y la mayoría de los aceites, resultando en una taza limpia, clara y que resalta la acidez y los matices del origen.</p>
+                        <h3>V60 (Hario V60):</h3>
+                        <p>Un icono del café manual. Su forma cónica con espirales internas y un orificio grande crea un flujo de agua rápido y controlado por el usuario, permitiendo una extracción brillante y compleja.</p>
+                        <ul>
+                            <li><strong>Ratio recomendado:</strong> 1:16 (ej: 20g de café para 320g de agua).</li>
+                            <li><strong>Molido:</strong> Medio-fino (similar a la sal de mar). Ajusta: si termina muy rápido (<2:30), muele más fino; si tarda mucho (>4:00), muele más grueso.</li>
+                            <li><strong>Tiempo total objetivo:</strong> 3:00 - 3:30 minutos para 320g.</li>
+                            <li><strong>Técnica básica (método de 4 vertidos):</strong>
+                                <ol>
+                                    <li><strong>Bloom (30 segundos):</strong> Vierte el doble del peso del café en agua (ej: 40g para 20g de café) para humedecer todo el lecho y liberar el CO2. Esto permite una extracción uniforme después.</li>
+                                    <li><strong>Primer vertido (hasta 1:00):</strong> Vierte en círculos concéntricos hasta llegar a ~120g total.</li>
+                                    <li><strong>Segundo vertido (hasta 2:00):</strong> Vierte hasta los ~220g total.</li>
+                                    <li><strong>Tercer vertido (hasta 3:00-3:30):</strong> Vierte hasta tu peso final (320g).</li>
+                                </ol>
+                            </li>
+                            <li><strong>Filtro:</strong> Papel blanco cónico. Enjuágalo con agua caliente antes de poner el café para eliminar sabores a papel y precalentar el recipiente.</li>
+                        </ul>
+                        <h3>Chemex:</h3>
+                        <p>Una pieza de diseño funcional y elegante. Usa un filtro de papel extra grueso que elimina casi todos los aceites y sedimentos, produciendo un café excepcionalmente limpio, suave y con un cuerpo té-like. Ideal para disfrutar la claridad de cafés muy afrutados o florales.</p>
+                        <ul>
+                            <li><strong>Ratio:</strong> 1:17 (ej: 30g de café para 510g de agua).</li>
+                            <li><strong>Molido:</strong> Medio-grueso (ligeramente más grueso que para V60). El filtro grueso ralentiza el flujo, por lo que un molido muy fino lo atascaría.</li>
+                            <li><strong>Tiempo total:</strong> 4:00 - 5:00 minutos.</li>
+                            <li><strong>Técnica:</strong> Similar al V60 pero con vertidos más lentos y pausados debido al filtro grueso. Un solo vertido continuo y controlado también funciona bien.</li>
+                        </ul>
+                        <h3>Filtro de Melitta o Kalita Wave (Cónico y Plano):</h3>
+                        <p>Alternativas muy consistentes. La Melitta (cónica) tiene un orificio pequeño que controla el flujo. La Kalita Wave (plana con 3 orificios) y fondo plano crean un lecho de café uniforme, minimizando canales de agua y haciendo el método más "forgiving" (perdonador) que el V60, ideal para principiantes.</p>
+                        <ul>
+                            <li><strong>Ratio:</strong> 1:15 a 1:17.</li>
+                            <li><strong>Molido:</strong> Medio (Kalita puede usar un molido un poco más fino que Melitta).</li>
+                            <li><strong>Tiempo:</strong> 3:00 - 4:00 minutos.</li>
+                            <li><strong>Técnica:</strong> Vertido circular constante, manteniendo un nivel de agua estable.</li>
+                        </ul>
+                        <h3>Consejos universales para un filtrado perfecto:</h3>
+                        <ul>
+                            <li><strong>Agua de calidad:</strong> Usa agua filtrada o embotellada baja en minerales. El agua del grifo con cloro o alta dureza arruinará el sabor.</li>
+                            <li><strong>Temperatura precisa:</strong> 93°C ± 2°C. Un hervidor con control de temperatura es una gran inversión.</li>
+                            <li><strong>Molido fresco y consistente:</strong> Muele justo antes de preparar. Un molino de muelas (burr grinder) es esencial para un molido uniforme. Los molinos de cuchilla crean partículas desiguales que extraen de manera inconsistente.</li>
+                            <li><strong>Pesarlo todo:</strong> Usa una balanza gramera de cocina (precisión 0.1g) para el café y el agua. La consistencia nace de la medición.</li>
+                            <li><strong>Precalientar:</strong> Enjuaga el filtro y precalienta toda la pieza (V60, Chemex, taza) con agua caliente. Esto evita que el recipiente frío robe calor durante la extracción.</li>
+                            <li><strong>Paciencia y práctica:</strong> Observa, huele, prueba y ajusta. Tu paladar es el mejor juez.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Historia -->
+            <article class="blog-article">
+                <button class="article-header" data-article="history">
+                    <div class="article-number">10</div>
+                    <div class="article-title">Historia: La Epopeya del Grano que Conquistó el Mundo</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="history">
+                    <div class="article-image">
+                        <img src="../img/blog/10.png" alt="Sacos históricos de café">
+                    </div>
+                    <div class="article-body">
+                        <p>La historia del café es una fascinante epopeya global que entreteje leyenda, comercio, cultura, política y economía. Ha sido elixir filosófico en los salones de la Ilustración, combustible de revoluciones, inspiración artística, y motivo de prohibiciones religiosas y políticas. Su viaje desde los bosques etíopes hasta convertirse en la segunda mercancía más comercializada del mundo (después del petróleo) es un relato de descubrimientos, imperialismo, innovación y, finalmente, de apreciación por la calidad y la sostenibilidad.</p>
+                        <h3>Orígenes legendarios en Etiopía (Siglo IX - XV):</h3>
+                        <p>La leyenda más difundida atribuye el descubrimiento a Kaldi, un pastor de cabras en la región de Kaffa. Observó que sus animales se mostraban inusualmente enérgicos después de masticar los frutos rojos de un arbusto desconocido. Intrigado, probó las bayas él mismo y experimentó una renovada vitalidad. Un monje local, al enterarse, experimentó con las bayas para mantenerse despierto durante las largas horas de oración, descubriendo así el poder del café. El consumo inicial fue probablemente de la fruta entera o en forma de infusión de las hojas y bayas.</p>
+                        <h3>Expansión por el Mundo Árabe y el Nacimiento de la Cafetería (Siglo XV - XVI):</h3>
+                        <p>El café llegó a la Península Arábiga (especialmente Yemen) en el siglo XV, donde comenzó su cultivo sistemático y su preparación como bebida tostando y moliendo los granos. Se popularizó entre las cofradías sufíes para sus vigilias nocturnas. Pronto, las "qahveh khaneh" (casas de café) se extendieron por La Meca, El Cairo, Estambul y Persia. Estos establecimientos se convirtieron en centros sociales vitales para conversar, escuchar música, jugar ajedrez y discutir asuntos de actualidad, ganándose el apodo de "escuelas de los sabios". Las autoridades, temerosas de su potencial subversivo, intentaron prohibirlas en varias ocasiones, pero sin éxito duradero.</p>
+                        <h3>La llegada a Europa y la Era de las Colonias (Siglo XVII - XVIII):</h3>
+                        <p>Los mercaderes venecianos introdujeron el café en Europa a principios del siglo XVII. Inicialmente caro y controvertido (el "vino de árabe" o "invención amarga de Satanás", según algunos clérigos), pronto ganó aceptación. La primera cafetería europea abrió en Venecia en 1645. En Londres, las "coffeehouses" se convirtieron en el centro de la vida financiera e intelectual (Lloyd's of London nació en una). Para asegurar el suministro y romper el monopolio árabe, los europeos comenzaron a cultivar café en sus colonias: los holandeses en Java (Indonesia), los franceses en las Antillas y los portugueses en Brasil. Fue el inicio de la producción a escala global, a menudo asociada a sistemas de plantación y trabajo esclavo.</p>
+                        <h3>El Café en las Américas y el Ascenso de Brasil (Siglo XVIII - XIX):</h3>
+                        <p>El café llegó a las Américas en el siglo XVIII. Una planta fue llevada clandestinamente a Martinica por el oficial francés Gabriel de Clieu, y desde allí se propagó. Brasil se convirtió en el mayor productor mundial en el siglo XIX, posición que mantiene hoy, aunque inicialmente enfocado en volumen más que en calidad.</p>
+                        <h3>Colombia: El Surgimiento de un Gigante de Calidad (Siglo XIX - XX):</h3>
+                        <p>El café llegó a Colombia a finales del siglo XVIII, traído por sacerdotes jesuitas, y se estableció en las regiones andinas donde encontró su "terroir" perfecto. A diferencia de Brasil, la producción colombiana estuvo históricamente en manos de pequeños productores (caficultura familiar), lo que fomentó un cuidado más artesanal. El "cafetero" se convirtió en un arquetipo nacional. El desarrollo del Ferrocarril y la navegación por el Río Magdalena facilitaron las exportaciones. Un evento crucial fue la creación de la <strong>Federación Nacional de Cafeteros de Colombia (FNC) en 1927</strong>. Esta institución única en el mundo se encargó de estandarizar la calidad (desarrollando el "Café de Colombia"), brindar asistencia técnica, crear la marca "Juan Valdez®" (1959) y defender los intereses de más de 500,000 familias productoras, consolidando la reputación del café colombiano como el "mejor café suave del mundo".</p>
+                        <h3>La Tercera Ola y la Era de la Especialidad (Finales Siglo XX - Actualidad):</h3>
+                        <p>La "Primera Ola" fue el café comercial en masa (instantáneo, enlatado). La "Segunda Ola" la protagonizaron las cadenas de café espresso (Starbucks) que popularizaron las bebidas especializadas. La <strong>"Tercera Ola"</strong>, desde los años 90, trata el café como un producto artesanal de origen, similar al vino. Se enfoca en la trazabilidad (de la finca a la taza), en procesos de cultivo y beneficio especializados, en tuestes más claros que respetan el origen, y en métodos de preparación precisos. Colombia, con su geografía diversa y cultura cafetera, es un actor protagonista en este movimiento, liderando la producción de cafés especiales con puntajes por encima de 85 puntos. Hoy, la industria avanza hacia una <strong>"Cuarta Ola"</strong> de hiper-transparencia, sostenibilidad profunda, innovación científica y una mayor justicia económica para toda la cadena, especialmente los productores.</p>
+                        <p>Al beber una taza de Azuca Café, bebes un sorbo de esta increíble historia, conectándote con siglos de tradición y con el futuro de la calidad sostenible.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyectos de productores aliados -->
+            <article class="blog-article">
+                <button class="article-header" data-article="producers">
+                    <div class="article-number">11</div>
+                    <div class="article-title">Proyectos de Productores Aliados: El Corazón de Nuestra Cadena</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="producers">
+                    <div class="article-image">
+                        <img src="../img/blog/11.png" alt="Comunidad de productores de café">
+                    </div>
+                    <div class="article-body">
+                        <p>En Azuca Café, estamos profundamente convencidos de que un café verdaderamente excepcional solo puede existir sobre una base de equidad, respeto y desarrollo mutuo. Por eso, nuestro modelo va mucho más allá de la simple compra de café; se basa en <strong>alianzas estratégicas de largo plazo</strong> con agricultores y sus comunidades. Trabajamos codo a codo con productores que comparten nuestros valores de calidad superlativa, sostenibilidad ambiental integral y responsabilidad social genuina, co-creando proyectos que generan valor tangible para todos los eslabones de la cadena.</p>
+                        <h3>Nuestro Enfoque Relacional (No Transaccional):</h3>
+                        <p>Evitamos el modelo de compra esporádica al precio del día. En su lugar, establecemos acuerdos de compra anticipada, a precios superiores al mercado (muchas veces 2x o 3x el precio de la bolsa), garantizando ingresos estables y predecibles a nuestros aliados. Visitamos las fincas regularmente, compartimos conocimientos y construimos relaciones de confianza. Para nosotros, el productor no es un proveedor, es un socio en la misión de llevar el mejor café colombiano al mundo.</p>
+                        <h3>Proyectos Específicos de Impacto:</h3>
+                        <h4>1. Mejora de Infraestructura Post-Cosecha:</h4>
+                        <p>Financiamos y asesoramos la construcción y mejora de infraestructura crítica: camas africanas elevadas para secado solar uniforme, marquesinas para proteger el café de lluvias inesperadas, tanques de fermentación de acero inoxidable con control de temperatura, y bodegas de almacenamiento con control de humedad. Esto permite un control de calidad milimétrico, reduce las mermas por hongos o sobre-fermentación y aumenta significativamente el valor del café producido.</p>
+                        <h4>2. Acceso Directo a Mercados Especializados Internacionales:</h4>
+                        <p>Conectamos directamente a nuestros productores aliados con tostadores y compradores de especialidad en Norteamérica, Europa y Asia, eliminando intermediarios. Organizamos "cataciones de origen" virtuales y presenciales donde el productor presenta su café directamente al comprador final. Esto no solo mejora sustancialmente sus ingresos, sino que les da reconocimiento y visibilidad por su trabajo, fomentando el orgullo por su producto.</p>
+                        <h4>3. Capacitación Técnica Continua y Asistencia Agronómica:</h4>
+                        <p>Junto con agrónomos especializados, ofrecemos talleres en las fincas sobre: podas eficientes, fertilización orgánica, control integrado de plagas, selección de variedades, y técnicas de cosecha selectiva. También los capacitamos en procesos innovadores (como Honey Controlado o Fermentaciones Anaeróbicas) para que puedan experimentar y crear perfiles de taza únicos que demandan precios premium.</p>
+                        <h4>4. Iniciativas de Conservación y Biodiversidad (Café bajo Sombra):</h4>
+                        <p>Incentivamos y apoyamos económicamente la transición y mantenimiento de sistemas agroforestales complejos. Pagamos un premio adicional por café cultivado bajo sombra diversificada. Apoyamos proyectos de reforestación con especies nativas en linderos y nacimientos de agua, y la creación de corredores biológicos. El café bajo sombra no solo produce granos de calidad superior y más complejos, sino que es un refugio para aves, insectos polinizadores y otros animales, captura carbono y protege los suelos.</p>
+                        <h4>5. Empoderamiento Comunitario y Proyectos Sociales:</h4>
+                        <p>Creemos que el desarrollo debe ser integral. Parte de nuestras utilidades se reinvierten en proyectos comunitarios decididos junto a los productores: mejoras en escuelas rurales, dotación de bibliotecas, programas de nutrición infantil, y especialmente, becas universitarias o técnicas para los hijos e hijas de los caficultores, rompiendo el ciclo de la pobreza y dando opciones para el futuro de las nuevas generaciones.</p>
+                        <h4>6. Certificaciones y Comercio Justo Verdaderos:</h4>
+                        <p>Ayudamos a los productores a obtener certificaciones orgánicas o de comercio justo si así lo desean, pero nuestro modelo intrínsecamente cumple y supera muchos de esos estándares. Pagamos precios justos por defecto, no solo cuando hay un sello. Nuestra trazabilidad es total y nuestra relación, directa.</p>
+                        <h3>El Impacto Medible:</h3>
+                        <p>Gracias a este modelo, nuestros productores aliados han logrado:
+                            <ul>
+                                <li>Aumentos del 30-50% en sus ingresos netos por hectárea.</li>
+                                <li>Mejoras del 15-25% en la puntuación de calidad (taza) de sus cafés, accediendo a segmentos de mercado más rentables.</li>
+                                <li>Reducción del 40% en el uso de agroquímicos mediante la adopción de prácticas agroecológicas.</li>
+                                <li>Fortalecimiento del tejido social comunitario y reducción de la migración juvenil a las ciudades.</li>
+                            </ul>
+                        </p>
+                        <p>Cuando eliges Azuca Café, eliges ser parte de este círculo virtuoso. Cada taza es un voto por un modelo de café más justo, más sostenible y más delicioso.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Los sueños del futuro -->
+            <article class="blog-article">
+                <button class="article-header" data-article="future">
+                    <div class="article-number">12</div>
+                    <div class="article-title">Los Sueños del Futuro: Desafíos y Oportunidades para la Caficultura</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="future">
+                    <div class="article-image">
+                        <img src="../img/blog/12.png" alt="Paisaje montañoso de futuro para café">
+                    </div>
+                    <div class="article-body">
+                        <p>La caficultura colombiana y mundial se encuentra en una encrucijada histórica. Los últimos 80 años vieron la industrialización, la estandarización y el crecimiento del volumen. Los próximos 80 estarán definidos por la adaptación climática, la regeneración ambiental, la hiper-calidad y la justicia económica. Mirar hacia el futuro implica reconocer desafíos inminentes con realismo y abrazar las oportunidades con innovación y audacia. En Azuca Café, soñamos y trabajamos por un futuro donde el café siga siendo una fuerza de desarrollo sostenible, biodiversidad y deleite sensorial para las próximas generaciones.</p>
+                        <h3>Desafíos Críticos que Enfrentamos:</h3>
+                        <h4>1. Cambio Climático y Variabilidad Extrema:</h4>
+                        <p>Es la amenaza existencial más grande. El aumento de temperaturas, la alteración de los patrones de lluvia (sequías más prolongadas seguidas de lluvias torrenciales), y la mayor incidencia de heladas y granizadas están desplazando la "cintura cafetera" hacia altitudes mayores. Algunas regiones tradicionales podrían volverse inviables para el Arábica de calidad. Además, favorece la proliferación de plagas y enfermedades como la roya y la broca.</p>
+                        <h4>2. Envejecimiento de los Caficultores y Migración Rural:</h4>
+                        <p>El promedio de edad del caficultor colombiano supera los 50 años. Los jóvenes, ante la percepción de baja rentabilidad y dureza del trabajo, migran a las ciudades. Se corre el riesgo de una crisis de relevo generacional y pérdida de conocimiento tradicional invaluable.</p>
+                        <h4>3. Volatilidad de los Precios Internacionales (Bolsa de Nueva York):</h4>
+                        <p>El modelo de fijación de precios basado en futuros desvincula el valor del mercado de los costos reales de producción sostenible. Un precio bajo en la bolja puede significar pérdidas para el productor, independientemente de su calidad o esfuerzo.</p>
+                        <h4>4. Presión sobre los Recursos Hídricos y los Suelos:</h4>
+                        <p>Los métodos de procesamiento ineficientes y la deforestación para expandir la frontera agrícola degradan cuencas hidrográficas y erosionan los suelos, poniendo en riesgo la producción a largo plazo.</p>
+                        <h3>Oportunidades y Tendencias para un Futuro Brillante:</h3>
+                        <h4>1. Crecimiento Exponencial del Mercado de Cafés Especiales y de Origen:</h4>
+                        <p>Los consumidores, especialmente las nuevas generaciones, demandan más que cafeína: buscan experiencias, historias, transparencia y calidad sensorial. Están dispuestos a pagar precios premium por cafés que cumplan con estos valores. Esto crea un espacio de mercado donde la calidad y la sostenibilidad son recompensadas económicamente.</p>
+                        <h4>2. Innovación en Procesamientos y Perfiles de Taza:</h4>
+                        <p>La experimentación controlada con fermentaciones (anaeróbicas, con levaduras seleccionadas, lácticas), secados en invernadero y otros métodos está creando una nueva paleta de sabores inimaginable hace una década. Colombia es líder en esta innovación, pudiendo ofrecer una diversidad sensorial que lo diferencie aún más.</p>
+                        <h4>3. Turismo de Café (Agroturismo) y Experiencias Inmersivas:</h4>
+                        <p>Los viajeros buscan autenticidad y conexión. El "Coffee Tourism" permite a los productores diversificar sus ingresos mostrando su trabajo, su cultura y su paisaje. Desde tours de recolección hasta cataciones en finca y estancias en eco-lodges, esta es una industria de alto valor agregado con gran potencial.</p>
+                        <h4>4. Agricultura Regenerativa y Captura de Carbono:</h4>
+                        <p>Los sistemas agroforestales de café bien manejados no son neutrales en carbono, son sumideros de carbono. Existen mercados emergentes de créditos de carbono y pagos por servicios ambientales (PSA) que podrían generar ingresos adicionales para los caficultores que protejan bosques y biodiversidad.</p>
+                        <h4>5. Tecnología de Precisión y Trazabilidad Blockchain:</h4>
+                        <p>Sensores para monitoreo climático en finca, apps para gestión agrícola, y tecnología blockchain para garantizar una trazabilidad irrefutable desde la semilla hasta la taza, aumentando la confianza del consumidor y el valor de la marca origen.</p>
+                        <h4>6. Diversificación de Ingresos en Finca:</h4>
+                        <p>El cultivo bajo sombra permite la producción asociada de frutas, miel, maderables, especias y plantas medicinales, creando resiliencia económica frente a las fluctuaciones del precio del café.</p>
+                        <h3>La Visión de Azuca Café para el 2030:</h3>
+                        <p>Nos hemos trazado metas ambiciosas y medibles para guiar nuestro trabajo en la próxima década:</p>
+                        <ul>
+                            <li><strong>100% de Abastecimiento Regenerativo:</strong> Que el 100% de nuestro café provenga de fincas que implementen prácticas de agricultura regenerativa (cobertura de suelos, no labranza, biodiversidad, manejo orgánico de plagas).</li>
+                            <li><strong>Neutralidad en Carbono:</strong> Lograr que nuestra cadena de suministro (incluyendo transporte y logística) sea carbono neutral, invirtiendo en proyectos de reforestación y energía renovable.</li>
+                            <li><strong>Precio Vital Mínimo Garantizado:</strong> Establecer y pagar un "Precio Vital" a todos nuestros productores aliados, que cubra no solo costos de producción sostenible, sino que permita una vida digna, educación, salud y ahorro.</li>
+                            <li><strong>Escuela de Caficultura para Jóvenes:</strong> Crear una escuela práctica en alianza con comunidades para formar a la próxima generación de caficultores empresarios, con conocimientos en agronomía, procesamiento, catación y negocios digitales.</li>
+                            <li><strong>Restauración de 1,000 Hectáreas:</strong> Liderar y financiar la restauración activa de 1,000 hectáreas de bosque nativo y corredores biológicos en zonas cafeteras aliadas.</li>
+                            <li><strong>Innovación Abierta:</strong> Crear un laboratorio de procesamiento experimental abierto a productores aliados para que desarrollen y patenten (colectivamente) nuevos perfiles de café.</li>
+                        </ul>
+                        <p>El futuro del café no está escrito. Lo escribimos día a día con las decisiones que tomamos: qué café compramos, cómo lo producimos, cómo lo disfrutamos. En Azuca Café, elegimos escribir un futuro de calidad, justicia y abundancia regenerativa. Te invitamos a ser coautor de esta historia.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Métodos de preparación -->
+            <article class="blog-article">
+                <button class="article-header" data-article="brewing-methods">
+                    <div class="article-number">13</div>
+                    <div class="article-title">Métodos de Preparación: El Universo Completo de Extracción</div>
+                    <div class="article-toggle">+</div>
+                </button>
+                <div class="article-content" id="brewing-methods">
+                    <div class="article-image">
+                        <img src="../img/blog/13.png" alt="Diferentes métodos de preparación de café">
+                    </div>
+                    <div class="article-body">
+                        <p>Descubrir los métodos de preparación del café es como aprender un nuevo idioma de sabores. Cada técnica revela facetas distintas de un mismo grano, transformando la experiencia sensorial según el método elegido.</p>
+
+                        <!-- LISTA DE MÉTODOS (submenús) -->
+                        <div class="methods-container">
+                            
+                            <!-- MÉTODOS DE FILTRACIÓN -->
+                            <div class="method-category">
+                                <h3>Métodos de Filtración por Goteo</h3>
+                                
+                                <!-- Submétodo 1: V60 -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="v60-method">
+                                        <span class="sub-method-number">A</span>
+                                        <span class="sub-method-title">Hario V60</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="v60-method">
+                                        <p><strong>Diseñado en Japón en 2004</strong>, el V60 debe su nombre a su forma cónica de 60 grados. Sus espirales internas y gran orificio de salida permiten un control total sobre el flujo de agua, ideal para baristas que buscan expresar matices específicos del café.</p>
+                                        <ul>
+                                            <li><strong>Características únicas:</strong> Espirales crean turbulencia para extracción uniforme; orificio grande permite flujo rápido controlado por vertido</li>
+                                            <li><strong>Ratio recomendado:</strong> 1:15 a 1:17 (ej: 20g café para 300-340g agua)</li>
+                                            <li><strong>Molido ideal:</strong> Medio-fino (similar a sal marina fina)</li>
+                                            <li><strong>Tiempo de extracción:</strong> 2:30 - 3:30 minutos para 300g</li>
+                                            <li><strong>Temperatura agua:</strong> 92-96°C según tueste y frescura</li>
+                                            <li><strong>Técnica avanzada:</strong>
+                                                <ol>
+                                                    <li><strong>Bloom:</strong> 45-60 segundos con 2x peso del café en agua</li>
+                                                    <li><strong>Vertido circular constante:</strong> Mantener nivel de agua estable a 1cm del borde</li>
+                                                    <li><strong>Control de flujo:</strong> Velocidad de vertido de 4-6g/segundo</li>
+                                                    <li><strong>Swirl final:</strong> Girar suavemente al terminar para nivelar el lecho</li>
+                                                </ol>
+                                            </li>
+                                            <li><strong>Perfil resultante:</strong> Café limpio, brillante, con acidez definida y sabores separados. Excelente para cafés africanos y centroamericanos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submétodo 2: Chemex -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="chemex-method">
+                                        <span class="sub-method-number">B</span>
+                                        <span class="sub-method-title">Chemex</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="chemex-method">
+                                        <p><strong>Inventado en 1941 por el químico alemán Peter Schlumbohm</strong>, el Chemex es una pieza de diseño funcional que une ciencia y estética. Su filtro de papel extra grueso (20-30% más que otros) produce la taza más limpia posible.</p>
+                                        <ul>
+                                            <li><strong>Características únicas:</strong> Filtro de triple capa elimina casi todos los aceites y sedimentos; forma de reloj de arena estiliza el flujo</li>
+                                            <li><strong>Ratio recomendado:</strong> 1:16 (ej: 30g café para 480g agua)</li>
+                                            <li><strong>Molido ideal:</strong> Medio-grueso (más grueso que V60 debido al filtro espeso)</li>
+                                            <li><strong>Tiempo de extracción:</strong> 4:00 - 5:00 minutos</li>
+                                            <li><strong>Perfil resultante:</strong> Excepcionalmente limpio, té-like, con sabores muy definidos y separados. Ideal para catas y cafés con notas florales complejas</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submétodo 3: Kalita Wave -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="kalita-method">
+                                        <span class="sub-method-number">C</span>
+                                        <span class="sub-method-title">Kalita Wave</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="kalita-method">
+                                        <p><strong>Diseñado para eliminar variables</strong>, el Kalita Wave (plano con 3 orificios pequeños) crea un lecho de café uniforme que minimiza canales de agua, siendo el método más consistente y "forgiving".</p>
+                                        <ul>
+                                            <li><strong>Características únicas:</strong> Fondo plano + orificios pequeños = flujo lento y controlado; filtros ondulados mantienen espacio entre filtro y paredes</li>
+                                            <li><strong>Ratio recomendado:</strong> 1:16 (ej: 22g café para 352g agua)</li>
+                                            <li><strong>Molido ideal:</strong> Medio (similar a sal gruesa)</li>
+                                            <li><strong>Tiempo de extracción:</strong> 3:00 - 4:00 minutos</li>
+                                            <li><strong>Técnica simplificada:</strong>
+                                                <ol>
+                                                    <li>Bloom estándar de 30 segundos</li>
+                                                    <li>Vertidos en pulsos pequeños manteniendo nivel constante</li>
+                                                    <li>No requiere movimientos circulares precisos - el diseño lo hace por ti</li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submétodo 4: Melitta -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="melitta-method">
+                                        <span class="sub-method-number">D</span>
+                                        <span class="sub-method-title">Melitta y Filtros Cónicos Tradicionales</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="melitta-method">
+                                        <p><strong>El sistema original inventado por Melitta Bentz en 1908</strong>, que democratizó el café filtrado en hogares. Sencillo, económico y efectivo.</p>
+                                        <ul>
+                                            <li><strong>Características:</strong> Orificio único pequeño; filtros de papel económicos y ampliamente disponibles</li>
+                                            <li><strong>Ratio:</strong> 1:15 a 1:17</li>
+                                            <li><strong>Molido:</strong> Medio-fino</li>
+                                            <li><strong>Técnica:</strong> Vertido lento en círculos concéntricos desde el centro hacia fuera</li>
+                                            <li><strong>Ventaja:</strong> Accesibilidad y simplicidad; perfecto para preparaciones de 4-6 tazas</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- MÉTODOS DE INMERSIÓN -->
+                            <div class="method-category">
+                                <h3>Métodos de Inmersión</h3>
+                                
+                                <!-- Submétodo 5: Prensa Francesa -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="frenchpress-method">
+                                        <span class="sub-method-number">E</span>
+                                        <span class="sub-method-title">Prensa Francesa (French Press)</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="frenchpress-method">
+                                        <p><strong>Patentada en 1929 por Attilio Calimani</strong>, la prensa francesa ofrece la experiencia de inmersión más pura, donde todos los componentes del café (aceites, sólidos suspendidos) permanecen en la taza.</p>
+                                        <ul>
+                                            <li><strong>Características únicas:</strong> Extracción completa por contacto total; filtro metálico permite paso de aceites y partículas finas</li>
+                                            <li><strong>Ratio recomendado:</strong> 1:15 (ej: 32g café para 480g agua)</li>
+                                            <li><strong>Molido ideal:</strong> Grueso (similar a migas de pan gruesas)</li>
+                                            <li><strong>Tiempo de inmersión:</strong> 4:00 minutos exactos</li>
+                                            <li><strong>Temperatura agua:</strong> 92-94°C (ligeramente más baja para evitar amargor)</li>
+                                            <li><strong>Perfil resultante:</strong> Máximo cuerpo, textura sedosa y oleosa, sabores ricos e integrados. Ideal para cafés con notas a chocolate, nueces y especias</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submétodo 6: AeroPress -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="aeropress-method">
+                                        <span class="sub-method-number">F</span>
+                                        <span class="sub-method-title">AeroPress</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="aeropress-method">
+                                        <p><strong>Inventado en 2005 por Alan Adler</strong>, el AeroPress revolucionó la preparación casera combinando inmersión con filtración por presión manual. Existen más de 200 recetas documentadas en el Campeonato Mundial de AeroPress.</p>
+                                        <ul>
+                                            <li><strong>Características únicas:</strong> Cámara de aire crea presión suave; filtros de papel micro-perforados; rápido y portátil</li>
+                                            <li><strong>Ratio estándar:</strong> 1:15 (15g café para 225g agua)</li>
+                                            <li><strong>Molido ideal:</strong> Medio-fino (más fino que pour over, más grueso que espresso)</li>
+                                            <li><strong>Perfil resultante:</strong> Extraordinariamente limpio a pesar de la inmersión; cuerpo medio-alto; versátil para imitar espresso o hacer café filtrado</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submétodo 7: Sifón -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="siphon-method">
+                                        <span class="sub-method-number">G</span>
+                                        <span class="sub-method-title">Sifón o Cafetera de Vacío</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="siphon-method">
+                                        <p><strong>Inventado en 1830</strong>, el sifón combina principios de vacío y presión para crear una experiencia espectacular y un café excepcionalmente limpio.</p>
+                                        <ul>
+                                            <li><strong>Principio científico:</strong> Calentar agua en cámara inferior crea presión que la empuja a cámara superior; al enfriarse, vacío succiona café filtrado de regreso</li>
+                                            <li><strong>Ratio recomendado:</strong> 1:15 (ej: 20g café para 300g agua)</li>
+                                            <li><strong>Molido ideal:</strong> Medio (similar a V60)</li>
+                                            <li><strong>Perfil resultante:</strong> Limpieza extrema como Chemex pero con cuerpo más completo; sabores muy definidos y aromáticos; temperatura de servicio perfecta</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- MÉTODOS DE PRESIÓN -->
+                            <div class="method-category">
+                                <h3>Métodos de Presión</h3>
+                                
+                                <!-- Submétodo 8: Espresso -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="espresso-method">
+                                        <span class="sub-method-number">H</span>
+                                        <span class="sub-method-title">Espresso</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="espresso-method">
+                                        <p><strong>Inventado en Italia a principios del siglo XX</strong>, el espresso representa la culminación técnica de la extracción bajo presión, donde ciencia y arte se encuentran en 25-30 segundos.</p>
+                                        <ul>
+                                            <li><strong>Parámetros técnicos críticos:</strong>
+                                                <ul>
+                                                    <li><strong>Presión:</strong> 9 bares ideal (8-10 rango aceptable)</li>
+                                                    <li><strong>Temperatura:</strong> 92-96°C con estabilidad de ±1°C</li>
+                                                    <li><strong>Tiempo:</strong> 25-30 segundos desde que comienza a salir</li>
+                                                    <li><strong>Ratio:</strong> 1:2 para espresso tradicional (18g in → 36g out)</li>
+                                                    <li><strong>Molido:</strong> Extra-fino (300-400 micras)</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Componentes de calidad:</strong>
+                                                <ol>
+                                                    <li><strong>Crema:</strong> Capa de microespuma de color avellana, persistente 2+ minutos</li>
+                                                    <li><strong>Cuerpo:</strong> Viscosidad y peso en boca</li>
+                                                    <li><strong>Aroma:</strong> Intenso y complejo, liberado por la crema</li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submétodo 9: Moka Pot -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="moka-method">
+                                        <span class="sub-method-number">I</span>
+                                        <span class="sub-method-title">Cafetera Moka (Moka Pot)</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="moka-method">
+                                        <p><strong>Inventada por Alfonso Bialetti en 1933</strong>, la Moka democratizó el espresso casero usando presión de vapor en lugar de bombas.</p>
+                                        <ul>
+                                            <li><strong>Principio físico:</strong> Agua en cámara inferior hierve → vapor crea presión (1-2 bares) → empuja agua a través del café hacia cámara superior</li>
+                                            <li><strong>Ratio:</strong> Llenar cámara inferior hasta válvula; llenar filtro con café sin apisonar</li>
+                                            <li><strong>Molido ideal:</strong> Medio-fino (más fino que pour over, más grueso que espresso)</li>
+                                            <li><strong>Técnica perfeccionada:</strong>
+                                                <ol>
+                                                    <li>Usar agua caliente en base para reducir tiempo en estufa</li>
+                                                    <li>Fuego medio-bajo para extracción lenta (4-5 minutos total)</li>
+                                                    <li>Retirar del fuego cuando flujo se vuelve rubio y hace sonido de gorgoteo</li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- MÉTODOS ANCESTRALES -->
+                            <div class="method-category">
+                                <h3>Métodos Ancestrales y Tradicionales</h3>
+                                
+                                <!-- Submétodo 10: Café Turco -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="turkish-method">
+                                        <span class="sub-method-number">J</span>
+                                        <span class="sub-method-title">Café Turco (Ibrik/Cezve)</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="turkish-method">
+                                        <p><strong>Método más antiguo aún en uso</strong>, practicado desde el siglo XV en el Imperio Otomano. Declarado Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO en 2013.</p>
+                                        <ul>
+                                            <li><strong>Equipo esencial:</strong>
+                                                <ul>
+                                                    <li><strong>Ibrik/Cezve:</strong> Olla de cobre o latón con mango largo</li>
+                                                    <li><strong>Molino:</strong> Capaz de moler a polvo ultrafino</li>
+                                                    <li><strong>Tazas:</strong> Fincan pequeñas sin asas</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Ratio tradicional:</strong> 1:10 (10g café para 100g agua) más azúcar al gusto</li>
+                                            <li><strong>Molido:</strong> Extra-fino como harina (75-150 micras)</li>
+                                            <li><strong>Características únicas:</strong> Textura espesa casi sirope; sabor intenso y complejo; ritual meditativo; sin filtración (se beben los posos)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submétodo 11: Café de Olla Mexicano -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="mexican-method">
+                                        <span class="sub-method-number">K</span>
+                                        <span class="sub-method-title">Café de Olla Mexicano</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="mexican-method">
+                                        <p><strong>Tradición mexicana que data de la Revolución Mexicana</strong>, donde el café se preparaba en grandes ollas de barro para las tropas.</p>
+                                        <ul>
+                                            <li><strong>Ingredientes característicos:</strong>
+                                                <ul>
+                                                    <li>Café molido grueso (generalmente de tueste oscuro)</li>
+                                                    <li>Piloncillo (azúcar de caña integral) o panela</li>
+                                                    <li>Canela en raja</li>
+                                                    <li>Clavos de olor (opcional)</li>
+                                                    <li>Anís estrella (opcional)</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Proceso tradicional:</strong>
+                                                <ol>
+                                                    <li>Calentar agua en olla de barro (mejor) o metal</li>
+                                                    <li>Agregar piloncillo, canela y otras especias, hervir 5 minutos</li>
+                                                    <li>Agregar café molido, remover, apagar fuego</li>
+                                                    <li>Tapar y dejar infusionar 5-10 minutos</li>
+                                                    <li>Colar con malla fina o filtro de tela</li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submétodo 12: Café Colado Puertorriqueño -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="puertorican-method">
+                                        <span class="sub-method-number">L</span>
+                                        <span class="sub-method-title">Café Colado Puertorriqueño</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="puertorican-method">
+                                        <p><strong>Técnica tradicional puertorriqueña</strong> usando un filtro de tela (colador) colgado de un marco de madera.</p>
+                                        <ul>
+                                            <li><strong>Equipo tradicional:</strong> Colador de tela (generalmente lino o algodón), marco de madera, olla grande</li>
+                                            <li><strong>Proceso:</strong>
+                                                <ol>
+                                                    <li>Hervir agua en olla grande</li>
+                                                    <li>Colocar colador de tela (previamente enjuagado con agua caliente) sobre olla receptora</li>
+                                                    <li>Agregar café molido medio-grueso al colador</li>
+                                                    <li>Verter agua hirviendo lentamente sobre el café</li>
+                                                    <li>Dejar filtrar completamente (puede tomar 10-15 minutos para varias tazas)</li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- MÉTODOS DE EXTRACCIÓN EN FRÍO -->
+                            <div class="method-category">
+                                <h3>Métodos de Extracción en Frío</h3>
+                                
+                                <!-- Submétodo 13: Cold Brew -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="coldbrew-method">
+                                        <span class="sub-method-number">M</span>
+                                        <span class="sub-method-title">Cold Brew</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="coldbrew-method">
+                                        <p><strong>Método que extrae lentamente (12-24 horas) con agua fría</strong>, resultando en un perfil radicalmente diferente al café caliente.</p>
+                                        <ul>
+                                            <li><strong>Química única:</strong> Agua fría extrae menos ácidos (cítrico, málico) y compuestos amargos (taninos), mientras preserva azúcares y compuestos dulces</li>
+                                            <li><strong>Ratios comunes:</strong>
+                                                <ul>
+                                                    <li><strong>Concentrado:</strong> 1:4 a 1:8 (para diluir después)</li>
+                                                    <li><strong>Listo para beber:</strong> 1:12 a 1:16</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Molido:</strong> Extra-grueso (como pan rallado muy grueso)</li>
+                                            <li><strong>Tiempos:</strong>
+                                                <ul>
+                                                    <li><strong>Temperatura ambiente:</strong> 12-16 horas</li>
+                                                    <li><strong>Refrigerador:</strong> 18-24 horas</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submétodo 14: Nitro Cold Brew -->
+                                <div class="sub-method">
+                                    <button class="sub-method-header" data-submethod="nitro-method">
+                                        <span class="sub-method-number">N</span>
+                                        <span class="sub-method-title">Nitro Cold Brew</span>
+                                        <span class="sub-method-toggle">+</span>
+                                    </button>
+                                    <div class="sub-method-content" id="nitro-method">
+                                        <p><strong>Cold brew infusionado con nitrógeno</strong>, creando una textura similar a la cerveza stout con micro-espuma cremosa.</p>
+                                        <ul>
+                                            <li><strong>Proceso:</strong> Cold brew terminado se carga en barril con nitrógeno a presión, servido a través de grifo cervecero</li>
+                                            <li><strong>Efecto del nitrógeno:</strong>
+                                                <ul>
+                                                    <li>Crea micro-burbujas que dan textura cremosa</li>
+                                                    <li>Suaviza aún más el perfil (el nitrógeno no se disuelve como el CO2)</li>
+                                                    <li>Mejora percepción de dulzura</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CONTENIDO ADICIONAL (guías, experimentos, consejos) -->
+                        <div class="additional-content">
+                            <h3>Guía de Selección por Perfil de Bebedor</h3>
+                            <p>Aquí encontrarás recomendaciones personalizadas según tus preferencias...</p>
+                            
+                            <h3>Consejos Finales de Maestría</h3>
+                            <p>En Azuca Café, creemos que cada método tiene su lugar y momento. Nuestros cafés están seleccionados y tostados para brillar en cualquier método que elijas.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <script>
+        // Script de verificación de elementos
+        window.addEventListener('load', function() {
+            const headers = document.querySelectorAll('.article-header');
+            const contents = document.querySelectorAll('.article-content');
+            console.log('🔍 Verificación final:');
+            console.log('✅ Headers encontrados:', headers.length);
+            console.log('✅ Content divs encontrados:', contents.length);
+            
+            headers.forEach((h) => {
+                const id = h.getAttribute('data-article');
+                const content = document.getElementById(id);
+                if (!content) {
+                    console.error('❌ MISMATCH:', id, '- content no encontrado');
+                } else {
+                    console.log('✅ Match OK:', id);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
