@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda - AzucaCafe</title>
-    <link rel="icon" href="../img/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/shop-styles.css">
-</head>
-<body>
     <!-- HERO SECTION CON ESTILO DE PLANES -->
     <section class="shop-hero">
         <div class="shop-hero-content">
@@ -32,7 +21,7 @@
             <!-- Granos de Café -->
             <div class="product-card" data-product="Bolsa de Granos de Café">
                 <div class="product-image-container">
-                    <img src="../img/shop/grano/100.png" alt="Granos de café" class="product-image">
+                    <img src="img/shop/grano/100.png" alt="Granos de café" class="product-image">
                 </div>
                 <div class="product-badge">Más Vendido</div>
                 <div class="product-content">
@@ -103,7 +92,7 @@
             <div class="product-card featured" data-product="Bolsa de Café Molido">
                 <div class="product-badge-featured">Recomendado</div>
                 <div class="product-image-container">
-                    <img src="../img/shop/molido/100.png" alt="Café molido" class="product-image">
+                    <img src="img/shop/molido/100.png" alt="Café molido" class="product-image">
                 </div>
                 <div class="product-badge">Listo para preparar</div>
                 <div class="product-content">
@@ -173,7 +162,7 @@
             <!-- Té de cáscara de café -->
             <div class="product-card" data-product="Bolsa de Té de Cáscara de Café Fermentado">
                 <div class="product-image-container">
-                    <img src="../img/shop/te.png" alt="Té de cáscara de café" class="product-image">
+                    <img src="img/shop/te.png" alt="Té de cáscara de café" class="product-image">
                 </div>
                 <div class="product-badge">Exclusivo</div>
                 <div class="product-content">
@@ -303,7 +292,7 @@
                 </div>
                 
                 <div class="plans-cta-buttons">
-                    <a href="#planes" class="plans-cta-btn primary">
+                    <a href="#" data-target="planes" class="plans-cta-btn primary">
                         <span>Ver Planes</span>
                         <span class="btn-arrow">→</span>
                     </a>
@@ -319,7 +308,7 @@
             <!-- <div class="coffee-beans-decoration"></div> -->
             
             <!-- CON ESTO -->
-            <img src="../img/Fotos_Azuca_Cafe/Book.png" alt="Planes de Café AzucaCafe" class="cta-real-image">
+            <img src="img/Fotos_Azuca_Cafe/Book.png" alt="Planes de Café AzucaCafe" class="cta-real-image">
             <div class="image-overlay"></div>
         </div>
     </div>
@@ -336,33 +325,4 @@
     </div>
 
     <!-- SCRIPTS -->
-    <script src="../javascript/shop.js"></script>
 
-    <script>
-        // Inicialización inmediata para cargada directa
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log("shop.html cargado directamente");
-            
-            // Inicializar inmediatamente si la tienda está presente
-            if (document.querySelector('#shop-container')) {
-                setTimeout(() => {
-                    if (window.initializeShop) {
-                        window.initializeShop();
-                    }
-                }, 300);
-            }
-        });
-        
-        // También inicializar cuando la página termine de cargar
-        window.addEventListener('load', function() {
-            if (document.querySelector('#shop-container') && !window.isShopInitialized) {
-                setTimeout(() => {
-                    if (window.initializeShop) {
-                        window.initializeShop();
-                    }
-                }, 500);
-            }
-        });
-    </script>
-</body>
-</html>

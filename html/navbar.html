@@ -1,39 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barra de navegación</title>
-    <link rel="icon" href="..\img\icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/navbar-styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-    <script src="../javascript/navbar.js" defer></script> <!-- Incluye el archivo de navegación -->
-    <script src="../javascript/utils.js" defer></script>
-    <script src="../javascript/components.js" defer></script>
-</head>
-
-<body>
-    <div class="navbar-container">
-        <div class="left-content">
-            <img src="..\img\Fotos_Azuca_Cafe\Logo.png" alt="Logo" class="navbar-logo">
-            <h1>Azuca Café</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a id="home-link" href="#" data-target="home">Inicio</a></li>
-                <li><a data-target="planes" id="planes-link" href="#">Planes</a></li>
-                <li><a data-target="shop" id="shop-link">Tienda</a></li>
-                <li class="dropdown">
-                    <a>Otros</a>
-                    <ul class="dropdown-content">
-                        <li><a id="history-link" href="#" data-target="history">Nuestra Historia</a></li>
-                        <li><a id="blog-link" href="#" data-target="blog">Blog</a></li>
-                        <!-- Puedes agregar más opciones aquí -->
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+<div class="navbar-container">
+    <button class="mobile-menu-toggle" aria-label="Abrir menú">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+    </button>
+    <div class="left-content">
+        <img src="img/Fotos_Azuca_Cafe/Logo.png" alt="Logo" class="navbar-logo">
+        <h1>Azuca Café</h1>
     </div>
-</body>
-</html>
+    <nav>
+        <ul>
+            <li><a id="home-link" href="#" data-target="home">Inicio</a></li>
+            <li><a data-target="planes" id="planes-link" href="#">Planes</a></li>
+            <li><a data-target="shop" id="shop-link">Tienda</a></li>
+            <li class="dropdown">
+                <a>Otros</a>
+                <ul class="dropdown-content">
+                    <li><a id="history-link" href="#" data-target="history">Nuestra Historia</a></li>
+                    <li><a id="blog-link" href="#" data-target="blog">Blog</a></li>
+                    <!-- Puedes agregar más opciones aquí -->
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -160,9 +160,6 @@
         // Iniciar verificación
         if (checkForCertSection()) {
             initializeCertifications();
-        } else {
-            checkTimer = setInterval(checkCertSectionInterval, CHECK_INTERVAL);
-        }
     }
     
     // ============================================
@@ -401,9 +398,6 @@
                 if (start >= target) {
                     element.textContent = target;
                     clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(start);
-                }
             }, 16);
         }
         
@@ -445,10 +439,6 @@
         // Iniciar verificación del sistema de suscripción
         if (checkForSubscriptionSection()) {
             initializeSubscription();
-        } else {
-            console.log('🔍 Buscando elementos de suscripción...');
-            checkTimer = setInterval(checkSubscriptionSectionInterval, CHECK_INTERVAL);
-        }
     }
     
     // ============================================
@@ -821,23 +811,17 @@ function hideBarTooltip() {
         // Agregar estilos dinámicos primero
         addDynamicStyles();
         
-        // Inicializar certificaciones (ya funciona)
+        // Inicializar certificaciones
         initCertificationsSystem();
         
-        // Inicializar suscripción con retraso
-        setTimeout(function() {
-            initSubscriptionSystem();
-        }, 300);
+        // Inicializar suscripción
+        initSubscriptionSystem();
         
         // Inicializar cards
-        setTimeout(function() {
-            initCardsSystem();
-        }, 200);
+        initCardsSystem();
         
         // Inicializar ubicaciones
-        setTimeout(function() {
-            initLocationsSystem();
-        }, 400);
+        initLocationsSystem();
         
         console.log('✅ Sistemas de Home completamente inicializados');
     }
@@ -849,25 +833,5 @@ function hideBarTooltip() {
     window.initCertificationsSystem = initCertificationsSystem;
     window.initSubscriptionSystem = initSubscriptionSystem;
     window.addDynamicStyles = addDynamicStyles;
-    
-    // Ejecutar automáticamente solo en index.html cuando se cargue directamente
-    // (no cuando se carga dinámicamente)
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-            // Solo auto-ejecutar si ya hay contenido de home cargado
-            if (document.getElementById('content') && 
-                document.getElementById('content').innerHTML.includes('card-button')) {
-                initHomePageSystems();
-            }
-        });
-    } else {
-        // Si el DOM ya está listo
-        setTimeout(function() {
-            if (document.getElementById('content') && 
-                document.getElementById('content').innerHTML.includes('card-button')) {
-                initHomePageSystems();
-            }
-        }, 100);
-    }
     
 })();

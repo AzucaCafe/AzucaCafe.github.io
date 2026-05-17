@@ -7188,3 +7188,50 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(85, 99, 69, 0.4);
 }
+/* Additional responsive fixes */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2.2rem !important;
+    }
+
+    .subscription-title {
+        font-size: 1.8rem !important;
+    }
+
+    .locations-title {
+        font-size: 2rem !important;
+    }
+}
+
+/* Premium Hover Transitions */
+.card-button, .header-button, .subscription-btn, .all-plan-btn, .buy-button {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.card-button:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.subscription-btn:hover {
+    box-shadow: 0 10px 25px rgba(85, 99, 69, 0.3);
+}
+
+/* Smooth section fade-in */
+.content-section {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-out {
+    opacity: 0;
+    transform: translateY(-20px);
+}
