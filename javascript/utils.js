@@ -1,59 +1,108 @@
 function loadComponentWithAnimation(id, file) {
     const content = document.getElementById(id);
+    if (!content) return;
+
     content.classList.add('slide-out');
 
     setTimeout(() => {
         fetch(file)
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.text();
+            })
             .then(data => {
                 content.innerHTML = data;
                 content.classList.remove('slide-out');
                 content.classList.add('hidden');
 
-                setTimeout(() => {
+                // Wait for the browser to process the innerHTML
+                requestAnimationFrame(() => {
                     content.classList.remove('hidden');
                     content.classList.add('slide-in');
 
-                    // ✅ Reactiva los listeners en el nuevo contenido
-                    addNavLinkListeners();
+                    // Reactivate listeners in the new content
+                    if (typeof addNavLinkListeners === 'function') {
+                        addNavLinkListeners();
+                    }
+                    if (typeof highlightActiveLink === 'function') {
+                        highlightActiveLink();
+                    }
 
-                    // ✅ Ejecutar inicializadores específicos según el archivo cargado
-                    console.log('📄 Componente cargado:', file);
-                    
-                    if (file.includes('home.html')) {
-                        console.log('🏠 Home cargado, inicializando sistemas...');
-                        setTimeout(() => {
+                    // Specific initializers according to the loaded file
+                    console.log('📄 Component loaded:', file);
+
+                    const fileName = file.split('/').pop();
+
+                    switch(fileName) {
+                        case 'home.html':
+                            console.log('🏠 Home loaded, initializing systems...');
                             if (typeof initHomePageSystems === 'function') {
                                 initHomePageSystems();
                             } else {
-                                console.warn('initHomePageSystems no está disponible');
+                                console.warn('initHomePageSystems is not available');
                             }
-                        }, 100);
-                    } else if (file.includes('planes.html')) {
-                        console.log('📋 Planes cargado, inicializando sistemas...');
-                        setTimeout(() => {
+                            break;
+                        case 'planes.html':
+                            console.log('📋 Planes loaded, initializing systems...');
                             if (typeof initPlagesPage === 'function') {
                                 initPlagesPage();
                             } else {
-                                console.warn('initPlagesPage no está disponible');
+                                console.warn('initPlagesPage is not available');
                             }
-                        }, 100);
+                            break;
+                        case 'shop.html':
+                            console.log('🛒 Shop loaded, initializing systems...');
+                            if (typeof initializeShop === 'function') {
+                                initializeShop();
+                            } else {
+                                console.warn('initializeShop is not available');
+                            }
+                            break;
+                        case 'history.html':
+                            console.log('📜 History loaded, initializing systems...');
+                            if (typeof initHistoryPage === 'function') {
+                                initHistoryPage();
+                            } else {
+                                console.warn('initHistoryPage is not available');
+                            }
+                            break;
+                        case 'blog.html':
+                            console.log('📰 Blog loaded, initializing systems...');
+                            if (typeof initBlogPage === 'function') {
+                                initBlogPage();
+                            } else {
+                                console.warn('initBlogPage is not available');
+                            }
+                            break;
                     }
-
-                }, 100);
+                });
             })
             .catch(error => console.error('Error loading component:', error));
     }, 500);
 }
 
 function updateURL(targetSection) {
-    window.history.pushState({}, '', `#${targetSection}`);
+    if (window.location.hash !== `#${targetSection}`) {
+        window.history.pushState({}, '', `#${targetSection}`);
+    }
 }
 
 function setActiveLink(activeLink) {
-    const navLinks = document.querySelectorAll('nav ul li a');
+    const navLinks = document.querySelectorAll('nav ul li a, footer a[data-target]');
     navLinks.forEach(link => {
         link.classList.remove('active');
     });
-    activeLink.classList.add('active');
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
 }
+
+// Initialize on page load based on hash
+window.addEventListener('load', () => {
+    const hash = window.location.hash.replace('#', '') || 'home';
+    // Small delay to ensure all scripts are loaded
+    setTimeout(() => {
+        const activeLink = document.querySelector(`nav a[data-target="${hash}"], footer a[data-target="${hash}"]`);
+        if (activeLink) setActiveLink(activeLink);
+    }, 100);
+});

@@ -357,9 +357,9 @@
                         const imageName = selectedSize.replace('g', '');
                         let imagePath = '';
                         if (productType === 'Bolsa de Granos de Café') {
-                            imagePath = `../img/shop/grano/${imageName}.png`;
+                            imagePath = `img/shop/grano/${imageName}.png`;
                         } else if (productType === 'Bolsa de Café Molido') {
-                            imagePath = `../img/shop/molido/${imageName}.png`;
+                            imagePath = `img/shop/molido/${imageName}.png`;
                         }
                         if (imagePath) {
                             productImage.src = imagePath;
@@ -677,41 +677,7 @@
     // ============================================
     // INICIALIZACIÓN AUTOMÁTICA
     // ============================================
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log("DOM cargado, buscando tienda...");
-        
-        if (document.querySelector('#shop-container')) {
-            console.log("Tienda encontrada, inicializando...");
-            
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'instant'
-            });
-            
-            setTimeout(() => {
-                initializeShop();
-            }, 100);
-        }
-    });
-
-    window.addEventListener('load', function() {
-        if (document.querySelector('#shop-container') && !shopInitialized) {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'instant'
-            });
-            
-            setTimeout(() => {
-                initializeShop();
-            }, 200);
-        }
-    });
-
-    // ============================================
     // EXPORTAR FUNCIONES GLOBALES
-    // ============================================
     window.initializeShop = initializeShop;
     window.reinitializeShop = function() {
         console.log("Reinicializando tienda...");

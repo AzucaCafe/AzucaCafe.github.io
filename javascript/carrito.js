@@ -37,34 +37,34 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             imagenes: {
                 "100g": [
-                    "../img/shop/grano/100.png",
-                    "../img/shop/grano/125.png",
-                    "../img/shop/grano/250.png"
+                    "img/shop/grano/100.png",
+                    "img/shop/grano/125.png",
+                    "img/shop/grano/250.png"
                 ],
                 "125g": [
-                    "../img/shop/grano/100.png",
-                    "../img/shop/grano/125.png",
-                    "../img/shop/grano/250.png"
+                    "img/shop/grano/100.png",
+                    "img/shop/grano/125.png",
+                    "img/shop/grano/250.png"
                 ],
                 "250g": [
-                    "../img/shop/grano/100.png",
-                    "../img/shop/grano/125.png",
-                    "../img/shop/grano/250.png"
+                    "img/shop/grano/100.png",
+                    "img/shop/grano/125.png",
+                    "img/shop/grano/250.png"
                 ],
                 "340g": [
-                    "../img/shop/grano/100.png",
-                    "../img/shop/grano/125.png",
-                    "../img/shop/grano/250.png"
+                    "img/shop/grano/100.png",
+                    "img/shop/grano/125.png",
+                    "img/shop/grano/250.png"
                 ],
                 "500g": [
-                    "../img/shop/grano/100.png",
-                    "../img/shop/grano/125.png",
-                    "../img/shop/grano/250.png"
+                    "img/shop/grano/100.png",
+                    "img/shop/grano/125.png",
+                    "img/shop/grano/250.png"
                 ],
                 "2500g": [
-                    "../img/shop/grano/100.png",
-                    "../img/shop/grano/125.png",
-                    "../img/shop/grano/250.png"
+                    "img/shop/grano/100.png",
+                    "img/shop/grano/125.png",
+                    "img/shop/grano/250.png"
                 ]
             }
         },
@@ -78,34 +78,34 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             imagenes: {
                 "100g": [
-                    "../img/shop/molido/100.png",
-                    "../img/shop/molido/125.png",
-                    "../img/shop/molido/250.png"
+                    "img/shop/molido/100.png",
+                    "img/shop/molido/125.png",
+                    "img/shop/molido/250.png"
                 ],
                 "125g": [
-                    "../img/shop/molido/100.png",
-                    "../img/shop/molido/125.png",
-                    "../img/shop/molido/250.png"
+                    "img/shop/molido/100.png",
+                    "img/shop/molido/125.png",
+                    "img/shop/molido/250.png"
                 ],
                 "250g": [
-                    "../img/shop/molido/100.png",
-                    "../img/shop/molido/125.png",
-                    "../img/shop/molido/250.png"
+                    "img/shop/molido/100.png",
+                    "img/shop/molido/125.png",
+                    "img/shop/molido/250.png"
                 ],
                 "340g": [
-                    "../img/shop/molido/100.png",
-                    "../img/shop/molido/125.png",
-                    "../img/shop/molido/250.png"
+                    "img/shop/molido/100.png",
+                    "img/shop/molido/125.png",
+                    "img/shop/molido/250.png"
                 ],
                 "500g": [
-                    "../img/shop/molido/100.png",
-                    "../img/shop/molido/125.png",
-                    "../img/shop/molido/250.png"
+                    "img/shop/molido/100.png",
+                    "img/shop/molido/125.png",
+                    "img/shop/molido/250.png"
                 ],
                 "2500g": [
-                    "../img/shop/molido/100.png",
-                    "../img/shop/molido/125.png",
-                    "../img/shop/molido/250.png"
+                    "img/shop/molido/100.png",
+                    "img/shop/molido/125.png",
+                    "img/shop/molido/250.png"
                 ]
             }
         },
@@ -119,9 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             imagenes: {
                 "100g": [
-                    "../img/shop/grano/100.png",
-                    "../img/shop/grano/125.png",
-                    "../img/shop/grano/250.png"
+                    "img/shop/grano/100.png",
+                    "img/shop/grano/125.png",
+                    "img/shop/grano/250.png"
                 ]
             }
         }

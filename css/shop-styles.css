@@ -2505,3 +2505,21 @@ body {
         height: 200px;
     }
 }
+/* Shop Card Interactions */
+.product-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.buy-button {
+    transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
